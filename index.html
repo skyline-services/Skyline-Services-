@@ -1,42 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skyline Services</title>
+
+<title>Skyline Services | Premium Interior & Ceiling Experts</title>
+
+<meta name="description" content="Skyline Services offers False Ceiling, T-Ceiling, Painting, Wiring and Aluminium work in Assam. Call now for professional service.">
+
 <style>
-body {font-family: Arial; margin:0;}
-header {background:#0a1f44; color:white; text-align:center; padding:20px;}
-section {padding:20px;}
-.card {background:#f4f4f4; padding:10px; margin:5px;}
+body {
+    margin:0;
+    font-family:Arial;
+    background:#0a0a0a;
+    color:white;
+}
+
+header {
+    padding:15px;
+    text-align:center;
+    background:black;
+    border-bottom:1px solid gold;
+}
+
+.hero {
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1 {
+    font-size:28px;
+    color:gold;
+}
+
+.btn {
+    background:gold;
+    color:black;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:15px;
+    display:inline-block;
+}
+
+.section {
+    padding:40px 20px;
+}
+
+.services {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+
+.card {
+    background:#111;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid gold;
+    text-align:center;
+}
+
+.gallery img {
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.review {
+    background:#111;
+    padding:15px;
+    border-left:3px solid gold;
+    margin-bottom:10px;
+}
+
+form input, form textarea {
+    width:100%;
+    padding:10px;
+    margin:5px 0;
+    border:none;
+    border-radius:5px;
+}
+
+form button {
+    background:gold;
+    color:black;
+    padding:10px;
+    border:none;
+    width:100%;
+    border-radius:5px;
+}
+
+.contact {
+    text-align:center;
+    padding:20px;
+}
+
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Skyline Services</h1>
-<p>Your Dream Home, Our Responsibility</p>
+<h2>Skyline Services</h2>
 </header>
 
-<section>
-<h2>Our Services</h2>
-<div class="card">False Ceiling (T-Ceiling)</div>
-<div class="card">House Wiring</div>
-<div class="card">Wall Putty</div>
-<div class="card">Wallpaper Installation</div>
-<div class="card">Interior & Exterior Painting</div>
-<div class="card">Aluminium Doors & Windows</div>
-<div class="card">Floor & Wall Tiling</div>
-<div class="card">Modular Kitchens & Furniture</div>
+<section class="hero">
+<h1>Your Dream Home, Our Responsibility</h1>
+<p>False Ceiling | Painting | Wiring | Aluminium Work</p>
+
+<a href="tel:+918876410518" class="btn">Call Now</a><br><br>
+
+<a href="https://wa.me/918876410518?text=Hello%20Skyline%20Services,%20I%20need%20work%20details" class="btn">
+WhatsApp Us
+</a>
 </section>
 
-<section>
-<h2>Contact</h2>
-<p>Phone: +91 8876410518</p>
-<p>Email: skyline.services27@gmail.com</p>
-<p>Instagram: @Skyline__Services</p>
+<section class="section">
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">False Ceiling</div>
+<div class="card">T-Ceiling</div>
+<div class="card">House Wiring</div>
+<div class="card">Interior Painting</div>
+<div class="card">Exterior Painting</div>
+<div class="card">Aluminium Work</div>
+<div class="card">Wallpaper</div>
+</div>
 </section>
+
+<section class="section gallery">
+<h2>Our Work</h2>
+<img src="https://via.placeholder.com/400x250">
+<img src="https://via.placeholder.com/400x250">
+</section>
+
+<section class="section">
+<h2>Customer Reviews</h2>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Excellent finishing work!</div>
+<div class="review">⭐️⭐️⭐️⭐️ Professional and fast service.</div>
+</section>
+
+<section class="section">
+<h2>Book a Service</h2>
+<form onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Mobile Number" required>
+<textarea id="work" placeholder="Work Details"></textarea>
+<button type="submit">Send Request</button>
+</form>
+</section>
+
+<section class="contact">
+<h3>Contact</h3>
+<p>📍 Sonai Road, Silchar, Assam</p>
+<p>📞 +91 8876410518</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/918876410518">💬</a>
+
+<script>
+function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let work = document.getElementById("work").value;
+
+    let message = `Name: ${name}%0APhone: ${phone}%0AWork: ${work}`;
+    window.open(`https://wa.me/918876410518?text=${message}`);
+}
+</script>
 
 </body>
 </html>
