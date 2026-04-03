@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,113 +13,110 @@
 body {
     margin:0;
     font-family:'Poppins', sans-serif;
-    background:#0f0f0f;
+    background:linear-gradient(135deg,#0b1a3a,#0a2a6b);
     color:white;
-    scroll-behavior:smooth;
 }
 
 /* HEADER */
 .header {
     text-align:center;
     padding:20px;
-    background:#000;
 }
 
 .logo {
-    font-size:30px;
+    font-size:32px;
     font-weight:bold;
-    background:linear-gradient(45deg,#FFD700,#FFC107);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
 }
 
-.tagline { color:#e6c200; }
-
-/* HERO SLIDER */
-.slider {
-    height:200px;
-    background-size:cover;
-    animation:slide 12s infinite;
+.tagline {
+    font-family:cursive;
+    font-size:18px;
+    margin-top:5px;
 }
 
-@keyframes slide {
-    0% {background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');}
-    33% {background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85');}
-    66% {background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858');}
-}
-
-/* SECTION */
-.section { padding:40px 20px; }
-.section h2 {
+/* TITLE BOX */
+.section-title {
     text-align:center;
-    color:#FFD700;
+    background:linear-gradient(to right,#d4af37,#FFD700);
+    color:black;
+    padding:10px;
+    border-radius:25px;
+    width:80%;
+    margin:25px auto;
+    font-weight:bold;
 }
 
 /* SERVICES */
 .services {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:15px;
+    padding:15px;
 }
 
 .card {
-    background:#1a1a1a;
-    padding:15px;
-    border-radius:10px;
-    border:1px solid #333;
+    background:#ffffff10;
+    border-radius:15px;
+    padding:10px;
+    border:2px solid #FFD700;
+    text-align:center;
+    transition:0.3s;
 }
 
-/* GALLERY */
-.gallery {
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
+.card:hover {
+    transform:scale(1.03);
+    box-shadow:0 0 15px gold;
 }
 
-.gallery img {
+.card img {
     width:100%;
-    height:140px;
+    height:150px;
     object-fit:cover;
-    border:2px solid gold;
+    border-radius:10px;
 }
 
-/* FORM */
-form {
-    max-width:400px;
-    margin:auto;
+.card b {
+    color:#FFD700;
+}
+
+/* MATERIAL */
+.material {
     display:flex;
-    flex-direction:column;
+    overflow-x:auto;
     gap:10px;
-}
-
-input, textarea {
-    padding:10px;
-    border:none;
-    border-radius:5px;
-}
-
-button {
-    background:#FFD700;
-    border:none;
     padding:10px;
 }
 
-/* MAP */
-iframe {
-    width:100%;
-    height:200px;
-    border:0;
+.material div {
+    background:#ffffff20;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid gold;
 }
 
-/* FLOAT */
+/* CONTACT */
+.contact {
+    text-align:center;
+    padding:20px;
+}
+
+/* FOOTER */
+.footer {
+    background:#00000060;
+    padding:15px;
+    text-align:center;
+}
+
+/* FLOAT BUTTONS */
 .whatsapp, .call {
     position:fixed;
     right:20px;
     padding:15px;
     border-radius:50%;
+    text-decoration:none;
 }
 
-.whatsapp { bottom:20px; background:#25D366; }
+.whatsapp { bottom:20px; background:#25D366; color:white; }
 .call { bottom:80px; background:#FFD700; color:black; }
 
 </style>
@@ -127,50 +125,89 @@ iframe {
 <body>
 
 <header class="header">
-<div class="logo">Skyline Services</div>
-<div class="tagline">Construction & Interior Solutions</div>
+  <div class="logo">🏢 Skyline Services</div>
+  <div class="tagline">Your Dream Home, Our Responsibility</div>
 </header>
 
-<div class="slider"></div>
+<div class="section-title">OUR SERVICES</div>
 
-<section class="section">
-<h2>OUR SERVICES</h2>
 <div class="services">
-<div class="card">False Ceiling</div>
-<div class="card">Painting</div>
-<div class="card">Wiring</div>
-<div class="card">Modular Kitchen</div>
-</div>
-</section>
 
-<section class="section">
-<h2>OUR WORK</h2>
-<div class="gallery">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+<b>False Ceiling (T-Ceiling)</b>
+<p>Stylish ceiling designs with lighting</p>
 </div>
-</section>
 
-<section class="section">
-<h2>CONTACT US</h2>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581090700227-1e8e6d8cba1c">
+<b>House Wiring</b>
+<p>Safe and reliable electrical solutions</p>
+</div>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Mobile Number">
-<textarea placeholder="Your Requirement"></textarea>
-<button>Send</button>
-</form>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828">
+<b>Wall Putty</b>
+<p>Smooth wall finishing</p>
+</div>
 
-</section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<b>Wallpaper Installation</b>
+<p>Modern wall decoration</p>
+</div>
 
-<section class="section">
-<h2>LOCATION</h2>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2f8c">
+<b>Painting</b>
+<p>Interior & exterior painting</p>
+</div>
 
-<iframe src="https://maps.google.com/maps?q=Silchar&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599423300746-b62533397364">
+<b>Aluminium Doors & Windows</b>
+<p>Durable & stylish fittings</p>
+</div>
 
-</section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+<b>Floor & Wall Tiling</b>
+<p>Professional tile work</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77">
+<b>Modular Kitchen</b>
+<p>Modern kitchen design</p>
+</div>
+
+</div>
+
+<!-- MATERIAL -->
+<div class="section-title">MATERIAL SUPPLY</div>
+
+<div class="material">
+<div>Cement</div>
+<div>Stone</div>
+<div>Sand (Bali)</div>
+<div>Bricks</div>
+<div>Iron Rods</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section-title">CONTACT US</div>
+
+<div class="contact">
+<p>📞 +91 8876410518</p>
+<p>📧 skyline.services27@gmail.com</p>
+<p>📍 Sonai Road, Silchar, Assam</p>
+<p>Facebook: Skyline Services</p>
+<p>Instagram: Skyline__services</p>
+</div>
+
+<div class="footer">
+Service Areas: Silchar | Sonai | Hailakandi | Karimganj | Guwahati
+</div>
 
 <a class="call" href="tel:+918876410518">📞</a>
 <a class="whatsapp" href="https://wa.me/918876410518">💬</a>
