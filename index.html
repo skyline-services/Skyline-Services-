@@ -18,26 +18,14 @@ body {
 }
 
 /* HEADER */
-.header {
-    text-align:center;
-    padding:20px;
-}
+.header { text-align:center; padding:20px; }
+.logo { font-size:32px; font-weight:bold; }
+.tagline { font-family:cursive; font-size:18px; }
 
-.logo {
-    font-size:32px;
-    font-weight:bold;
-}
-
-.tagline {
-    font-family:cursive;
-    font-size:18px;
-    margin-top:5px;
-}
-
-/* TITLE BOX */
+/* TITLE */
 .section-title {
     text-align:center;
-    background:linear-gradient(to right,#d4af37,#FFD700);
+    background:linear-gradient(to right,#FFD700,#FFC107);
     color:black;
     padding:10px;
     border-radius:25px;
@@ -60,12 +48,6 @@ body {
     padding:10px;
     border:2px solid #FFD700;
     text-align:center;
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:scale(1.03);
-    box-shadow:0 0 15px gold;
 }
 
 .card img {
@@ -75,48 +57,40 @@ body {
     border-radius:10px;
 }
 
-.card b {
-    color:#FFD700;
-}
+.card b { color:#FFD700; }
 
 /* MATERIAL */
 .material {
-    display:flex;
-    overflow-x:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
     gap:10px;
-    padding:10px;
+    padding:15px;
 }
 
 .material div {
-    background:#ffffff20;
-    padding:10px;
+    text-align:center;
+}
+
+.material img {
+    width:100%;
+    height:80px;
+    object-fit:cover;
     border-radius:10px;
-    border:1px solid gold;
+    border:2px solid gold;
 }
 
 /* CONTACT */
-.contact {
-    text-align:center;
-    padding:20px;
-}
+.contact { text-align:center; padding:20px; }
 
-/* FOOTER */
-.footer {
-    background:#00000060;
-    padding:15px;
-    text-align:center;
-}
-
-/* FLOAT BUTTONS */
+/* FLOAT */
 .whatsapp, .call {
     position:fixed;
     right:20px;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
 }
 
-.whatsapp { bottom:20px; background:#25D366; color:white; }
+.whatsapp { bottom:20px; background:#25D366; }
 .call { bottom:80px; background:#FFD700; color:black; }
 
 </style>
@@ -125,8 +99,8 @@ body {
 <body>
 
 <header class="header">
-  <div class="logo">🏢 Skyline Services</div>
-  <div class="tagline">Your Dream Home, Our Responsibility</div>
+<div class="logo">🏢 Skyline Services</div>
+<div class="tagline">Your Dream Home, Our Responsibility</div>
 </header>
 
 <div class="section-title">OUR SERVICES</div>
@@ -135,14 +109,14 @@ body {
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-<b>False Ceiling (T-Ceiling)</b>
+<b>False Ceiling (T-Ceiling, PVC)</b>
 <p>Stylish ceiling designs with lighting</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1581090700227-1e8e6d8cba1c">
 <b>House Wiring</b>
-<p>Safe and reliable electrical solutions</p>
+<p>Safe electrical wiring solutions</p>
 </div>
 
 <div class="card">
@@ -159,8 +133,8 @@ body {
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2f8c">
-<b>Painting</b>
-<p>Interior & exterior painting</p>
+<b>Interior & Exterior Painting</b>
+<p>Professional painting services</p>
 </div>
 
 <div class="card">
@@ -172,26 +146,53 @@ body {
 <div class="card">
 <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
 <b>Floor & Wall Tiling</b>
-<p>Professional tile work</p>
+<p>Professional tile installation</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77">
-<b>Modular Kitchen</b>
-<p>Modern kitchen design</p>
+<b>Modular Kitchens & Furniture</b>
+<p>Modern kitchen & storage solutions</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4">
+<b>Material Supply</b>
+<p>Cement, sand, bricks, rods</p>
 </div>
 
 </div>
 
-<!-- MATERIAL -->
+<!-- MATERIAL WITH IMAGES -->
 <div class="section-title">MATERIAL SUPPLY</div>
 
 <div class="material">
-<div>Cement</div>
-<div>Stone</div>
-<div>Sand (Bali)</div>
-<div>Bricks</div>
-<div>Iron Rods</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1600585154340-1e3f9d0f1c3d">
+<p>Cement</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10">
+<p>Stone</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<p>Sand</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1581091215367-59ab6b1c6a6b">
+<p>Bricks</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1581091012184-5c2c7a5b6c6b">
+<p>Iron Rods</p>
+</div>
+
 </div>
 
 <!-- CONTACT -->
@@ -201,12 +202,6 @@ body {
 <p>📞 +91 8876410518</p>
 <p>📧 skyline.services27@gmail.com</p>
 <p>📍 Sonai Road, Silchar, Assam</p>
-<p>Facebook: Skyline Services</p>
-<p>Instagram: Skyline__services</p>
-</div>
-
-<div class="footer">
-Service Areas: Silchar | Sonai | Hailakandi | Karimganj | Guwahati
 </div>
 
 <a class="call" href="tel:+918876410518">📞</a>
