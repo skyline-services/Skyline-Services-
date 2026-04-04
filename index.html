@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
-
-<title>Skyline Services Silchar | Interior & Construction Experts</title>
-
-<meta name="description" content="Skyline Services provides false ceiling, painting, wiring, tiles, aluminium work and material supply in Silchar and nearby areas.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Skyline Services | Construction & Interior Solutions</title><meta name="description" content="Skyline Services offers False Ceiling, Painting, Wiring, Aluminium Work & more in Assam.">
+<meta name="keywords" content="False Ceiling Assam, Interior Design Silchar, Painting Services, Modular Kitchen Assam"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo.png"><style>
+html { scroll-behavior:smooth; }
 
 body {
     margin:0;
@@ -22,47 +14,60 @@ body {
     color:white;
 }
 
-/* HEADER */
 .header {
-    text-align:center;
-    padding:15px;
+    position:sticky;
+    top:0;
+    background:#0b1a3a;
+    z-index:1000;
+    padding:10px;
+}
+
+.logo {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
 }
 
 .logo img {
     width:80px;
+    height:auto;
 }
 
-.logo-text {
-    font-size:28px;
+.brand-name {
+    font-size:24px;
     font-weight:bold;
-    color:#FFD700;
+    background:linear-gradient(45deg,#FFD700,#FFC107,#FFB300);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.tagline {
-    font-size:16px;
-}
+.tagline { font-size:14px; color:#ccc; }
 
-/* HERO */
 .hero {
     text-align:center;
     padding:50px 20px;
-    background:url('images/painting.jpg') center/cover;
 }
 
-.hero h1 {
-    font-size:28px;
-}
+.hero h1 { font-size:30px; margin-bottom:10px; }
+.hero p { color:#ddd; }
 
-.hero-btn {
-    background:#FFD700;
-    color:black;
-    padding:10px 20px;
-    border-radius:20px;
+.hero-buttons a {
+    margin:10px;
+    padding:12px 25px;
+    border-radius:25px;
     text-decoration:none;
     font-weight:bold;
+    display:inline-block;
 }
 
-/* SECTION */
+.call-btn { background:#FFD700; color:black; }
+.whatsapp-btn { background:#25D366; color:white; }
+
+.call-btn:hover, .whatsapp-btn:hover {
+    transform:scale(1.05);
+}
+
 .section-title {
     text-align:center;
     background:linear-gradient(to right,#FFD700,#FFC107);
@@ -71,10 +76,14 @@ body {
     border-radius:25px;
     width:80%;
     margin:30px auto;
+    font-weight:bold;
 }
 
-/* SERVICES */
-.services {
+.features, .area, .contact { text-align:center; padding:15px; }
+
+.features p { color:#FFD700; font-weight:600; }
+
+.services, .gallery, .reviews {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:15px;
@@ -82,11 +91,19 @@ body {
 }
 
 .card {
-    background:#ffffff10;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
     border-radius:15px;
     padding:10px;
-    border:2px solid #FFD700;
+    border:1px solid rgba(255,215,0,0.5);
     text-align:center;
+    transition:0.3s;
+    animation:fadeIn 0.6s ease;
+}
+
+.card:hover {
+    transform:scale(1.03);
+    box-shadow:0 0 15px gold;
 }
 
 .card img {
@@ -96,23 +113,21 @@ body {
     border-radius:10px;
 }
 
-.card b {
-    color:#FFD700;
-    display:block;
-    margin-top:10px;
+.card p { font-size:13px; color:#ccc; }
+
+.review-box {
+    background:#ffffff10;
+    padding:15px;
+    border-radius:10px;
 }
 
-.card small {
-    color:#ddd;
-}
-
-/* CONTACT */
-.contact {
+footer {
     text-align:center;
-    padding:20px;
+    padding:15px;
+    background:#00000050;
+    font-size:14px;
 }
 
-/* FLOAT BUTTON */
 .call, .whatsapp {
     position:fixed;
     right:20px;
@@ -120,104 +135,41 @@ body {
     border-radius:50%;
 }
 
-.call {
-    bottom:80px;
-    background:#FFD700;
+.call { bottom:80px; background:#FFD700; color:black; }
+.whatsapp { bottom:20px; background:#25D366; color:white; }
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(10px);} 
+    to {opacity:1; transform:translateY(0);} 
 }
 
-.whatsapp {
-    bottom:20px;
-    background:#25D366;
-}
-
-</style>
-</head>
-
-<body>
-
-<header class="header">
-    <div class="logo">
-        <img src="images/logo.png" alt="Skyline Services Logo">
-    </div>
-    <div class="logo-text">Skyline Services</div>
-    <div class="tagline">Construction & Interior Solutions</div>
-</header>
-
-<section class="hero">
-    <h1>Build Your Dream Home With Us</h1>
-    <a href="https://wa.me/918876410518" class="hero-btn">Get Free Quote</a>
-</section>
-
-<div class="section-title">OUR SERVICES</div>
-
+</style></head><body><header class="header">
+<div class="logo">
+<img src="images/logo.png" alt="Skyline Services Logo">
+<div>
+<div class="brand-name">Skyline Services</div>
+<div class="tagline">Construction & Interior Solutions</div>
+</div>
+</div>
+</header><section class="hero">
+<h1>Complete Construction & Interior Solutions in Assam</h1>
+<p>Trusted by Hundreds of Happy Customers</p>
+<div class="hero-buttons">
+<a class="call-btn" href="tel:+918876410518">Call Now</a>
+<a class="whatsapp-btn" href="https://wa.me/918876410518?text=Hello%20Skyline%20Services%2C%20I%20need%20your%20service">Get Quote on WhatsApp</a>
+</div>
+</section><div class="section-title">WHY CHOOSE US</div>
+<div class="features">
+<p>✔ Complete Home & Building Solutions Under One Roof</p>
+<p>✔ Experienced & Skilled Professionals</p>
+<p>✔ Premium Quality Materials & Workmanship</p>
+<p>✔ Affordable & Transparent Pricing</p>
+<p>✔ On-Time Project Completion</p>
+<p>✔ 100% Customer Satisfaction Guaranteed</p>
+</div><div class="section-title">OUR SERVICES</div>
 <div class="services">
-
-<div class="card">
-<img src="images/ceiling.jpg" loading="lazy">
-<b>False Ceiling</b>
-<small>T-Ceiling & PVC Ceiling</small>
-</div>
-
-<div class="card">
-<img src="images/wiring.jpg" loading="lazy">
-<b>House Wiring</b>
-<small>Electrical Work</small>
-</div>
-
-<div class="card">
-<img src="images/putty.jpg" loading="lazy">
-<b>Wall Putty</b>
-<small>Smooth finishing</small>
-</div>
-
-<div class="card">
-<img src="images/painting.jpg" loading="lazy">
-<b>Painting</b>
-<small>Interior & Exterior</small>
-</div>
-
-<div class="card">
-<img src="images/wallpaper.jpg" loading="lazy">
-<b>Wallpaper</b>
-<small>Installation service</small>
-</div>
-
-<div class="card">
-<img src="images/aluminium.jpg" loading="lazy">
-<b>Aluminium Work</b>
-<small>Doors & Windows</small>
-</div>
-
-<div class="card">
-<img src="images/tiles.jpg" loading="lazy">
-<b>Tiles Work</b>
-<small>Floor & Wall</small>
-</div>
-
-<div class="card">
-<img src="images/kitchen.jpg" loading="lazy">
-<b>Modular Kitchen</b>
-<small>Kitchen & Furniture</small>
-</div>
-
-<div class="card">
-<img src="images/material.jpg" loading="lazy">
-<b>Material Supply</b>
-<small>Cement, Sand, Bricks etc.</small>
-</div>
-
-</div>
-
-<div class="section-title">CONTACT</div>
-
-<div class="contact">
-<p>📞 +91 8876410518</p>
-<p>📧 skyline.services27@gmail.com</p>
-<p>📍 Sonai Road, Silchar, Assam</p>
-</div>
-
-<a class="call" href="tel:+918876410518">📞</a>
-<a class="whatsapp" href="https://wa.me/918876410518?text=Hello%20Skyline%20Services">💬</a>
-
-</body>
-</html>
+<div class="card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="False Ceiling Work" loading="lazy"><b>False Ceiling (T-Ceiling, PVC Ceiling)</b><p>Modern ceiling solutions</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758" alt="House Wiring Work" loading="lazy"><b>House Wiring</b><p>Safe & reliable wiring</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828" alt="Wall Putty Work" loading="lazy"><b>Wall Putty</b><p>Smooth wall finish</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2f8c" alt="Painting Work" loading="lazy"><b>Interior & Exterior Painting</b><p>Premium paint solutions</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-160058
