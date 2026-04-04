@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Skyline Services | Construction & Interior Solutions</title>
+<meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
+
+<title>Skyline Services Silchar | Interior & Construction Experts</title>
+
+<meta name="description" content="Skyline Services provides false ceiling, painting, wiring, tiles, aluminium work and material supply in Silchar and nearby areas.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,23 +25,44 @@ body {
 /* HEADER */
 .header {
     text-align:center;
-    padding:20px;
+    padding:15px;
 }
 
-.logo {
-    font-size:32px;
+.logo img {
+    width:80px;
+}
+
+.logo-text {
+    font-size:28px;
     font-weight:bold;
-    background:linear-gradient(45deg,#FFD700,#FFC107,#FFB300);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    color:#FFD700;
 }
 
 .tagline {
-    font-size:18px;
-    margin-top:5px;
+    font-size:16px;
 }
 
-/* TITLE */
+/* HERO */
+.hero {
+    text-align:center;
+    padding:50px 20px;
+    background:url('images/painting.jpg') center/cover;
+}
+
+.hero h1 {
+    font-size:28px;
+}
+
+.hero-btn {
+    background:#FFD700;
+    color:black;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* SECTION */
 .section-title {
     text-align:center;
     background:linear-gradient(to right,#FFD700,#FFC107);
@@ -45,19 +71,6 @@ body {
     border-radius:25px;
     width:80%;
     margin:30px auto;
-    font-weight:bold;
-}
-
-/* FEATURES */
-.features {
-    text-align:center;
-    padding:10px;
-}
-
-.features p {
-    margin:8px 0;
-    color:#FFD700;
-    font-weight:bold;
 }
 
 /* SERVICES */
@@ -74,12 +87,6 @@ body {
     padding:10px;
     border:2px solid #FFD700;
     text-align:center;
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:scale(1.03);
-    box-shadow:0 0 15px gold;
 }
 
 .card img {
@@ -90,16 +97,13 @@ body {
 }
 
 .card b {
+    color:#FFD700;
     display:block;
     margin-top:10px;
-    color:#FFD700;
 }
 
-/* AREA */
-.area {
-    text-align:center;
-    padding:15px;
-    font-weight:bold;
+.card small {
+    color:#ddd;
 }
 
 /* CONTACT */
@@ -108,25 +112,22 @@ body {
     padding:20px;
 }
 
-/* FLOAT BUTTONS */
-.whatsapp, .call {
+/* FLOAT BUTTON */
+.call, .whatsapp {
     position:fixed;
     right:20px;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
 }
 
 .call {
     bottom:80px;
     background:#FFD700;
-    color:black;
 }
 
 .whatsapp {
     bottom:20px;
     background:#25D366;
-    color:white;
 }
 
 </style>
@@ -135,83 +136,79 @@ body {
 <body>
 
 <header class="header">
-    <div class="logo">🏢 Skyline Services</div>
+    <div class="logo">
+        <img src="images/logo.png" alt="Skyline Services Logo">
+    </div>
+    <div class="logo-text">Skyline Services</div>
     <div class="tagline">Construction & Interior Solutions</div>
 </header>
 
-<!-- FEATURES -->
-<div class="section-title">WHY CHOOSE US</div>
+<section class="hero">
+    <h1>Build Your Dream Home With Us</h1>
+    <a href="https://wa.me/918876410518" class="hero-btn">Get Free Quote</a>
+</section>
 
-<div class="features">
-<p>✔ Complete Home & Building Solutions Under One Roof</p>
-<p>✔ Experienced & Skilled Team</p>
-<p>✔ Premium Quality Materials</p>
-<p>✔ Affordable Pricing</p>
-<p>✔ 100% Customer Satisfaction</p>
-</div>
-
-<!-- SERVICES -->
 <div class="section-title">OUR SERVICES</div>
 
 <div class="services">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-<b>False Ceiling (T-Ceiling, PVC Ceiling)</b>
+<img src="images/ceiling.jpg" loading="lazy">
+<b>False Ceiling</b>
+<small>T-Ceiling & PVC Ceiling</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1581090700227-1e8e6d8cba1c">
+<img src="images/wiring.jpg" loading="lazy">
 <b>House Wiring</b>
+<small>Electrical Work</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828">
+<img src="images/putty.jpg" loading="lazy">
 <b>Wall Putty</b>
+<small>Smooth finishing</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2f8c">
-<b>Interior & Exterior Painting</b>
+<img src="images/painting.jpg" loading="lazy">
+<b>Painting</b>
+<small>Interior & Exterior</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1599423300746-b62533397364">
-<b>Aluminium Doors & Windows</b>
+<img src="images/wallpaper.jpg" loading="lazy">
+<b>Wallpaper</b>
+<small>Installation service</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
-<b>Tile Work (Floor & Walls)</b>
+<img src="images/aluminium.jpg" loading="lazy">
+<b>Aluminium Work</b>
+<small>Doors & Windows</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
-<b>Wallpaper Installation</b>
+<img src="images/tiles.jpg" loading="lazy">
+<b>Tiles Work</b>
+<small>Floor & Wall</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77">
-<b>Modular Kitchen Solutions</b>
+<img src="images/kitchen.jpg" loading="lazy">
+<b>Modular Kitchen</b>
+<small>Kitchen & Furniture</small>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1590650213165-c1fef80648c4">
+<img src="images/material.jpg" loading="lazy">
 <b>Material Supply</b>
-Cement | Stone | Sand | Bricks | Iron Rods
+<small>Cement, Sand, Bricks etc.</small>
 </div>
 
 </div>
 
-<!-- SERVICE AREA -->
-<div class="section-title">SERVICE AREA</div>
-
-<div class="area">
-Silchar | Sonai | Hailakandi | Karimganj | Guwahati
-</div>
-
-<!-- CONTACT -->
-<div class="section-title">CONTACT US</div>
+<div class="section-title">CONTACT</div>
 
 <div class="contact">
 <p>📞 +91 8876410518</p>
@@ -219,9 +216,8 @@ Silchar | Sonai | Hailakandi | Karimganj | Guwahati
 <p>📍 Sonai Road, Silchar, Assam</p>
 </div>
 
-<!-- FLOAT BUTTONS -->
 <a class="call" href="tel:+918876410518">📞</a>
-<a class="whatsapp" href="https://wa.me/918876410518">💬</a>
+<a class="whatsapp" href="https://wa.me/918876410518?text=Hello%20Skyline%20Services">💬</a>
 
 </body>
 </html>
