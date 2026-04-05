@@ -1,284 +1,195 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skyline Services | Premium Interior & Construction</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
-html { scroll-behavior:smooth; }
-body {
-  margin:0;
-  font-family:Poppins, sans-serif;
-  background:#0b1a3a;
-  color:#f5f5f5;
-}
+
+<title>Skyline Services | Interior & Construction Experts</title>
+
+<meta name="description" content="False Ceiling, T-Ceiling, PVC Ceiling, Painting, Wiring, Tiles & more in Assam. Free site visit available.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,sans-serif;background:#0b1a3a;color:#f5f5f5}
 
 /* TOP BAR */
-.topbar{
-  background:linear-gradient(90deg,red,orange);
-  text-align:center;
-  padding:6px;
-  font-weight:bold;
-}
+.topbar{background:linear-gradient(90deg,red,orange);text-align:center;padding:6px;font-weight:bold}
 
 /* HEADER */
-.header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 20px;
-  background:#08122b;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-.brand-wrap{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.brand {
-  color:#FFD700;
-  font-weight:700;
-}
-
-.tagline{
-  font-size:12px;
-  color:#ccc;
-}
-
-.nav a {
-  color:#fff;
-  margin:0 10px;
-  text-decoration:none;
-  font-size:14px;
-}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#08122b;position:sticky;top:0;z-index:1000}
+.brand-wrap{display:flex;align-items:center;gap:10px}
+.brand{color:#FFD700;font-weight:700}
+.tagline{font-size:12px;color:#ccc}
+.nav a{color:#fff;margin:0 8px;text-decoration:none;font-size:14px}
 
 /* HERO */
-.hero {
-  text-align:center;
-  padding:80px 20px;
-  background:linear-gradient(135deg,#0b1a3a,#132c5c);
-}
+.hero{text-align:center;padding:70px 20px;background:linear-gradient(135deg,#0b1a3a,#132c5c)}
+.hero h1{text-shadow:0 0 15px rgba(255,215,0,0.5)}
 
-.hero h1{
-  text-shadow:0 0 15px rgba(255,215,0,0.5);
-}
-
-.btn{
-  padding:14px 26px;
-  border:none;
-  border-radius:30px;
-  margin:10px;
-  font-weight:600;
-}
-
-.call{background:#FFD700;color:black;}
-.whatsapp{background:#25D366;color:white;}
+.btn{padding:14px 26px;border:none;border-radius:30px;margin:10px;font-weight:600;cursor:pointer;transition:.3s}
+.btn:hover{transform:scale(1.05)}
+.call{background:#FFD700;color:black}
+.whatsapp{background:#25D366;color:white}
 
 /* SECTION */
-.section{
-  padding:50px 20px;
-  text-align:center;
-}
-
-.title{
-  background:#FFD700;
-  color:black;
-  padding:10px 25px;
-  border-radius:30px;
-  display:inline-block;
-  margin-bottom:25px;
-}
+.section{padding:40px 20px;text-align:center}
+.title{background:#FFD700;color:black;padding:8px 20px;border-radius:25px;display:inline-block;margin-bottom:20px}
 
 /* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:rgba(255,255,255,0.12);
-  padding:15px;
-  border-radius:15px;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 10px 25px rgba(255,215,0,0.4);
-}
-
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-  border-radius:10px;
-}
-
-.card b{
-  color:#FFD700;
-  display:block;
-  margin-top:10px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:rgba(255,255,255,0.12);padding:12px;border-radius:15px;transition:.3s;text-decoration:none;color:white}
+.card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(255,215,0,0.4)}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+.card b{color:#FFD700;display:block;margin-top:8px}
 
 /* REVIEW */
-.review{
-  background:rgba(255,255,255,0.1);
-  padding:10px;
-  margin:10px;
-  border-radius:10px;
-}
+.review{background:rgba(255,255,255,0.1);padding:10px;margin:10px;border-radius:10px}
 
 /* FORM */
-input,textarea{
-  width:90%;
-  padding:12px;
-  margin:8px;
-  border-radius:10px;
-  border:none;
-}
-
-.submit-btn{
-  background:#FFD700;
-  color:black;
-  padding:12px 25px;
-  border:none;
-  border-radius:25px;
-}
-
-/* FLOAT */
-.float{
-  position:fixed;
-  right:20px;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
-}
-
-.call-float{bottom:80px;background:#FFD700;color:black;}
-.whatsapp-float{bottom:20px;background:#25D366;color:white;}
-
-footer{
-  background:#000;
-  padding:15px;
-  text-align:center;
-}
+input,textarea{width:90%;padding:12px;margin:6px;border-radius:10px;border:none}
+.submit-btn{background:#FFD700;color:black;padding:12px 25px;border:none;border-radius:25px}
 
 /* LIGHTBOX */
-.lightbox {
-  display:none;
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
-}
-.lightbox img {
-  max-width:90%;
-  max-height:90%;
-  border-radius:10px;
-}
-.lightbox:target { display:flex; }
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);justify-content:center;align-items:center}
+.lightbox img{max-width:90%;max-height:90%;border-radius:10px}
+.lightbox:target{display:flex}
 
-</style></head><body><div class="topbar">🔥 Free Site Visit Available – Limited Offer</div><div class="header">
+/* FLOAT */
+.float{position:fixed;right:20px;padding:15px;border-radius:50%;text-decoration:none}
+.call-float{bottom:80px;background:#FFD700;color:black}
+.whatsapp-float{bottom:20px;background:#25D366;color:white}
+
+footer{text-align:center;padding:15px;background:#000}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">🔥 Free Site Visit Available – Limited Offer</div>
+
+<div class="header">
 <div class="brand-wrap">
 <img src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/66a8aa55f6128baabacccae65e36e6028e3603ce/logo.png" width="45">
 <div>
 <div class="brand">Skyline Services</div>
-<div class="tagline">Complete Construction & Interior Solutions</div>
+<div class="tagline">Your Dream Home, Our Responsibility.</div>
 </div>
 </div>
 <div class="nav">
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
-</div><div class="hero">
-<h1>Premium Interior & Construction Services</h1>
-<p>Serving Silchar, Sonai, Hailakandi, Karimganj & Guwahati</p>
+</div>
+
+<div class="hero">
+<h1>Interior & Construction Services in Assam</h1>
+<p>Complete Home & Building Solutions Under One Roof.</p>
 <button class="btn call" onclick="smartCall()">Call Now</button>
 <button class="btn whatsapp" onclick="window.location.href='https://wa.me/918876410518?text=Hi, I need your service'">WhatsApp</button>
-</div><div class="section" id="services">
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
 <div class="title">Our Services</div>
 <div class="grid">
-<div class="card"><img src="https://picsum.photos/300/200?1"><b>False Ceiling</b></div>
-<div class="card"><img src="https://picsum.photos/300/200?2"><b>T-Ceiling</b></div>
-<div class="card"><img src="https://picsum.photos/300/200?3"><b>PVC Ceiling</b></div>
-<div class="card"><img src="https://picsum.photos/300/200?4"><b>Painting</b></div>
-<div class="card"><img src="https://picsum.photos/300/200?5"><b>Electrical</b></div>
-<div class="card"><img src="https://picsum.photos/300/200?6"><b>Aluminium</b></div>
+
+<a href="#img1" class="card"><img src="YOUR_IMAGE_1"><b>False Ceiling</b><p>Modern gypsum & POP ceiling designs with lighting.</p></a>
+
+<a href="#img2" class="card"><img src="YOUR_IMAGE_2"><b>T-Ceiling</b><p>Grid ceiling systems for offices & commercial spaces.</p></a>
+
+<a href="#img3" class="card"><img src="YOUR_IMAGE_3"><b>PVC Ceiling</b><p>Durable, waterproof and stylish PVC ceiling panels.</p></a>
+
+<a href="#img4" class="card"><img src="YOUR_IMAGE_4"><b>Painting</b><p>Interior & exterior painting with smooth finishing.</p></a>
+
+<a href="#img5" class="card"><img src="YOUR_IMAGE_5"><b>Wall Putty</b><p>Perfect base coating for long-lasting paint finish.</p></a>
+
+<a href="#img6" class="card"><img src="YOUR_IMAGE_6"><b>Electrical Work</b><p>Safe house wiring, fittings & repair services.</p></a>
+
+<a href="#img7" class="card"><img src="YOUR_IMAGE_7"><b>Tile Work</b><p>Floor & wall tile installation with clean finishing.</p></a>
+
+<a href="#img8" class="card"><img src="YOUR_IMAGE_8"><b>Aluminium Work</b><p>Doors, windows & partitions with modern design.</p></a>
+
+<a href="#img9" class="card"><img src="YOUR_IMAGE_9"><b>Wallpaper Installation</b><p>Stylish and decorative wall covering solutions.</p></a>
+
+<a href="#img10" class="card"><img src="YOUR_IMAGE_10"><b>Modular Kitchen</b><p>Complete kitchen design & installation services.</p></a>
+
+<a href="#img11" class="card"><img src="YOUR_IMAGE_11"><b>Material Supply</b><p>Cement, sand, bricks & construction materials supply.</p></a>
+
 </div>
-</div><!-- WHY CHOOSE US --><div class="section">
+</div>
+
+<!-- LIGHTBOX -->
+<div id="img1" class="lightbox"><a href="#"><img src="YOUR_IMAGE_1"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="YOUR_IMAGE_2"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="YOUR_IMAGE_3"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="YOUR_IMAGE_4"></a></div>
+<div id="img5" class="lightbox"><a href="#"><img src="YOUR_IMAGE_5"></a></div>
+<div id="img6" class="lightbox"><a href="#"><img src="YOUR_IMAGE_6"></a></div>
+<div id="img7" class="lightbox"><a href="#"><img src="YOUR_IMAGE_7"></a></div>
+<div id="img8" class="lightbox"><a href="#"><img src="YOUR_IMAGE_8"></a></div>
+<div id="img9" class="lightbox"><a href="#"><img src="YOUR_IMAGE_9"></a></div>
+<div id="img10" class="lightbox"><a href="#"><img src="YOUR_IMAGE_10"></a></div>
+<div id="img11" class="lightbox"><a href="#"><img src="YOUR_IMAGE_11"></a></div>
+
+<!-- WHY -->
+<div class="section">
 <div class="title">Why Choose Us</div>
 <p>✔ Skilled Professionals</p>
 <p>✔ Affordable Pricing</p>
 <p>✔ On-Time Completion</p>
 <p>✔ Trusted Local Experts</p>
-</div><div class="section">
+</div>
+
+<!-- REVIEWS -->
+<div class="section">
 <div class="title">Customer Reviews</div>
-<div class="review">⭐⭐⭐⭐⭐ Excellent work – Rahman</div>
+<div class="review">⭐⭐⭐⭐⭐ Excellent ceiling work – Rahman</div>
 <div class="review">⭐⭐⭐⭐⭐ Professional team – Ali</div>
-</div><!-- CONTACT DETAILS --><div class="section">
-<div class="title">Contact Info</div>
-<p>📞 +91 8876410518</p>
-<p>📞 +91 6002414408</p>
-<p>📧 skyline.services27@gmail.com</p>
-<p>📍 Sonai Road, Silchar, Assam</p>
-<p>🕒 Mon–Sat: 9 AM – 7 PM</p>
-</div><!-- MAP --><div class="section">
-<div class="title">Location</div>
-<iframe src="https://www.google.com/maps?q=Silchar,Assam&output=embed" width="90%" height="200" style="border-radius:10px;"></iframe>
-</div><div class="section" id="contact">
+<div class="review">⭐⭐⭐⭐⭐ Best finishing – Das</div>
+<div class="review">⭐⭐⭐⭐⭐ Affordable service – Hussain</div>
+<div class="review">⭐⭐⭐⭐⭐ Quality work – Roy</div>
+<div class="review">⭐⭐⭐⭐⭐ Highly recommended – Ahmed</div>
+<div class="review">⭐⭐⭐⭐⭐ Clean finishing – Paul</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
 <div class="title">Get Free Quote</div>
-<input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Phone Number">
-<textarea placeholder="Your Requirement"></textarea>
+<input type="text" id="name" placeholder="Your Name">
+<input type="tel" id="phone" placeholder="Phone Number">
+<textarea id="msg" placeholder="Your Requirement"></textarea>
 <br>
 <button class="submit-btn" onclick="sendWhatsApp()">Send on WhatsApp</button>
-</div><footer>© 2026 Skyline Services</footer><a href="tel:+918876410518" class="float call-float">📞</a> <a href="https://wa.me/918876410518" class="float whatsapp-float">💬</a>
+</div>
+
+<footer>© 2026 Skyline Services</footer>
+
+<a href="tel:+918876410518" class="float call-float">📞</a>
+<a href="https://wa.me/918876410518" class="float whatsapp-float">💬</a>
 
 <script>
 function smartCall(){
-  window.location.href="tel:+918876410518";
-  setTimeout(function(){
-    if(confirm("Call not answered? Try alternate number?")){
-      window.location.href="tel:+916002414408";
-    }
-  },4000);
+window.location.href="tel:+918876410518";
+setTimeout(()=>{if(confirm("Call not answered? Try alternate number?")){window.location.href="tel:+916002414408";}},4000)
 }
 
 function sendWhatsApp(){
-  var name=document.querySelector('input[placeholder="Your Name"]').value;
-  var phone=document.querySelector('input[placeholder="Phone Number"]').value;
-  var msg=document.querySelector('textarea').value;
+let name=document.getElementById('name').value;
+let phone=document.getElementById('phone').value;
+let msg=document.getElementById('msg').value;
 
-  var url="https://wa.me/918876410518?text="
-  +"Name: "+encodeURIComponent(name)+"%0A"
-  +"Phone: "+encodeURIComponent(phone)+"%0A"
-  +"Requirement: "+encodeURIComponent(msg);
-
-  window.open(url,'_blank');
+if(!name||!phone){
+alert("Please fill name & phone");
+return;
 }
 
-// SCROLL ANIMATION
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.opacity=1;
-      entry.target.style.transform='translateY(0)';
-    }
-  });
-});
+let url="https://wa.me/918876410518?text="+encodeURIComponent("Name: "+name+"\nPhone: "+phone+"\nWork: "+msg);
+window.open(url,'_blank');
+}
+</script>
 
-document.querySelectorAll('.card, .section').forEach(el=>{
-  el.style.opacity=0;
-  el.style.transform='translateY(40px)';
-  el.style.transition='0.6s ease';
-  observer.observe(el);
-});
-
-</script></body>
+</body>
 </html>
