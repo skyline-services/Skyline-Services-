@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
+  <meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Skyline Services | Interior & Construction Experts</title>
+<!-- SEO -->
+<meta name="description" content="Skyline Services Assam - Interior, Painting, Electrical & Construction Experts.">
+<meta name="keywords" content="Interior Assam, Painting, Electrical Work, False Ceiling">
+<meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
+
+<title>Skyline Services Assam | Ultra Premium Interior Experts</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 html{scroll-behavior:smooth}
+
 body{
   margin:0;
   font-family:Poppins,sans-serif;
-  background:linear-gradient(135deg,#000,#1a1a1a,#2b2b2b);
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
   color:#fff;
 }
 
-/* CONTAINER */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:0 20px;
-}
+.container{max-width:1200px;margin:auto;padding:0 20px}
 
-/* TOP BAR */
 .topbar{
-  background:linear-gradient(90deg,red,orange);
+  background:linear-gradient(90deg,#ff512f,#dd2476);
   text-align:center;
   padding:6px;
   font-weight:bold;
@@ -35,8 +35,9 @@ body{
 
 /* HEADER */
 .header{
-  background:#000;
-  border-bottom:1px solid rgba(255,215,0,0.2);
+  background:rgba(0,0,0,0.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,215,0,0.3);
 }
 .header-inner{
   display:flex;
@@ -44,71 +45,61 @@ body{
   align-items:center;
   padding:15px 0;
 }
-
-.brand-wrap{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+.brand-wrap{display:flex;align-items:center;gap:12px}
 
 .logo{
-  width:70px;
+  width:65px;
   background:#fff;
-  padding:6px;
+  padding:5px;
   border-radius:12px;
 }
 
+.text-wrap{display:flex;flex-direction:column}
+
 .brand{
-  font-size:24px;
+  font-size:22px;
   font-weight:700;
   background:linear-gradient(45deg,#FFD700,#ffb300);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-.tagline{
-  font-size:14px;
-  color:#ddd;
-}
+.tagline{font-size:13px;color:#ddd}
 
+/* NAV */
 .nav a{
   color:#fff;
   margin-left:15px;
   text-decoration:none;
 }
+.nav a:hover{color:#FFD700}
 
 /* HERO */
 .hero{
-  padding:120px 20px;
+  padding:110px 20px;
   text-align:center;
+  animation:fadeIn 1.5s ease;
 }
-.hero h1{
-  font-size:42px;
-  max-width:800px;
-  margin:auto;
-}
-.hero p{
-  font-size:18px;
-  color:#ccc;
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
+/* BUTTON */
 .btn{
-  padding:16px 32px;
+  padding:15px 30px;
   border:none;
   border-radius:40px;
   margin:10px;
   cursor:pointer;
+  font-weight:bold;
 }
 .call{background:linear-gradient(45deg,#FFD700,#ffb300);color:black}
 .whatsapp{background:#25D366;color:white}
 
 /* SECTION */
-.section{
-  padding:80px 20px;
-}
-.section:nth-child(even){
-  background:rgba(255,255,255,0.02);
-}
+.section{padding:70px 20px}
+.section:nth-child(even){background:rgba(255,255,255,0.03)}
 
 .title{
   text-align:center;
@@ -123,21 +114,21 @@ body{
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:18px;
-  border:1px solid rgba(255,215,0,0.15);
+  background:rgba(255,255,255,0.07);
+  padding:15px;
+  border-radius:15px;
+  border:1px solid rgba(255,215,0,0.2);
   transition:.3s;
 }
 .card:hover{
   transform:translateY(-10px);
-  box-shadow:0 20px 40px rgba(255,215,0,0.25);
+  box-shadow:0 15px 40px rgba(255,215,0,0.3);
 }
 .card img{
   width:100%;
@@ -145,12 +136,10 @@ body{
   object-fit:cover;
   border-radius:10px;
 }
-.card b{color:#FFD700;display:block;margin-top:10px}
-.card p{color:#fff}
 
-/* REVIEWS */
+/* REVIEW */
 .review{
-  background:rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.1);
   padding:12px;
   border-radius:10px;
   margin:10px 0;
@@ -165,7 +154,7 @@ input,textarea{
   border:none;
 }
 .submit-btn{
-  background:#FFD700;
+  background:linear-gradient(45deg,#FFD700,#ffb300);
   padding:12px 30px;
   border:none;
   border-radius:30px;
@@ -186,10 +175,21 @@ iframe{
   padding:15px;
   border-radius:50%;
 }
-.call-float{bottom:80px;background:#FFD700;color:black}
-.whatsapp-float{bottom:20px;background:#25D366;color:white}
+.call-float{
+  bottom:80px;
+  background:#FFD700;
+}
+.whatsapp-float{
+  bottom:20px;
+  background:#25D366;
+}
 
-footer{text-align:center;padding:20px;background:#000}
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+}
 </style>
 </head>
 
@@ -199,36 +199,32 @@ footer{text-align:center;padding:20px;background:#000}
 
 <!-- HEADER -->
 <div class="header">
-  <div class="container header-inner">
-    <div class="brand-wrap">
-      <!DOCTYPE html>
-<html>
-<head>
-    <title>Skyline Services Logo</title>
-</head>
-<body>
-<img src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/bf1f2a726730543dc7f471aaca9a9b7848942fed/logo.png" alt="Skyline Services Logo" width="200">
-</body>
-</html>
-        <div class="brand">Welcome to Skyline Services</div>
-        <p>Your Dream Home, Our Responsibility.</p>
-      </div>
-    </div>
+<div class="container header-inner">
 
-    <div class="nav">
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+<div class="brand-wrap">
+<img class="logo" src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/bf1f2a726730543dc7f471aaca9a9b7848942fed/logo.png">
+
+<div class="text-wrap">
+<div class="brand">Welcome to Skyline Services 🏠</div>
+<div class="tagline">Your Dream Home, Our Responsibility.</div>
+</div>
+</div>
+
+<div class="nav">
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Interior & Construction Services in Assam</h1>
-  <p>Complete Home & Building Solutions Under One Roof.</p>
+<h1>Interior & Construction Services in Assam</h1>
+<p>Complete Home & Building Solutions Under One Roof.</p>
 
-  <button class="btn call" onclick="smartCall()">Call Now</button>
-  <button class="btn whatsapp" onclick="window.location.href='https://wa.me/918876410518'">WhatsApp</button>
+<button class="btn call" onclick="smartCall()">Call Now</button>
+<button class="btn whatsapp" onclick="window.location.href='https://wa.me/918876410518'">WhatsApp</button>
 </div>
 
 <!-- SERVICES -->
@@ -238,46 +234,21 @@ footer{text-align:center;padding:20px;background:#000}
 
 <div class="grid">
 
-<!-- False Ceiling -->
-<div class="card"><img src="YOUR_IMAGE_1"><b>False Ceiling</b><p>Modern ceiling designs.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>False Ceiling</b><p>Modern stylish ceiling designs.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>T-Ceiling</b><p>Office grid ceiling solutions.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>PVC Ceiling</b><p>Waterproof durable ceiling.</p></div>
 
-<!-- T-Ceiling -->
-<div class="card"><img src="YOUR_IMAGE_2"><b>T-Ceiling</b><p>Office grid ceiling.</p></div>
+<div class="card"><img src="https://drive.google.com/uc?export=view&id=1ZnrCDbGh23XChnbQKGEGDHP7sSOtk78u"><b>Painting</b><p>Premium smooth painting finish.</p></div>
 
-<!-- PVC Ceiling -->
-<div class="card"><img src="YOUR_IMAGE_3"><b>PVC Ceiling</b><p>Waterproof ceiling.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>Wall Putty</b><p>Perfect wall base finishing.</p></div>
 
-<!-- Interior & Exterior Painting -->
-<div class="card">
-<img src="https://drive.google.com/uc?export=view&id=1ZnrCDbGh23XChnbQKGEGDHP7sSOtk78u">
-<b>Interior & Exterior Painting</b>
-<p>Premium finish painting services.</p>
-</div>
+<div class="card"><img src="https://lh3.googleusercontent.com/d/1ionD5WdUdAsD9o-yGyPy4XICrOoSMYBN"><b>Electrical</b><p>Safe wiring & electrical solutions.</p></div>
 
-<!-- Wall Putty -->
-<div class="card"><img src="YOUR_IMAGE_5"><b>Wall Putty</b><p>Smooth finishing.</p></div>
-
-<!-- Electrical / House Wiring -->
-<div class="card">
-<img src="https://drive.google.com/uc?export=view&id=1ionD5WdUdAsD9o-yGyPy4XICrOoSMYBN">
-<b>Electrical</b>
-<p>House wiring & electrical work.</p>
-</div>
-
-<!-- Tile Work -->
-<div class="card"><img src="YOUR_IMAGE_7"><b>Tile Work</b><p>Floor & wall tiles.</p></div>
-
-<!-- Aluminium -->
-<div class="card"><img src="YOUR_IMAGE_8"><b>Aluminium</b><p>Doors & windows.</p></div>
-
-<!-- Wallpaper -->
-<div class="card"><img src="YOUR_IMAGE_9"><b>Wallpaper</b><p>Wall design.</p></div>
-
-<!-- Modular Kitchen -->
-<div class="card"><img src="YOUR_IMAGE_10"><b>Modular Kitchen</b><p>Kitchen setup.</p></div>
-
-<!-- Material Supply -->
-<div class="card"><img src="YOUR_IMAGE_11"><b>Material Supply</b><p>All materials.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>Tile Work</b><p>Floor & wall tile fitting.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>Aluminium</b><p>Doors & window solutions.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>Wallpaper</b><p>Modern wall decoration.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>Kitchen</b><p>Modular kitchen setup.</p></div>
+<div class="card"><img src="https://via.placeholder.com/400x300"><b>Material Supply</b><p>All building materials available.</p></div>
 
 </div>
 </div>
@@ -288,10 +259,10 @@ footer{text-align:center;padding:20px;background:#000}
 <div class="container">
 <div class="title">Why Choose Us</div>
 
-<p>✔ Experienced & Skilled Team</p>
-<p>✔ Premium Quality Materials</p>
-<p>✔ Affordable & Transparent Pricing</p>
-<p>✔ 100% Customer Satisfaction</p>
+<p>✔ Skilled Team</p>
+<p>✔ Premium Materials</p>
+<p>✔ Affordable Pricing</p>
+<p>✔ 100% Satisfaction</p>
 
 </div>
 </div>
@@ -302,7 +273,7 @@ footer{text-align:center;padding:20px;background:#000}
 <div class="title">Customer Reviews</div>
 
 <div class="review">⭐⭐⭐⭐⭐ Excellent work – Rahman</div>
-<div class="review">⭐⭐⭐⭐⭐ Professional team – Ali</div>
+<div class="review">⭐⭐⭐⭐⭐ Professional – Ali</div>
 <div class="review">⭐⭐⭐⭐⭐ Highly recommended – Das</div>
 <div class="review">⭐⭐⭐⭐⭐ Affordable service – Hussain</div>
 
@@ -338,7 +309,10 @@ footer{text-align:center;padding:20px;background:#000}
 <script>
 function smartCall(){
 window.location.href="tel:+918876410518";
-setTimeout(()=>{if(confirm("Call not answered? Try alternate number?")){window.location.href="tel:+916002414408";}},4000)
+setTimeout(()=>{
+if(confirm("Call not answered? Try alternate number?")){
+window.location.href="tel:+916002414408";
+}},4000)
 }
 
 function sendWhatsApp(){
@@ -351,7 +325,10 @@ alert("Please fill details");
 return;
 }
 
-let url="https://wa.me/918876410518?text="+encodeURIComponent("Name: "+name+"\nPhone: "+phone+"\nWork: "+msg);
+let url="https://wa.me/918876410518?text="+encodeURIComponent(
+"Name: "+name+"\nPhone: "+phone+"\nWork: "+msg
+);
+
 window.open(url,'_blank');
 }
 </script>
