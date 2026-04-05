@@ -7,168 +7,176 @@
 
 <title>Skyline Services | Interior & Construction Experts</title>
 
-<meta name="description" content="False Ceiling, T-Ceiling, PVC Ceiling, Painting, Wiring, Tiles & more in Assam. Free site visit available.">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Poppins,sans-serif;background:#0b1a3a;color:#f5f5f5}
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(135deg,#000,#1a1a1a,#2b2b2b);
+  color:#fff;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
 
 /* TOP BAR */
-.topbar{background:linear-gradient(90deg,red,orange);text-align:center;padding:6px;font-weight:bold}
+.topbar{
+  background:linear-gradient(90deg,red,orange);
+  text-align:center;
+  padding:6px;
+  font-weight:bold;
+}
 
 /* HEADER */
 .header{
+  background:#000;
+  border-bottom:1px solid rgba(255,215,0,0.2);
+}
+.header-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 20px;
-  background:#08122b;
-  position:sticky;
-  top:0;
-  z-index:1000;
+  padding:15px 0;
 }
 
-.brand-wrap{display:flex;align-items:center;gap:12px}
+.brand-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
 .logo{
-  width:55px;
-  background:white;
-  padding:5px;
-  border-radius:10px;
+  width:70px;
+  background:#fff;
+  padding:6px;
+  border-radius:12px;
 }
 
 .brand{
-  color:#FFD700;
+  font-size:24px;
   font-weight:700;
-  font-size:20px;
+  background:linear-gradient(45deg,#FFD700,#ffb300);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .tagline{
   font-size:14px;
-  color:#e0e0e0;
+  color:#ddd;
 }
 
 .nav a{
   color:#fff;
-  margin:0 8px;
+  margin-left:15px;
   text-decoration:none;
-  font-size:14px;
 }
 
 /* HERO */
 .hero{
+  padding:120px 20px;
   text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(135deg,#0b1a3a,#132c5c);
 }
-
 .hero h1{
-  text-shadow:0 0 15px rgba(255,215,0,0.5);
+  font-size:42px;
+  max-width:800px;
+  margin:auto;
+}
+.hero p{
+  font-size:18px;
+  color:#ccc;
 }
 
 .btn{
-  padding:14px 26px;
+  padding:16px 32px;
   border:none;
-  border-radius:30px;
+  border-radius:40px;
   margin:10px;
-  font-weight:600;
   cursor:pointer;
-  transition:.3s;
 }
-
-.btn:hover{transform:scale(1.05)}
-
-.call{background:#FFD700;color:black}
+.call{background:linear-gradient(45deg,#FFD700,#ffb300);color:black}
 .whatsapp{background:#25D366;color:white}
 
 /* SECTION */
-.section{padding:40px 20px;text-align:center}
+.section{
+  padding:80px 20px;
+}
+.section:nth-child(even){
+  background:rgba(255,255,255,0.02);
+}
 
 .title{
-  background:#FFD700;
+  text-align:center;
+  margin-bottom:30px;
+  background:linear-gradient(45deg,#FFD700,#ffb300);
   color:black;
-  padding:8px 20px;
-  border-radius:25px;
   display:inline-block;
-  margin-bottom:20px;
+  padding:10px 25px;
+  border-radius:30px;
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 
+/* CARD */
 .card{
-  background:rgba(255,255,255,0.12);
-  padding:12px;
-  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:18px;
+  border:1px solid rgba(255,215,0,0.15);
   transition:.3s;
 }
-
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 10px 25px rgba(255,215,0,0.4);
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(255,215,0,0.25);
 }
-
 .card img{
   width:100%;
-  height:160px;
+  height:180px;
   object-fit:cover;
   border-radius:10px;
 }
+.card b{color:#FFD700;display:block;margin-top:10px}
+.card p{color:#fff}
 
-.card b{
-  color:#FFD700;
-  display:block;
-  margin-top:8px;
-}
-
-/* LIGHTBOX */
-.lightbox{
-  display:none;
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
-}
-
-.lightbox img{
-  max-width:90%;
-  max-height:90%;
-  border-radius:10px;
-}
-
-.lightbox:target{display:flex}
-
-/* REVIEW */
+/* REVIEWS */
 .review{
-  background:rgba(255,255,255,0.1);
-  padding:10px;
-  margin:10px;
+  background:rgba(255,255,255,0.08);
+  padding:12px;
   border-radius:10px;
+  margin:10px 0;
 }
 
 /* FORM */
 input,textarea{
-  width:90%;
+  width:100%;
   padding:12px;
-  margin:6px;
+  margin:8px 0;
   border-radius:10px;
   border:none;
 }
-
 .submit-btn{
   background:#FFD700;
-  color:black;
-  padding:12px 25px;
+  padding:12px 30px;
   border:none;
-  border-radius:25px;
+  border-radius:30px;
+}
+
+/* MAP */
+iframe{
+  width:100%;
+  height:250px;
+  border-radius:12px;
+  border:none;
 }
 
 /* FLOAT */
@@ -178,31 +186,32 @@ input,textarea{
   padding:15px;
   border-radius:50%;
 }
-
 .call-float{bottom:80px;background:#FFD700;color:black}
 .whatsapp-float{bottom:20px;background:#25D366;color:white}
 
-footer{text-align:center;padding:15px;background:#000}
+footer{text-align:center;padding:20px;background:#000}
 </style>
 </head>
 
 <body>
 
-<div class="topbar">🔥 Free Site Visit Available – Limited Offer</div>
+<div class="topbar">🔥 Free Site Visit Available</div>
 
 <!-- HEADER -->
 <div class="header">
-  <div class="brand-wrap">
-    <img src="YOUR_LOGO_LINK" class="logo">
-    <div>
-      <div class="brand">Skyline Services</div>
-      <div class="tagline">Your Dream Home, Our Responsibility.</div>
+  <div class="container header-inner">
+    <div class="brand-wrap">
+      <img src="YOUR_LOGO_LINK" class="logo">
+      <div>
+        <div class="brand">Skyline Services</div>
+        <div class="tagline">Your Dream Home, Our Responsibility.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="nav">
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <div class="nav">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 </div>
 
@@ -217,57 +226,75 @@ footer{text-align:center;padding:15px;background:#000}
 
 <!-- SERVICES -->
 <div class="section" id="services">
-  <div class="title">Our Services</div>
+<div class="container">
+<div class="title">Our Services</div>
 
-  <div class="grid">
+<div class="grid">
 
-    <a href="#img1" class="card"><img src="YOUR_IMAGE_1"><b>False Ceiling</b><p>Modern gypsum & POP ceiling designs.</p></a>
-    <a href="#img2" class="card"><img src="YOUR_IMAGE_2"><b>T-Ceiling</b><p>Grid ceiling for offices & shops.</p></a>
-    <a href="#img3" class="card"><img src="YOUR_IMAGE_3"><b>PVC Ceiling</b><p>Waterproof & stylish ceiling panels.</p></a>
-    <a href="#img4" class="card"><img src="YOUR_IMAGE_4"><b>Painting</b><p>Interior & exterior finishing.</p></a>
-    <a href="#img5" class="card"><img src="YOUR_IMAGE_5"><b>Wall Putty</b><p>Smooth base coating.</p></a>
-    <a href="#img6" class="card"><img src="YOUR_IMAGE_6"><b>Electrical</b><p>Safe wiring & fittings.</p></a>
-    <a href="#img7" class="card"><img src="YOUR_IMAGE_7"><b>Tile Work</b><p>Floor & wall tiles.</p></a>
-    <a href="#img8" class="card"><img src="YOUR_IMAGE_8"><b>Aluminium</b><p>Doors & windows.</p></a>
-    <a href="#img9" class="card"><img src="YOUR_IMAGE_9"><b>Wallpaper</b><p>Modern wall decoration.</p></a>
-    <a href="#img10" class="card"><img src="YOUR_IMAGE_10"><b>Modular Kitchen</b><p>Complete setup.</p></a>
-    <a href="#img11" class="card"><img src="YOUR_IMAGE_11"><b>Material Supply</b><p>All construction materials.</p></a>
+<div class="card"><img src="YOUR_IMAGE_1"><b>False Ceiling</b><p>Modern ceiling designs.</p></div>
+<div class="card"><img src="YOUR_IMAGE_2"><b>T-Ceiling</b><p>Office grid ceiling.</p></div>
+<div class="card"><img src="YOUR_IMAGE_3"><b>PVC Ceiling</b><p>Waterproof ceiling.</p></div>
+<div class="card"><img src="YOUR_IMAGE_4"><b>Painting</b><p>Interior & exterior work.</p></div>
+<div class="card"><img src="YOUR_IMAGE_5"><b>Wall Putty</b><p>Smooth finishing.</p></div>
+<div class="card"><img src="YOUR_IMAGE_6"><b>Electrical</b><p>Safe wiring.</p></div>
+<div class="card"><img src="YOUR_IMAGE_7"><b>Tile Work</b><p>Floor & wall tiles.</p></div>
+<div class="card"><img src="YOUR_IMAGE_8"><b>Aluminium</b><p>Doors & windows.</p></div>
+<div class="card"><img src="YOUR_IMAGE_9"><b>Wallpaper</b><p>Wall design.</p></div>
+<div class="card"><img src="YOUR_IMAGE_10"><b>Modular Kitchen</b><p>Kitchen setup.</p></div>
+<div class="card"><img src="YOUR_IMAGE_11"><b>Material Supply</b><p>All materials.</p></div>
 
-  </div>
 </div>
-
-<!-- LIGHTBOX -->
-<div id="img1" class="lightbox"><a href="#"><img src="YOUR_IMAGE_1"></a></div>
-<div id="img2" class="lightbox"><a href="#"><img src="YOUR_IMAGE_2"></a></div>
+</div>
+</div>
 
 <!-- WHY -->
 <div class="section">
-  <div class="title">Why Choose Us</div>
-  <p>✔ Experienced & Skilled Team</p>
-  <p>✔ Premium Quality Materials</p>
-  <p>✔ Affordable & Transparent Pricing</p>
-  <p>✔ 100% Customer Satisfaction</p>
+<div class="container">
+<div class="title">Why Choose Us</div>
+
+<p>✔ Experienced & Skilled Team</p>
+<p>✔ Premium Quality Materials</p>
+<p>✔ Affordable & Transparent Pricing</p>
+<p>✔ 100% Customer Satisfaction</p>
+
+</div>
 </div>
 
 <!-- REVIEWS -->
 <div class="section">
-  <div class="title">Customer Reviews</div>
-  <div class="review">⭐⭐⭐⭐⭐ Excellent work – Rahman</div>
-  <div class="review">⭐⭐⭐⭐⭐ Professional team – Ali</div>
-  <div class="review">⭐⭐⭐⭐⭐ Highly recommended – Das</div>
+<div class="container">
+<div class="title">Customer Reviews</div>
+
+<div class="review">⭐⭐⭐⭐⭐ Excellent work – Rahman</div>
+<div class="review">⭐⭐⭐⭐⭐ Professional team – Ali</div>
+<div class="review">⭐⭐⭐⭐⭐ Highly recommended – Das</div>
+<div class="review">⭐⭐⭐⭐⭐ Affordable service – Hussain</div>
+
+</div>
+</div>
+
+<!-- MAP -->
+<div class="section">
+<div class="container">
+<div class="title">Our Location</div>
+<iframe src="https://www.google.com/maps?q=Silchar,Assam&output=embed"></iframe>
+</div>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-  <div class="title">Get Free Quote</div>
-  <input type="text" id="name" placeholder="Your Name">
-  <input type="tel" id="phone" placeholder="Phone Number">
-  <textarea id="msg" placeholder="Your Requirement"></textarea>
-  <br>
-  <button class="submit-btn" onclick="sendWhatsApp()">Send on WhatsApp</button>
+<div class="container">
+<div class="title">Get Free Quote</div>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="tel" id="phone" placeholder="Phone Number">
+<textarea id="msg" placeholder="Your Requirement"></textarea>
+
+<button class="submit-btn" onclick="sendWhatsApp()">Send on WhatsApp</button>
+</div>
 </div>
 
-<footer>© 2026 Skyline Services</footer>
+<footer>© Skyline Services</footer>
 
 <a href="tel:+918876410518" class="float call-float">📞</a>
 <a href="https://wa.me/918876410518" class="float whatsapp-float">💬</a>
@@ -284,7 +311,7 @@ let phone=document.getElementById('phone').value;
 let msg=document.getElementById('msg').value;
 
 if(!name||!phone){
-alert("Please fill name & phone");
+alert("Please fill details");
 return;
 }
 
