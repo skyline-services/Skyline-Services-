@@ -256,7 +256,6 @@ window.location.href="tel:+916002414408";
 }},4000)
 }
 
-<script>
 function sendWhatsApp(){
 
 let name = document.getElementById('name').value;
@@ -264,7 +263,6 @@ let phone = document.getElementById('phone').value;
 let service = document.getElementById('service').value;
 let msg = document.getElementById('msg').value;
 
-// Validation
 if(name=="" || phone=="" || service==""){
 alert("Please fill all required details");
 return;
@@ -288,7 +286,6 @@ let url = "https://wa.me/918876410518?text=" + text;
 window.open(url, '_blank');
 }
 </script>
-
 window.open(url,'_blank');
 }
 </script>
