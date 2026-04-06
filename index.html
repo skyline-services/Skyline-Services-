@@ -220,6 +220,23 @@ style="color:#FFD700;font-size:22px;">
 
 <input type="text" id="name" placeholder="Your Name">
 <input type="tel" id="phone" placeholder="Phone Number">
+
+<!-- ✅ YAHAN PASTE KIYA -->
+<select id="service">
+<option value="">Select Service</option>
+<option>False Ceiling</option>
+<option>T-Ceiling</option>
+<option>PVC Ceiling</option>
+<option>Painting</option>
+<option>Wall Putty</option>
+<option>House Wiring</option>
+<option>Tile Work</option>
+<option>Aluminium Work</option>
+<option>Wallpaper</option>
+<option>Modular Kitchen</option>
+<option>Material Supply</option>
+</select>
+
 <textarea id="msg" placeholder="Your Requirement"></textarea>
 
 <button class="submit-btn" onclick="sendWhatsApp()">Send on WhatsApp</button>
@@ -284,7 +301,6 @@ text += "%0APlease contact me at your earliest convenience. Thank you.";
 let url = "https://wa.me/918876410518?text=" + text;
 window.open(url, '_blank');
 }
-</script>
 </script>
 
 </body>
