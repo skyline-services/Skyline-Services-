@@ -16,6 +16,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+  .service-card{
+text-align:center;
+font-size:18px;
+font-weight:600;
+padding:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.service-card span{
+font-size:30px;
+display:block;
+margin-bottom:10px;
+}
+
+.service-card:hover{
+background:linear-gradient(45deg,#FFD700,#ffb300);
+color:black;
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(255,215,0,0.4);
+}
+
+.highlight{
+border:2px solid #FFD700;
+background:rgba(255,215,0,0.1);
+}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Poppins,sans-serif;background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff}
 .container{max-width:1200px;margin:auto;padding:0 20px}
