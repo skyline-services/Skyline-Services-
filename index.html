@@ -361,10 +361,15 @@ let name = document.getElementById('name').value;
 let phone = document.getElementById('phone').value;
 let service = document.getElementById('service').value;
 let msg = document.getElementById('msg').value;
-let location = document.getElementById('Assam').value;
+let location = document.getElementById('location').value;
   
-if(name=="" || phone=="" || service==""){
+if(name=="" || phone=="" || service=="" || location==""){
 alert("Please fill all required details");
+return;
+}
+
+if(phone.length < 10){
+alert("Enter valid phone number");
 return;
 }
 
