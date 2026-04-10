@@ -441,7 +441,7 @@ text += "📝 Details: " + msg + "\n";
 text += "\nPlease contact me at your earliest convenience. Thank you.";
 
 // Save lead
-let lead = {name, phone, service, location, budget, date, msg};
+let lead = {name, phone, service, location, msg};
 let leads = JSON.parse(localStorage.getItem("leads")) || [];
 leads.push(lead);
 localStorage.setItem("leads", JSON.stringify(leads));
