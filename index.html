@@ -29,7 +29,7 @@ text-align:center;
 font-size:18px;
 font-weight:600;
 padding:25px;
-cursor:pointer;
+cursor:default;
 transition:0.3s;
 }
 
@@ -113,6 +113,7 @@ footer{text-align:center;padding:20px;background:#000}
 <div class="hero">
 <h1>Interior & Construction Solutions in Assam</h1>
 <p>Complete Home & Building Solutions Under One Roof.</p>
+<p>📍 Based in Silchar | Serving All Assam</p>
 
 <!-- ✅ ONE LINE BUTTON -->
 <div style="margin-top:20px;display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
@@ -216,6 +217,7 @@ style="color:#FFD700;font-size:22px;">
 <div class="section">
 <div class="container">
 <div class="title">Why Choose Us</div>
+<p>✔ 50+ Projects Completed Across Assam</p>
 <p>✔ Experienced & Skilled Team</p>
 <p>✔ Premium Quality Materials</p>
 <p>✔ Affordable & Transparent Pricing</p>
@@ -237,10 +239,10 @@ style="color:#FFD700;font-size:22px;">
 <div class="container">
 <div class="title">Customer Reviews</div>
 
-<div class="review">⭐⭐⭐⭐⭐ Great ceiling work in Silchar – Rahman</div>
-<div class="review">⭐⭐⭐⭐⭐ Professional tile Work in Sonai – Ali</div>
-<div class="review">⭐⭐⭐⭐⭐ Highly recommended – Das</div>
-<div class="review">⭐⭐⭐⭐⭐ Affordable service – Hussain</div>
+<div class="review">⭐⭐⭐⭐⭐ False Ceiling Work in Silchar – Rahman</div>
+<div class="review">⭐⭐⭐⭐⭐ Tile Work in Assam – Ali</div>
+<div class="review">⭐⭐⭐⭐⭐ Interior Work in Hailakandi – Das</div>
+<div class="review">⭐⭐⭐⭐⭐ Construction Service in Assam – Hussain</div>
 
 </div>
 </div>
@@ -359,14 +361,15 @@ let name = document.getElementById('name').value;
 let phone = document.getElementById('phone').value;
 let service = document.getElementById('service').value;
 let msg = document.getElementById('msg').value;
-
+let location = document.getElementById('location').value;
+  
 if(name=="" || phone=="" || service==""){
 alert("Please fill all required details");
 return;
 }
 
 let text = "Hello Skyline Services,%0A%0A"
-"I found your website on Google.%0A"
++ "I found your website on Google.%0A"
 + "I want to enquire about your service.%0A%0A"
 + "Service: " + service + "%0A"
 + "Name: " + name + "%0A"
