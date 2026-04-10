@@ -410,15 +410,16 @@ let text = "Hello Skyline Services,%0A%0A"
 + "Phone: " + phone + "%0A"
 + "Location: " + location + "%0A";
 
-if(msg!=""){
-text += "Details: " + msg + "%0A";
-}
-
-text += "%0APlease contact me at your earliest convenience. Thank you.";
-
-let url = "https://wa.me/918876410518?text=" + encodeURIComponent(text);
-window.open(url, '_blank');
-}
-
-</body>
+if(msg!=""){  
+text += "Details: " + msg + "%0A";  
+}  
+  
+text += "%0APlease contact me at your earliest convenience. Thank you.";  
+  
+let url = "https://wa.me/918876410518?text=" + encodeURIComponent(text);  
+window.open(url, '_blank');  
+}  
+</script>  
+  
+</body>  
 </html>
