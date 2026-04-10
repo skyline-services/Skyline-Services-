@@ -356,11 +356,11 @@ window.location.href="tel:+916002414408";
 
 function sendWhatsApp(){
 
-let name = document.getElementById('name').value;
-let phone = document.getElementById('phone').value;
-let service = document.getElementById('service').value;
-let msg = document.getElementById('msg').value;
-let location = document.getElementById('location').value;
+let name = document.getElementById('name').value. trim();
+let phone = document.getElementById('phone').value. trim();
+let service = document.getElementById('service').value. trim();
+let msg = document.getElementById('msg').value. trim();
+let location = document.getElementById('location').value. trim();
   
 if(name=="" || phone=="" || service=="" || location==""){
 alert("Please fill all required details");
