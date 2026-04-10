@@ -8,8 +8,7 @@
 
 <!-- SEO -->
 <meta name="description" content="Skyline Services provides expert interior design, false ceiling, painting, electrical, tile work & construction services across Assam. Free site visit available. Call now!">
-<meta name="keywords" content="Interior Assam, Painting, Electrical Work, False Ceiling">
-
+<meta name="keywords" content="Interior Design Assam, False Ceiling Silchar, Painting Services Assam, Electrical Work Assam, Tile Work Assam, Construction Services Assam">
 <!-- SOCIAL PREVIEW (WhatsApp / Facebook) -->
 <meta property="og:title" content="Skyline Services Assam">
 <meta property="og:description" content="Interior & Construction Experts in Assam">
@@ -368,8 +367,8 @@ alert("Please fill all required details");
 return;
 }
 
-if(phone.length < 10){
-alert("Enter valid phone number");
+if(!/^[0-9]{10}$/.test(phone)){
+alert("Enter valid 10 digit phone number");
 return;
 }
 
@@ -379,7 +378,7 @@ let text = "Hello Skyline Services,%0A%0A"
 + "Service: " + service + "%0A"
 + "Name: " + name + "%0A"
 + "Phone: " + phone + "%0A"
-+ "Location: Assam%0A";
++ "Location: " + location + %0A";
 
 if(msg!=""){
 text += "Details: " + msg + "%0A";
@@ -387,7 +386,7 @@ text += "Details: " + msg + "%0A";
 
 text += "%0APlease contact me at your earliest convenience. Thank you.";
 
-let url = "https://wa.me/918876410518?text=" + text;
+let url = "https://wa.me/918876410518?text=" + encodeURIComponent(text);
 window.open(url, '_blank');
 }
 </script>
