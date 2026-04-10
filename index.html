@@ -409,7 +409,9 @@ let phone = document.getElementById('phone').value.trim();
 let service = document.getElementById('service').value.trim();
 let msg = document.getElementById('msg').value.trim();
 let location = document.getElementById('location').value.trim();
-  
+let budget = document.getElementById('budget')?.value || "Not specified";
+let date = document.getElementById('date')?.value || "Not specified";
+
 if(name=="" || phone=="" || service=="" || location==""){
 alert("Please fill all required details");
 return;
@@ -420,23 +422,38 @@ alert("Enter valid 10 digit phone number");
 return;
 }
 
-let text = "Hello Skyline Services,%0A%0A"
-+ "I found your Skyline Services website on Google and I'm interested in your services."
-+ "I want to enquire about your service.%0A%0A"
-+ "Service: " + service + "%0A"
-+ "Name: " + name + "%0A"
-+ "Phone: " + phone + "%0A"
-+ "Location: " + location + "%0A";
+let text = "Hello Skyline Services,\n\n"
++ "I found your Skyline Services website on Google and I'm interested in your services.\n"
++ "I want to enquire about your service.\n\n"
++ "🔧 Service: " + service + "\n"
++ "👤 Name: " + name + "\n"
++ "📞 Phone: " + phone + "\n"
++ "📍 Location: " + location + "\n"
++ "💰 Budget: " + budget + "\n"
++ "📅 Work Start Date: " + date + "\n";
 
 if(msg!=""){  
-text += "Details: " + msg + "%0A";  
+text += "📝 Details: " + msg + "\n";  
 }  
-  
-text += "%0APlease contact me at your earliest convenience. Thank you.";  
-  
-let url = "https://wa.me/918876410518?text=" + encodeURIComponent(text);  
-window.open(url, '_blank');  
-}  
+
+text += "\nPlease contact me at your earliest convenience. Thank you.";
+
+// Save lead
+let lead = {name, phone, service, location, budget, date, msg};
+let leads = JSON.parse(localStorage.getItem("leads")) || [];
+leads.push(lead);
+localStorage.setItem("leads", JSON.stringify(leads));
+
+// Open WhatsApp
+let url = "https://wa.me/918876410518?text=" + encodeURIComponent(text);
+window.open(url, '_blank');
+
+// Auto message
+setTimeout(()=>{
+alert("✅ Thank you! Our team will contact you soon.");
+},1500);
+
+  } 
 </script>  
   
 </body>  
