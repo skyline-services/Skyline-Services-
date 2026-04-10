@@ -415,8 +415,6 @@ let phone = document.getElementById('phone').value.trim();
 let service = document.getElementById('service').value.trim();
 let msg = document.getElementById('msg').value.trim();
 let location = document.getElementById('location').value.trim();
-let budget = document.getElementById('budget')?.value || "Not specified";
-let date = document.getElementById('date')?.value || "Not specified";
 
 if(name=="" || phone=="" || service=="" || location==""){
 alert("Please fill all required details");
@@ -435,8 +433,6 @@ let text = "Hello Skyline Services,\n\n"
 + "👤 Name: " + name + "\n"
 + "📞 Phone: " + phone + "\n"
 + "📍 Location: " + location + "\n"
-+ "💰 Budget: " + budget + "\n"
-+ "📅 Work Start Date: " + date + "\n";
 
 if(msg!=""){  
 text += "📝 Details: " + msg + "\n";  
