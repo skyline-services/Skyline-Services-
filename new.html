@@ -4,26 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Skyline Services</title>
+<title>Skyline Services | Interior & Construction</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#040404;color:#fff;overflow-x:hidden;}
-img{width:100%;display:block;}
+body{background:#050505;color:#fff;overflow-x:hidden;}
+a{text-decoration:none;color:inherit}
 
 :root{
 --gold:#d8a63a;
---border:rgba(255,215,0,.18);
+--dark:#0b0b0b;
+--border:rgba(255,215,0,.15);
 }
 
-/* TOPBAR */
+/* TOP */
 .topbar{
 background:linear-gradient(to right,#ad7f1a,#f2d178,#ad7f1a);
 color:#000;
@@ -35,109 +33,71 @@ font-size:12px;
 
 /* NAV */
 .navbar{
-position:sticky;
-top:0;
-z-index:999;
-background:#050505;
-border-bottom:1px solid rgba(255,215,0,.08);
+position:sticky;top:0;z-index:999;
+background:#000;
+border-bottom:1px solid var(--border);
 }
 
 .nav-wrap{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:16px 3%;
+padding:15px 3%;
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-}
+.logo{display:flex;gap:10px;align-items:center;}
+.logo img{width:60px;height:60px;object-fit:contain;}
+.logo h2{color:var(--gold);font-size:18px}
+.logo p{font-size:11px;color:#aaa}
 
-.logo img{
-width:65px;
-height:65px;
-object-fit:contain;
-}
+.nav-links{display:flex;gap:20px}
+.nav-links a{font-size:14px;font-weight:500;color:#ddd}
+.nav-links a:hover{color:var(--gold)}
 
-.logo-text h2{color:var(--gold);}
-.logo-text p{font-size:12px;color:#ccc;}
-
-.nav-links{
-display:flex;
-gap:25px;
-}
-
-.nav-links a{
-color:#fff;
-text-decoration:none;
-font-weight:600;
-font-size:14px;
-}
-
-.quote-btn{
+.btn{
 background:linear-gradient(to right,#b8860b,#f2d178);
-padding:10px 18px;
-border-radius:10px;
-color:#000;
+padding:10px 16px;
+border-radius:8px;
 font-weight:700;
-text-decoration:none;
+color:#000;
 }
 
 /* HERO */
-.hero-box{
+.hero{
 display:grid;
-grid-template-columns:1.1fr 1fr;
-background:#0b0b0b;
+grid-template-columns:1.2fr 1fr;
+margin:20px;
+background:#0a0a0a;
 border:1px solid var(--border);
 border-radius:20px;
 overflow:hidden;
-margin:20px;
 }
 
-.hero-left{
-padding:50px;
-}
+.hero-left{padding:50px}
+.hero-left h1{font-size:48px}
+.hero-left span{color:var(--gold)}
+.hero-left p{color:#bbb;margin:15px 0}
 
-.hero-left h1{
-font-size:54px;
-line-height:1.1;
-margin:15px 0;
-}
-
-.hero-left span{color:var(--gold);}
-
-.hero-left p{color:#ccc;line-height:1.7;margin-bottom:20px;}
-
-.hero-buttons a{
+.hero-btns a{
 display:inline-block;
 margin:5px;
-padding:12px 18px;
+padding:12px 16px;
 border-radius:10px;
-text-decoration:none;
 font-weight:600;
 }
 
-.call{background:linear-gradient(to right,#b8860b,#f2d178);color:#000;}
-.outline{border:1px solid var(--border);color:#fff;}
+.call{background:linear-gradient(to right,#b8860b,#f2d178);color:#000}
+.wh{border:1px solid var(--border);color:#fff}
 
-.hero-right img{height:100%;object-fit:cover;}
+.hero-right img{width:100%;height:100%;object-fit:cover}
 
-/* SECTION TITLE */
-.section{
-padding:40px 3%;
-}
+/* SECTION */
+.section{padding:50px 3%}
+.title{text-align:center;margin-bottom:20px}
+.title h2{font-size:30px}
+.title small{color:var(--gold)}
 
-.title{
-text-align:center;
-margin-bottom:25px;
-}
-
-.title h2{font-size:34px;}
-.title small{color:var(--gold);}
-
-/* SERVICES */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -145,16 +105,15 @@ gap:15px;
 }
 
 .card{
-background:#0b0b0b;
+background:#0a0a0a;
 border:1px solid var(--border);
-border-radius:15px;
+border-radius:12px;
 overflow:hidden;
 }
 
-.card img{height:150px;object-fit:cover;}
-
-.card h3{padding:10px;color:var(--gold);}
-.card p{padding:0 10px 15px;color:#ccc;font-size:13px;}
+.card img{height:150px;object-fit:cover}
+.card h3{padding:10px;color:var(--gold)}
+.card p{padding:0 10px 15px;color:#bbb;font-size:13px}
 
 /* FEATURES */
 .features{
@@ -164,14 +123,14 @@ gap:15px;
 }
 
 .feature{
-background:#0b0b0b;
+background:#0a0a0a;
 padding:20px;
-border-radius:15px;
-border:1px solid var(--border);
 text-align:center;
+border-radius:12px;
+border:1px solid var(--border);
 }
 
-.feature i{color:var(--gold);font-size:25px;margin-bottom:10px;}
+.feature i{color:var(--gold);font-size:22px;margin-bottom:10px}
 
 /* WHY */
 .why{
@@ -181,38 +140,13 @@ gap:15px;
 }
 
 .box{
-background:#0b0b0b;
+background:#0a0a0a;
 padding:20px;
-border-radius:15px;
 border:1px solid var(--border);
+border-radius:12px;
 }
 
-.box ul{list-style:none;}
-.box li{margin:10px 0;color:#ccc;}
-
-/* REVIEWS */
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
-
-.review{
-background:#0b0b0b;
-padding:15px;
-border-radius:15px;
-border:1px solid var(--border);
-}
-
-/* AREAS */
-.areas span{
-display:inline-block;
-margin:5px;
-padding:8px 12px;
-background:#111;
-border-radius:10px;
-border:1px solid var(--border);
-}
+.box li{margin:8px 0;color:#bbb}
 
 /* CONTACT */
 .contact{
@@ -222,16 +156,16 @@ gap:15px;
 }
 
 form{
-background:#0b0b0b;
+background:#0a0a0a;
 padding:20px;
-border-radius:15px;
+border-radius:12px;
 border:1px solid var(--border);
 }
 
 input,textarea,select{
 width:100%;
 padding:10px;
-margin:8px 0;
+margin:6px 0;
 background:#111;
 border:1px solid #333;
 color:#fff;
@@ -239,20 +173,20 @@ border-radius:8px;
 }
 
 button{
-background:linear-gradient(to right,#b8860b,#f2d178);
+width:100%;
 padding:12px;
 border:none;
-width:100%;
-border-radius:10px;
+border-radius:8px;
 font-weight:700;
+background:linear-gradient(to right,#b8860b,#f2d178);
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:30px;
+padding:25px;
 border-top:1px solid #222;
-margin-top:30px;
+color:#aaa;
 }
 
 /* WHATSAPP */
@@ -260,14 +194,13 @@ margin-top:30px;
 position:fixed;
 bottom:20px;
 right:20px;
+width:60px;height:60px;
 background:#25d366;
-width:60px;
-height:60px;
+border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:50%;
-font-size:30px;
+font-size:28px;
 color:#fff;
 }
 
@@ -284,34 +217,34 @@ color:#fff;
 
 <div class="logo">
 <img src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png">
-<div class="logo-text">
+<div>
 <h2>Skyline Services</h2>
 <p>Your Dream Home, Our Responsibility</p>
 </div>
 </div>
 
 <div class="nav-links">
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </div>
 
-<a class="quote-btn">Get Quote</a>
+<a class="btn" href="#contact">Get Quote</a>
 
 </div>
 </div>
 
 <!-- HERO -->
-<div class="hero-box">
+<div class="hero" id="home">
 
 <div class="hero-left">
 <h1>Best Interior & <span>Construction</span> Services</h1>
 <p>Complete home solutions: false ceiling, painting, modular kitchen, renovation & more.</p>
 
-<div class="hero-buttons">
-<a class="call">Call Now</a>
-<a class="outline">WhatsApp</a>
+<div class="hero-btns">
+<a class="call" href="tel:+916901217516">Call Now</a>
+<a class="wh" href="https://wa.me/916901217516">WhatsApp</a>
 </div>
 </div>
 
@@ -322,7 +255,7 @@ color:#fff;
 </div>
 
 <!-- SERVICES -->
-<div class="section">
+<div class="section" id="services">
 <div class="title">
 <small>OUR SERVICES</small>
 <h2>What We Provide</h2>
@@ -330,29 +263,10 @@ color:#fff;
 
 <div class="grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
-<h3>False Ceiling</h3>
-<p>Modern ceiling designs</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1556911220-bff31c812dba">
-<h3>Modular Kitchen</h3>
-<p>Luxury kitchen setup</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-<h3>Painting</h3>
-<p>Interior & exterior painting</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1558002038-1055907df827">
-<h3>Electrical Work</h3>
-<p>Safe wiring services</p>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6"><h3>False Ceiling</h3><p>Modern designs</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba"><h3>Modular Kitchen</h3><p>Luxury kitchen setup</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"><h3>Painting</h3><p>Interior & exterior</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1558002038-1055907df827"><h3>Electrical Work</h3><p>Safe wiring</p></div>
 
 </div>
 </div>
@@ -361,20 +275,9 @@ color:#fff;
 <div class="section">
 <div class="features">
 
-<div class="feature">
-<i class="fa fa-award"></i>
-<p>Premium Quality</p>
-</div>
-
-<div class="feature">
-<i class="fa fa-users"></i>
-<p>Expert Team</p>
-</div>
-
-<div class="feature">
-<i class="fa fa-clock"></i>
-<p>On Time Delivery</p>
-</div>
+<div class="feature"><i class="fa fa-award"></i><p>Premium Quality</p></div>
+<div class="feature"><i class="fa fa-users"></i><p>Expert Team</p></div>
+<div class="feature"><i class="fa fa-clock"></i><p>On Time Delivery</p></div>
 
 </div>
 </div>
@@ -385,37 +288,33 @@ color:#fff;
 <div class="box">
 <h2>Why Choose Us</h2>
 <ul>
-<li>✔ High Quality Work</li>
-<li>✔ Skilled Workers</li>
-<li>✔ Affordable Price</li>
-<li>✔ On Time Delivery</li>
-<li>✔ Customer Satisfaction</li>
+<li>✔ Skilled Professionals</li>
+<li>✔ Affordable Pricing</li>
+<li>✔ Premium Materials</li>
+<li>✔ On-Time Delivery</li>
+<li>✔ 100% Satisfaction</li>
 </ul>
 </div>
 
 <div class="box">
 <h2>Stats</h2>
-<p>100+ Projects</p>
-<p>100+ Happy Clients</p>
-<p>10+ Team Members</p>
+<p>✔ 100+ Projects</p>
+<p>✔ 100+ Happy Clients</p>
+<p>✔ 10+ Team Members</p>
 </div>
 
 </div>
 
-<!-- AREAS -->
-<div class="section">
-<div class="title"><h2>Service Areas</h2></div>
-<div class="areas">
-<span>Silchar</span>
-<span>Karimganj</span>
-<span>Hailakandi</span>
-<span>Sonai</span>
-<span>Dholai</span>
+<!-- ABOUT -->
+<div class="section" id="about">
+<div class="title"><h2>About Us</h2></div>
+<div class="box">
+Skyline Services is a professional interior & construction company providing complete home solutions in Assam with premium quality and modern design approach.
 </div>
 </div>
 
 <!-- CONTACT -->
-<div class="section contact">
+<div class="section contact" id="contact">
 
 <form>
 <h2>Contact Us</h2>
@@ -423,25 +322,30 @@ color:#fff;
 <input placeholder="Phone">
 <select>
 <option>Select Service</option>
+<option>Interior Design</option>
+<option>Construction</option>
+<option>Renovation</option>
 </select>
 <textarea placeholder="Message"></textarea>
-<button>Submit</button>
+<button>Send Message</button>
 </form>
 
 <div class="box">
-<h2>Book Free Visit</h2>
-<p>We will visit your site and give estimate</p>
+<h2>Contact Info</h2>
+<p>📞 +91 69012 17516</p>
+<p>📍 Silchar, Assam</p>
+<p>⏱ Instant Response</p>
 </div>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
-<p>© 2026 Skyline Services</p>
+© 2026 Skyline Services | All Rights Reserved
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+<a class="whatsapp" href="https://wa.me/916901217516">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
