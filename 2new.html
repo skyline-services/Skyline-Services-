@@ -1,343 +1,610 @@
-// PREMIUM SKYLINE SERVICES WEBSITE // Modern Luxury React + Tailwind Version // Tailwind CSS Required // npm install -D tailwindcss postcss autoprefixer // npx tailwindcss init -p // // Add inside index.css: // @tailwind base; // @tailwind components; // @tailwind utilities; // // Import index.css inside main.jsx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="N1CCSdfGSMAyWpgArepaA1a7-zXx5T8RSt3kZnLXoXw" />
 
-export default function SkylineServicesLandingPage() { const services = [ { title: 'False Ceiling', desc: 'Modern & stylish false ceiling designs with premium finish and lighting.', }, { title: 'T-Ceiling (2x2)', desc: 'Professional 2x2 grid ceiling solutions for offices and commercial spaces.', }, { title: 'PVC Ceiling & Panel Design', desc: 'Waterproof PVC ceiling and panel solutions with modern design.', }, { title: 'Interior & Exterior Painting', desc: 'Premium quality painting with smooth finish and durable protection.', }, { title: 'Wall Putty', desc: 'Smooth and strong wall base with professional wall putty services.', }, { title: 'House Wiring', desc: 'Safe and reliable electrical wiring solutions for homes.', }, { title: 'TV Unit / Panel & Wall', desc: 'Elegant TV panels and wall units for modern interiors.', }, { title: 'Bathroom Renovation', desc: 'Luxury bathroom renovation with premium fittings and tiles.', }, { title: 'Modular Kitchen', desc: 'Stylish modular kitchens with smart storage systems.', }, { title: 'Carpenter Service', desc: 'Expert woodwork and furniture services by skilled carpenters.', }, ];
+<title>Skyline Services | Interior & Construction Solutions in Silchar Assam</title>
 
-return ( <div className="bg-gradient-to-br from-black via-zinc-950 to-zinc-900 text-white min-h-screen font-sans overflow-hidden"> {/* Top Bar */} <div className="bg-gradient-to-r from-yellow-500 to-amber-600 text-black text-center py-3 text-sm font-bold tracking-wide shadow-lg"> Free Site Visit Available </div>
+<meta name="description" content="Skyline Services provides premium interior & construction services in Silchar Assam including false ceiling, modular kitchen, painting, electrical work, wallpaper, tile work and renovation.">
+<meta name="keywords" content="Interior Design Silchar, False Ceiling Assam, Construction Services Assam, Modular Kitchen Silchar">
+<meta name="robots" content="index, follow">
 
-{/* Navbar */}
-  <header className="border-b border-yellow-500/20 bg-black/80 backdrop-blur-xl sticky top-0 z-50">
-    <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
-      <div className="flex items-center gap-4">
-        <div>
-          <h1 className="text-4xl font-black tracking-[0.25em] bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
-            SKYLINE
-          </h1>
-          <p className="text-xs text-gray-300 tracking-wider">
-            INTERIOR & CONSTRUCTION SOLUTIONS
-          </p>
-        </div>
-        <div>
-          <h2 className="text-yellow-500 font-semibold text-lg">
-            Skyline Services
-          </h2>
-          <p className="text-sm text-gray-300">
-            Your Dream Home, Our Responsibility.
-          </p>
-        </div>
-      </div>
+<meta property="og:title" content="Skyline Services Assam">
+<meta property="og:description" content="Premium Interior & Construction Solutions in Assam">
+<meta property="og:image" content="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png">
+<meta property="og:type" content="website">
 
-      <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#" className="text-yellow-500 border-b border-yellow-500 pb-1">
-          Home
-        </a>
-        <a href="#services" className="hover:text-yellow-500">
-          Services
-        </a>
-        <a href="#projects" className="hover:text-yellow-500">
-          Projects
-        </a>
-        <a href="#about" className="hover:text-yellow-500">
-          About Us
-        </a>
-        <a href="#contact" className="hover:text-yellow-500">
-          Contact
-        </a>
-      </nav>
+<link rel="canonical" href="https://skyline-services.github.io/Skyline-Services-/">
 
-      <button className="bg-yellow-600 hover:bg-yellow-500 text-black font-semibold px-5 py-2 rounded-xl shadow-lg transition-all">
-        Get a Quote →
-      </button>
-    </div>
-  </header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  {/* Hero */}
-  <section className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center relative">
-    <div>
-      <p className="uppercase text-yellow-500 tracking-widest text-sm font-semibold mb-3">
-        Premium Interior & Construction Services
-      </p>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-      <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8">
-        Best Interior & Construction Solutions in
-        <span className="text-yellow-500"> Silchar, Assam</span>
-      </h1>
+html{
+scroll-behavior:smooth;
+}
 
-      <p className="text-gray-300 text-lg mb-8">
-        Complete Home & Building Solutions Under One Roof.
-      </p>
+body{
+font-family:'Poppins',sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-        {[
-          "50+ Projects Done",
-          "Trusted Service",
-          "All Assam Service",
-        ].map((item) => (
-          <div
-            key={item}
-            className="border border-yellow-500/20 rounded-3xl p-5 text-center bg-white/5 backdrop-blur-lg shadow-2xl hover:scale-105 transition-all duration-300"
-          >
-            <p className="text-yellow-500 font-bold text-lg">✓</p>
-            <p className="text-sm mt-2">{item}</p>
-          </div>
-        ))}
-      </div>
+.container{
+max-width:1300px;
+margin:auto;
+padding:0 20px;
+}
 
-      <div className="flex flex-wrap gap-4 mt-6">
-        <button className="bg-gradient-to-r from-yellow-400 to-amber-600 text-black px-8 py-4 rounded-2xl font-bold shadow-2xl hover:scale-105 transition-all duration-300">
-          Call Now
-        </button>
-        <button className="border border-yellow-500/30 bg-white/5 backdrop-blur-lg px-8 py-4 rounded-2xl hover:bg-yellow-500 hover:text-black transition-all duration-300">
-          WhatsApp
-        </button>
-        <button className="border border-yellow-500/30 bg-white/5 backdrop-blur-lg px-8 py-4 rounded-2xl hover:bg-yellow-500 hover:text-black transition-all duration-300">
-          Instagram
-        </button>
-        <button className="border border-yellow-500/30 bg-white/5 backdrop-blur-lg px-8 py-4 rounded-2xl hover:bg-yellow-500 hover:text-black transition-all duration-300">
-          Facebook
-        </button>
-      </div>
-    </div>
+.topbar{
+background:linear-gradient(90deg,#d4a63a,#FFD700,#b8860b);
+color:#000;
+text-align:center;
+padding:8px;
+font-weight:700;
+font-size:14px;
+}
 
-    <div>
-      <img
-        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop"
-        alt="Luxury Interior"
-        className="rounded-[2rem] border border-yellow-500/20 shadow-[0_20px_80px_rgba(255,215,0,0.15)] hover:scale-[1.02] transition-all duration-500"
-      />
-    </div>
-  </section>
+.header{
+background:#000;
+border-bottom:1px solid rgba(255,215,0,.2);
+position:sticky;
+top:0;
+z-index:999;
+}
 
-  {/* Services */}
-  <section id="services" className="max-w-7xl mx-auto px-6 py-14">
-    <div className="text-center mb-16">
-      <p className="uppercase text-yellow-500 tracking-widest text-sm">
-        Our Services
-      </p>
-      <h2 className="text-5xl font-black mt-4 bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
-        Complete Solutions for Every Space
-      </h2>
-    </div>
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 0;
+}
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className="bg-white/5 backdrop-blur-xl border border-yellow-500/20 rounded-[2rem] overflow-hidden hover:-translate-y-3 hover:scale-[1.02] transition-all duration-500 shadow-[0_10px_40px_rgba(255,215,0,0.08)] group"
-        >
-          <img
-            src={`https://picsum.photos/400/300?random=${index}`}
-            alt={service.title}
-            className="h-52 w-full object-cover group-hover:scale-110 transition-all duration-700"
-          />
+.brand-wrap{
+display:flex;
+align-items:center;
+gap:15px;
+}
 
-          <div className="p-6">
-            <h3 className="font-bold text-xl mb-3 text-yellow-400">
-              {service.title}
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              {service.desc}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
+.logo{
+width:110px;
+}
 
-  {/* Features */}
-  <section className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-4 gap-6">
-    {[
-      "Premium Quality",
-      "Expert Team",
-      "On-Time Delivery",
-      "After-Sales Support",
-    ].map((item) => (
-      <div
-        key={item}
-        className="border border-yellow-700 bg-zinc-900 rounded-2xl p-6 text-center"
-      >
-        <div className="text-yellow-500 text-4xl mb-4">★</div>
-        <h3 className="font-bold text-xl mb-2">{item}</h3>
-        <p className="text-gray-400 text-sm">
-          Professional solutions with trusted quality and modern execution.
-        </p>
-      </div>
-    ))}
-  </section>
+.brand{
+font-size:28px;
+font-weight:700;
+color:#FFD700;
+}
 
-  {/* Why Choose Us */}
-  <section className="max-w-7xl mx-auto px-6 py-14 grid lg:grid-cols-2 gap-10">
-    <div className="border border-yellow-700 rounded-3xl p-8 bg-zinc-900">
-      <h2 className="text-3xl font-bold text-yellow-500 mb-6">
-        Why Choose Us
-      </h2>
+.tagline{
+font-size:13px;
+color:#ccc;
+}
 
-      <ul className="space-y-4 text-gray-300">
-        <li>✔ 100% Quality Construction & Premium Designs</li>
-        <li>✔ Professional & Skilled Team</li>
-        <li>✔ Premium Quality Materials</li>
-        <li>✔ Affordable & Transparent Pricing</li>
-        <li>✔ On-Time Project Completion</li>
-        <li>✔ Customized Solutions</li>
-        <li>✔ 100% Customer Satisfaction</li>
-      </ul>
-    </div>
+.nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
 
-    <div className="grid grid-cols-3 gap-4">
-      {[
-        ["50+", "Projects Done"],
-        ["100+", "Happy Clients"],
-        ["10+", "Team Members"],
-      ].map(([num, label]) => (
-        <div
-          key={label}
-          className="border border-yellow-700 rounded-3xl p-8 text-center bg-zinc-900"
-        >
-          <h3 className="text-4xl font-extrabold text-yellow-500">
-            {num}
-          </h3>
-          <p className="text-gray-300 mt-2">{label}</p>
-        </div>
-      ))}
-    </div>
-  </section>
+.nav a:hover{
+color:#FFD700;
+}
 
-  {/* Reviews */}
-  <section className="max-w-7xl mx-auto px-6 py-14">
-    <h2 className="text-4xl font-bold text-center mb-10 text-yellow-500">
-      Client Reviews
-    </h2>
+.hero{
+position:relative;
+padding:120px 20px;
+background:
+linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.82)),
+url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop') center/cover;
+}
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {[
-        "Skyline Services transformed our home beautifully.",
-        "Excellent quality and finishing.",
-        "Best interior service in Silchar.",
-        "From design to delivery everything was perfect.",
-      ].map((review, index) => (
-        <div
-          key={index}
-          className="bg-zinc-900 border border-yellow-700 rounded-2xl p-6"
-        >
-          <div className="text-yellow-500 text-xl mb-3">★★★★★</div>
-          <p className="text-gray-300 text-sm leading-relaxed">
-            “{review}”
-          </p>
-        </div>
-      ))}
-    </div>
-  </section>
+.hero-content{
+max-width:700px;
+}
 
-  {/* Service Areas */}
-  <section className="max-w-7xl mx-auto px-6 py-14 grid lg:grid-cols-2 gap-10 items-center">
-    <div>
-      <h2 className="text-4xl font-bold text-yellow-500 mb-6">
-        Service Areas
-      </h2>
+.hero h1{
+font-size:65px;
+line-height:1.1;
+font-weight:800;
+margin:15px 0;
+}
 
-      <div className="grid grid-cols-2 gap-4">
-        {[
-          "Silchar",
-          "Sonai",
-          "Dholai",
-          "Karimganj",
-          "Hailakandi",
-          "Cachar",
-        ].map((area) => (
-          <div
-            key={area}
-            className="border border-yellow-700 rounded-xl p-4 bg-zinc-900"
-          >
-            📍 {area}
-          </div>
-        ))}
-      </div>
-    </div>
+.hero h1 span{
+color:#FFD700;
+}
 
-    <img
-      src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop"
-      alt="Map"
-      className="rounded-3xl border border-yellow-700"
-    />
-  </section>
+.hero p{
+font-size:18px;
+line-height:1.7;
+color:#ddd;
+}
 
-  {/* Contact */}
-  <section
-    id="contact"
-    className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10"
-  >
-    <div className="border border-yellow-700 bg-zinc-900 rounded-3xl p-8">
-      <h2 className="text-3xl font-bold text-yellow-500 mb-6">
-        Get Free Quote
-      </h2>
+.action-buttons{
+margin-top:30px;
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
 
-      <div className="grid grid-cols-2 gap-4 mb-4">
-        <input
-          placeholder="Your Name"
-          className="bg-black border border-yellow-700 rounded-xl p-4 outline-none"
-        />
-        <input
-          placeholder="Phone Number"
-          className="bg-black border border-yellow-700 rounded-xl p-4 outline-none"
-        />
-      </div>
+.action-btn{
+padding:14px 22px;
+background:linear-gradient(45deg,#FFD700,#ffb300);
+color:#000;
+text-decoration:none;
+border-radius:40px;
+font-weight:700;
+transition:.3s;
+border:none;
+cursor:pointer;
+}
 
-      <div className="grid grid-cols-2 gap-4 mb-4">
-        <input
-          placeholder="Email Address"
-          className="bg-black border border-yellow-700 rounded-xl p-4 outline-none"
-        />
-        <select className="bg-black border border-yellow-700 rounded-xl p-4 outline-none">
-          <option>Select Service</option>
-          {services.map((service, index) => (
-            <option key={index}>{service.title}</option>
-          ))}
-        </select>
-      </div>
+.action-btn:hover{
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(255,215,0,.4);
+}
 
-      <textarea
-        placeholder="Your Message"
-        rows={5}
-        className="w-full bg-black border border-yellow-700 rounded-xl p-4 outline-none mb-4"
-      />
+.section{
+padding:80px 20px;
+}
 
-      <button className="bg-yellow-600 text-black px-8 py-3 rounded-xl font-bold hover:bg-yellow-500">
-        Send Message
-      </button>
-    </div>
+.title{
+text-align:center;
+font-size:40px;
+font-weight:800;
+margin-bottom:50px;
+}
 
-    <div className="rounded-3xl overflow-hidden border border-yellow-700 relative">
-      <img
-        src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop"
-        alt="Visit"
-        className="w-full h-full object-cover opacity-40"
-      />
+.title::after{
+content:'';
+display:block;
+width:90px;
+height:4px;
+background:#FFD700;
+margin:15px auto;
+border-radius:20px;
+}
 
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8">
-        <h2 className="text-4xl font-bold text-yellow-500 mb-4">
-          Book Your Free Site Visit Today!
-        </h2>
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-        <p className="text-gray-300 max-w-md mb-6">
-          Our expert will visit your place, understand your requirements,
-          and give the best solution.
-        </p>
+.card{
+background:#0b0b0b;
+border:1px solid rgba(255,215,0,.2);
+border-radius:18px;
+padding:14px;
+transition:.4s;
+overflow:hidden;
+}
 
-        <div className="flex gap-4 flex-wrap justify-center">
-          <button className="bg-yellow-600 text-black px-6 py-3 rounded-xl font-bold">
-            Call Now
-          </button>
-          <button className="border border-yellow-500/30 bg-white/5 backdrop-blur-lg px-8 py-4 rounded-2xl hover:bg-yellow-500 hover:text-black transition-all duration-300">
-            Chat on WhatsApp
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(255,215,0,.25);
+border-color:#FFD700;
+}
 
-  {/* Footer */}
-  <footer className="border-t border-yellow-500/20 py-10 text-center text-gray-400 text-sm bg-black/60 backdrop-blur-xl mt-10">
-    © 2026 Skyline Services. All Rights Reserved.
-  </footer>
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:14px;
+margin-bottom:15px;
+}
+
+.card b{
+font-size:22px;
+color:#FFD700;
+display:block;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.7;
+color:#ccc;
+}
+
+.service-card{
+text-align:center;
+padding:30px 20px;
+}
+
+.service-card span{
+font-size:40px;
+display:block;
+margin-bottom:15px;
+}
+
+.highlight{
+border:2px solid #FFD700;
+}
+
+.review{
+background:#0b0b0b;
+border:1px solid rgba(255,215,0,.2);
+padding:20px;
+border-radius:14px;
+margin-bottom:20px;
+}
+
+input,textarea,select{
+width:100%;
+padding:14px;
+margin:10px 0;
+background:#111;
+color:#fff;
+border:1px solid rgba(255,215,0,.2);
+border-radius:12px;
+font-size:15px;
+}
+
+.submit-btn{
+background:linear-gradient(45deg,#FFD700,#ffb300);
+color:#000;
+padding:14px 35px;
+border:none;
+border-radius:40px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+margin-top:15px;
+}
+
+.submit-btn:hover{
+transform:scale(1.05);
+}
+
+iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:18px;
+}
+
+footer{
+background:#000;
+padding:30px 20px;
+text-align:center;
+border-top:1px solid rgba(255,215,0,.2);
+}
+
+footer a{
+color:#FFD700;
+font-size:22px;
+margin:0 10px;
+}
+
+.float{
+position:fixed;
+right:18px;
+width:58px;
+height:58px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+text-decoration:none;
+z-index:999;
+}
+
+.call-float{
+bottom:90px;
+background:#FFD700;
+color:#000;
+}
+
+.whatsapp-float{
+bottom:20px;
+background:#25D366;
+color:#fff;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:38px;
+}
+
+.header-inner{
+flex-direction:column;
+gap:15px;
+}
+
+.nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card img{
+height:180px;
+}
+
+.title{
+font-size:30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">🔥 Free Site Visit Available Across Assam</div>
+
+<div class="header">
+<div class="container header-inner">
+
+<div class="brand-wrap">
+<img class="logo" src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png">
+<div>
+<div class="brand">Skyline Services</div>
+<div class="tagline">Your Dream Home, Our Responsibility.</div>
+</div>
 </div>
 
-); }
+<div class="nav">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</div>
+
+<div class="hero">
+<div class="container hero-content">
+
+<p style="color:#FFD700;font-weight:600;">PREMIUM INTERIOR & CONSTRUCTION SERVICES</p>
+
+<h1>
+Best Interior & <span>Construction</span><br>
+Solutions in <span>Silchar, Assam</span>
+</h1>
+
+<p>
+Complete Home & Building Solutions Under One Roof.
+Serving Silchar, Sonai, Hailakandi, Karimganj & Across Assam.
+</p>
+
+<div style="margin-top:25px;display:flex;gap:15px;flex-wrap:wrap;">
+<span style="border:1px solid #FFD700;padding:10px 18px;border-radius:12px;">✔ 50+ Projects Done</span>
+<span style="border:1px solid #FFD700;padding:10px 18px;border-radius:12px;">✔ Trusted Service</span>
+<span style="border:1px solid #FFD700;padding:10px 18px;border-radius:12px;">✔ All Assam Service</span>
+</div>
+
+<div class="action-buttons">
+<button class="action-btn" onclick="smartCall()">📞 Call Now</button>
+<a href="https://wa.me/918876410518" class="action-btn">💬 WhatsApp</a>
+<a href="https://instagram.com/skyline__services" target="_blank" class="action-btn">Instagram</a>
+<a href="https://www.facebook.com/share/18R1zyZW5s/" target="_blank" class="action-btn">Facebook</a>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="services">
+<div class="container">
+<h2 class="title">Our Services</h2>
+
+<div class="grid">
+
+<div class="card"><img src="https://picsum.photos/500/300?1"><b>False Ceiling</b><p>Modern premium false ceiling designs with stylish lighting and elegant finish.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?2"><b>T-Ceiling (2x2)</b><p>Professional office and commercial T-grid ceiling solutions.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?3"><b>PVC Ceiling</b><p>Durable waterproof PVC panel and ceiling installation.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?4"><b>Interior Painting</b><p>Luxury interior painting with premium smooth finishing.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?5"><b>Exterior Painting</b><p>Weather resistant exterior painting with long lasting protection.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?6"><b>Wall Putty</b><p>Smooth and strong wall putty services for perfect wall finishing.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?7"><b>House Wiring</b><p>Safe and professional electrical wiring solutions.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?8"><b>Tile Work</b><p>Premium floor and wall tile installation with modern finish.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?9"><b>Wallpaper Installation</b><p>Stylish wallpaper designs for home and office interiors.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?10"><b>Modular Kitchen</b><p>Smart modern kitchen designs with premium storage solutions.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?11"><b>TV Cabinet Design</b><p>Luxury TV units and modern decorative wall panel designs.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?12"><b>Wardrobe Design</b><p>Modern wardrobe and storage solutions for stylish interiors.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?13"><b>Bathroom Renovation</b><p>Premium bathroom renovation and fitting solutions.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?14"><b>Aluminium Work</b><p>Strong aluminium doors and windows with elegant finish.</p></div>
+
+<div class="card"><img src="https://picsum.photos/500/300?15"><b>Custom Furniture</b><p>Premium custom furniture and carpenter decorative work.</p></div>
+
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="container">
+<h2 class="title">Why Choose Us</h2>
+
+<div class="grid">
+
+<div class="card service-card">
+<span>🏆</span>
+<b>Premium Quality</b>
+<p>Finest materials and latest techniques.</p>
+</div>
+
+<div class="card service-card">
+<span>👨‍🔧</span>
+<b>Expert Team</b>
+<p>Experienced professionals with creative solutions.</p>
+</div>
+
+<div class="card service-card">
+<span>⏰</span>
+<b>On-Time Delivery</b>
+<p>Projects completed on schedule.</p>
+</div>
+
+<div class="card service-card">
+<span>🤝</span>
+<b>After Sales Support</b>
+<p>Customer satisfaction is our priority.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="section" id="about">
+<div class="container">
+<h2 class="title">About Skyline Services</h2>
+
+<p style="max-width:900px;margin:auto;text-align:center;line-height:2;color:#ccc;font-size:17px;">
+Skyline Services provides premium interior and construction solutions across Assam. We specialize in false ceiling, modular kitchen, painting, electrical work, wallpaper installation, tile work, renovation and luxury interior design services with modern finishing and professional quality.
+</p>
+
+</div>
+</div>
+
+<div class="section" id="reviews">
+<div class="container">
+<h2 class="title">Customer Reviews</h2>
+
+<div class="review">⭐⭐⭐⭐⭐ Beautiful False Ceiling Work in Silchar – Rahman</div>
+<div class="review">⭐⭐⭐⭐⭐ Best Tile Work in Assam – Mohim Uddin</div>
+<div class="review">⭐⭐⭐⭐⭐ Luxury Interior Work in Hailakandi – Ruhit</div>
+<div class="review">⭐⭐⭐⭐⭐ Affordable Construction Service in Assam – Dr. Pinky Nath</div>
+
+</div>
+</div>
+
+<div class="section">
+<div class="container">
+<h2 class="title">Service Areas</h2>
+
+<div class="grid">
+<div class="card service-card"><span>📍</span><b>Silchar</b></div>
+<div class="card service-card"><span>📍</span><b>Sonai</b></div>
+<div class="card service-card"><span>📍</span><b>Hailakandi</b></div>
+<div class="card service-card"><span>📍</span><b>Karimganj</b></div>
+<div class="card service-card"><span>📍</span><b>Cachar</b></div>
+<div class="card service-card highlight"><span>🌍</span><b>Across Assam</b></div>
+</div>
+
+<div style="margin-top:40px;">
+<iframe src="https://www.google.com/maps?q=Skyline%20Services%20Sonai%20Road%20Silchar%20Assam&output=embed"></iframe>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="contact">
+<div class="container">
+<h2 class="title">Get Free Quote</h2>
+
+<p style="margin-bottom:20px;color:#FFD700;">
+📧 skyline.services27@gmail.com
+</p>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="tel" id="phone" placeholder="Phone Number">
+<input type="text" id="location" placeholder="Your Location">
+
+<select id="service">
+<option value="">Select Service</option>
+<option>False Ceiling</option>
+<option>T-Ceiling</option>
+<option>PVC Ceiling</option>
+<option>Interior Painting</option>
+<option>Exterior Painting</option>
+<option>Wall Putty</option>
+<option>House Wiring</option>
+<option>Tile Work</option>
+<option>Wallpaper Installation</option>
+<option>Modular Kitchen</option>
+<option>TV Cabinet</option>
+<option>Wardrobe Design</option>
+<option>Bathroom Renovation</option>
+<option>Aluminium Work</option>
+<option>Custom Furniture</option>
+</select>
+
+<textarea id="msg" placeholder="Your Requirement"></textarea>
+
+<button class="submit-btn" onclick="sendWhatsApp()">Send on WhatsApp</button>
+
+</div>
+</div>
+
+<footer>
+
+<p>© Skyline Services | Interior & Construction Solutions Assam</p>
+
+<div style="margin-top:15px;">
+<a href="https://instagram.com/skyline__services" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/share/18R1zyZW5s/" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+
+</footer>
+
+<a href="tel:+918876410518" class="float call-float">📞</a>
+<a href="https://wa.me/918876410518" class="float whatsapp-float">💬</a>
+
+<script>
+function smartCall(){
+window.location.href="tel:+918876410518";
+setTimeout(()=>{
+if(confirm("Call not answered? Try alternate number?")){
+window.location.href="tel:+916002414408";
+}
+},4000)
+}
+
+function sendWhatsApp(){
+
+let name=document.getElementById('name').value.trim();
+let phone=document.getElementById('phone').value.trim();
+let location=document.getElementById('location').value.trim();
+let service=document.getElementById('service').value.trim();
+let msg=document.getElementById('msg').value.trim();
+
+if(name=='' || phone=='' || location=='' || service==''){
+alert('Please fill all details');
+return;
+}
+
+if(!/^[0-9]{10}$/.test(phone)){
+alert('Enter valid 10 digit phone number');
+return;
+}
+
+let text="Hello Skyline Services,%0A%0A"
++"I want to enquire about your service.%0A%0A"
++"👤 Name: "+name+"%0A"
++"📞 Phone: "+phone+"%0A"
++"📍 Location: "+location+"%0A"
++"🔧 Service: "+service+"%0A"
++"📝 Details: "+msg;
+
+window.open("https://wa.me/918876410518?text="+text,'_blank');
+}
+</script>
+
+</body>
+</html>
