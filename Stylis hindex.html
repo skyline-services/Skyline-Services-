@@ -367,20 +367,69 @@ grid-template-columns:1fr;
 
 header{
 flex-direction:row;
-padding:15px;
+justify-content:center;
+padding:15px 10px;
+}
+
+.logo{
+width:65px;
+height:auto;
+display:block;
 }
 
 .logo-area{
 flex:1;
+justify-content:center;
+text-align:center;
+}
+
+.logo-area h2{
+font-size:24px;
+}
+
+.logo-area p{
+font-size:11px;
 }
 
 nav{
 display:none;
 }
 
+.hero{
+min-height:auto;
+}
+
+.hero-content{
+padding:40px 20px;
+}
+
 .hero-content h1{
 font-size:38px;
 line-height:1.2;
+}
+
+.hero-image img{
+height:auto;
+display:block;
+}
+
+.stats{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.stats div{
+width:100px;
+padding:15px;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-buttons button{
+padding:12px 18px;
+font-size:13px;
 }
 
 form{
