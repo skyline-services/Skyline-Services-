@@ -227,10 +227,24 @@ color:#d6a536;
 padding:80px 6%;
 }
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+..services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
+
+/* Tablet */
+@media(max-width:992px){
+    .services-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .services-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 .service-card{
