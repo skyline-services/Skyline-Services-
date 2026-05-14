@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Skyline Services | Premium Interior & Construction Solutions</title>
+<title>Skyline Services</title>
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
-
-/* =========================================================
-GLOBAL
-========================================================= */
 
 *{
 margin:0;
@@ -27,13 +21,11 @@ scroll-behavior:smooth;
 
 :root{
 --gold:#d4a437;
---gold2:#f2cb6b;
 --black:#050505;
 --dark:#0b0b0b;
---card:#0d0d0d;
---white:#ffffff;
+--card:#101010;
 --text:#d7d7d7;
---border:rgba(212,164,55,0.25);
+--border:rgba(212,164,55,.28);
 }
 
 body{
@@ -41,23 +33,7 @@ font-family:'Poppins',sans-serif;
 background:#050505;
 color:white;
 overflow-x:hidden;
-background-image:
-radial-gradient(circle at top left, rgba(212,164,55,.08), transparent 35%),
-radial-gradient(circle at bottom right, rgba(212,164,55,.05), transparent 30%);
 }
-
-/* SCROLLBAR */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:var(--gold);
-border-radius:50px;
-}
-
-/* CONTAINER */
 
 .container{
 width:100%;
@@ -66,11 +42,33 @@ margin:auto;
 padding:0 20px;
 }
 
-/* COMMON */
-
 section{
 padding:80px 0;
 position:relative;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+.card{
+background:linear-gradient(to bottom,#101010,#080808);
+border:1px solid var(--border);
+border-radius:22px;
+transition:.45s ease;
+overflow:hidden;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 35px rgba(212,164,55,.10);
+border-color:rgba(212,164,55,.65);
 }
 
 .section-head{
@@ -83,113 +81,38 @@ color:var(--gold);
 font-size:13px;
 font-weight:700;
 letter-spacing:1px;
-text-transform:uppercase;
 }
 
 .section-head h2{
 font-size:42px;
-line-height:1.2;
 margin-top:10px;
-font-weight:700;
+line-height:1.2;
 }
 
-.gold{
-color:var(--gold);
-}
-
-.card{
-background:linear-gradient(to bottom,#101010,#080808);
-border:1px solid var(--border);
-border-radius:22px;
-overflow:hidden;
-position:relative;
-transition:.45s ease;
-backdrop-filter:blur(12px);
-}
-
-.card::before{
-content:'';
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:linear-gradient(to right,transparent,rgba(255,255,255,.04),transparent);
-transition:.8s;
-}
-
-.card:hover::before{
-left:100%;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:rgba(212,164,55,.7);
-box-shadow:
-0 0 25px rgba(212,164,55,.12),
-0 0 80px rgba(212,164,55,.08);
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:15px 26px;
-background:linear-gradient(135deg,var(--gold),var(--gold2));
-color:black;
-font-weight:700;
-border-radius:14px;
-text-decoration:none;
-transition:.4s;
-border:none;
-cursor:pointer;
-}
-
-.btn:hover{
-transform:translateY(-4px);
-box-shadow:0 0 25px rgba(212,164,55,.35);
-}
-
-.btn-outline{
-background:#111;
-border:1px solid rgba(212,164,55,.4);
-color:white;
-}
-
-.btn-outline:hover{
-background:var(--gold);
-color:black;
-}
-
-/* =========================================================
-TOP BAR
-========================================================= */
+/* TOP BAR */
 
 .topbar{
-background:linear-gradient(to right,#b8860b,var(--gold),#b8860b);
+background:linear-gradient(to right,#c69218,#e5be60,#c69218);
+padding:8px;
+text-align:center;
 color:black;
 font-size:13px;
 font-weight:700;
-text-align:center;
-padding:7px;
 }
 
-/* =========================================================
-HEADER
-========================================================= */
+/* NAVBAR */
 
 header{
 position:sticky;
 top:0;
 z-index:999;
 background:rgba(5,5,5,.95);
-backdrop-filter:blur(14px);
+backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(255,255,255,.04);
 }
 
 .navbar{
-height:92px;
+height:90px;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -198,34 +121,32 @@ justify-content:space-between;
 .logo{
 display:flex;
 align-items:center;
-gap:15px;
+gap:14px;
 }
 
 .logo img{
-width:70px;
+width:62px;
 }
 
 .logo h2{
 font-size:24px;
-font-weight:700;
 color:var(--gold);
 line-height:1;
 }
 
 .logo p{
 font-size:12px;
-color:#d8d8d8;
-margin-top:4px;
+color:#cfcfcf;
+margin-top:5px;
 }
 
 .nav-links{
 display:flex;
-gap:38px;
+gap:34px;
 list-style:none;
 }
 
 .nav-links a{
-text-decoration:none;
 color:white;
 font-weight:500;
 position:relative;
@@ -236,7 +157,7 @@ transition:.3s;
 content:'';
 position:absolute;
 left:0;
-bottom:-10px;
+bottom:-8px;
 width:0%;
 height:2px;
 background:var(--gold);
@@ -251,25 +172,40 @@ color:var(--gold);
 width:100%;
 }
 
+.btn{
+padding:15px 26px;
+background:linear-gradient(135deg,#d4a437,#f0ca70);
+border-radius:14px;
+font-weight:700;
+color:black;
+display:inline-flex;
+align-items:center;
+gap:10px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(212,164,55,.35);
+}
+
 .menu-btn{
 display:none;
 font-size:28px;
 cursor:pointer;
 }
 
-/* =========================================================
-HERO
-========================================================= */
+/* HERO */
 
 .hero{
-padding-top:45px;
+padding-top:50px;
 padding-bottom:70px;
 }
 
 .hero-grid{
 display:grid;
 grid-template-columns:1.1fr 1fr;
-gap:38px;
+gap:35px;
 align-items:center;
 }
 
@@ -282,49 +218,48 @@ letter-spacing:1px;
 
 .hero-left h1{
 font-size:72px;
-line-height:1.02;
+line-height:1.03;
 margin:18px 0;
 font-weight:800;
 }
 
 .hero-left p{
-font-size:18px;
-color:#d0d0d0;
+font-size:17px;
 line-height:1.8;
+color:#cfcfcf;
 margin-bottom:28px;
 max-width:620px;
 }
 
-.stats-row{
+.stats{
 display:flex;
 gap:18px;
 flex-wrap:wrap;
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
-.stat-box{
-display:flex;
-align-items:center;
-gap:14px;
-padding:16px 18px;
-border-radius:18px;
+.stat{
 background:#0f0f0f;
 border:1px solid var(--border);
+padding:15px 18px;
+border-radius:16px;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-.stat-box i{
-font-size:22px;
+.stat i{
+font-size:20px;
 color:var(--gold);
 }
 
-.stat-box h4{
+.stat h4{
 font-size:18px;
 }
 
-.stat-box p{
+.stat p{
 font-size:13px;
-margin:0;
-color:#cfcfcf;
+margin-top:2px;
 }
 
 .hero-buttons{
@@ -333,39 +268,48 @@ flex-wrap:wrap;
 gap:14px;
 }
 
-.hero-right{
+.outline-btn{
+background:#111;
+color:white;
+border:1px solid rgba(212,164,55,.35);
+}
+
+.outline-btn:hover{
+background:var(--gold);
+color:black;
+}
+
+.hero-image{
 position:relative;
 }
 
-.hero-right img{
-width:100%;
+.hero-image img{
 height:680px;
+width:100%;
 object-fit:cover;
 border-radius:28px;
 border:1px solid rgba(212,164,55,.25);
 }
 
-.hero-right::before{
+.hero-image::before{
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.15));
 border-radius:28px;
+background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.08));
 }
 
-/* =========================================================
-SERVICES
-========================================================= */
+/* SERVICES */
 
 .services-grid{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:20px;
+gap:18px;
 }
 
 .service-card img{
-width:100%;
 height:170px;
+width:100%;
 object-fit:cover;
 }
 
@@ -377,36 +321,31 @@ padding:18px;
 width:52px;
 height:52px;
 border-radius:50%;
+background:#111;
+border:1px solid var(--gold);
 display:flex;
 align-items:center;
 justify-content:center;
-background:#111;
-border:1px solid var(--gold);
 color:var(--gold);
-margin-top:-45px;
+font-size:18px;
+margin-top:-44px;
 position:relative;
 margin-bottom:16px;
-font-size:18px;
 }
 
 .service-content h3{
-font-size:18px;
+font-size:17px;
 margin-bottom:10px;
+line-height:1.3;
 }
 
 .service-content p{
-font-size:14px;
-color:#cfcfcf;
+font-size:13px;
 line-height:1.7;
+color:#cfcfcf;
 }
 
-/* =========================================================
-FEATURE STRIP
-========================================================= */
-
-.features{
-padding-top:0;
-}
+/* FEATURES */
 
 .feature-grid{
 display:grid;
@@ -417,34 +356,32 @@ gap:18px;
 .feature-card{
 padding:28px;
 display:flex;
-gap:18px;
+gap:16px;
 align-items:flex-start;
 }
 
 .feature-card i{
-font-size:30px;
+font-size:28px;
 color:var(--gold);
 }
 
 .feature-card h4{
+font-size:18px;
 margin-bottom:8px;
-font-size:19px;
 }
 
 .feature-card p{
 font-size:14px;
-color:#d0d0d0;
 line-height:1.7;
+color:#d0d0d0;
 }
 
-/* =========================================================
-WHY CHOOSE
-========================================================= */
+/* WHY */
 
 .why-grid{
 display:grid;
-grid-template-columns:1.2fr .9fr;
-gap:25px;
+grid-template-columns:1.1fr .8fr;
+gap:22px;
 align-items:start;
 }
 
@@ -461,6 +398,7 @@ margin-top:20px;
 display:flex;
 gap:12px;
 margin-bottom:16px;
+line-height:1.7;
 color:#ddd;
 }
 
@@ -471,12 +409,11 @@ margin-top:4px;
 
 .counter-grid{
 display:grid;
-grid-template-columns:1fr;
 gap:18px;
 }
 
 .counter-card{
-padding:35px;
+padding:38px;
 text-align:center;
 }
 
@@ -486,14 +423,12 @@ color:var(--gold);
 margin-bottom:10px;
 }
 
-/* =========================================================
-REVIEWS
-========================================================= */
+/* REVIEWS */
 
 .review-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:18px;
 }
 
 .review-card{
@@ -502,13 +437,13 @@ padding:28px;
 
 .stars{
 color:var(--gold);
-margin-bottom:18px;
+margin-bottom:16px;
 }
 
 .review-card p{
-color:#d7d7d7;
 font-size:14px;
 line-height:1.8;
+color:#d7d7d7;
 }
 
 .review-card h4{
@@ -517,14 +452,12 @@ color:var(--gold);
 font-size:15px;
 }
 
-/* =========================================================
-SERVICE AREA
-========================================================= */
+/* AREA */
 
 .area-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:30px;
+gap:28px;
 align-items:center;
 }
 
@@ -551,21 +484,16 @@ color:black;
 }
 
 .map-box img{
-width:100%;
-height:100%;
-object-fit:cover;
 border-radius:22px;
 border:1px solid var(--border);
 }
 
-/* =========================================================
-PROJECTS
-========================================================= */
+/* PROJECTS */
 
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:22px;
+gap:20px;
 }
 
 .project-card{
@@ -574,7 +502,6 @@ overflow:hidden;
 }
 
 .project-card img{
-width:100%;
 height:320px;
 object-fit:cover;
 transition:.6s;
@@ -589,23 +516,20 @@ position:absolute;
 bottom:0;
 left:0;
 right:0;
-padding:25px;
-background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
+padding:24px;
+background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
 }
 
 .project-overlay h4{
-font-size:20px;
+font-size:19px;
 }
 
-/* =========================================================
-QUOTE
-========================================================= */
+/* QUOTE */
 
 .quote-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:28px;
-align-items:stretch;
+gap:24px;
 }
 
 .quote-form{
@@ -643,8 +567,7 @@ grid-column:span 2;
 .checkbox{
 display:flex;
 gap:10px;
-margin-top:10px;
-margin-bottom:22px;
+margin:15px 0 22px;
 font-size:14px;
 color:#ccc;
 }
@@ -655,7 +578,6 @@ overflow:hidden;
 }
 
 .quote-image img{
-width:100%;
 height:100%;
 object-fit:cover;
 }
@@ -663,7 +585,7 @@ object-fit:cover;
 .quote-overlay{
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.58);
+background:rgba(0,0,0,.6);
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -671,15 +593,15 @@ padding:50px;
 }
 
 .quote-overlay h3{
-font-size:44px;
+font-size:42px;
+margin-bottom:18px;
 line-height:1.2;
-margin-bottom:20px;
 }
 
 .quote-overlay p{
-color:#ddd;
 line-height:1.8;
-margin-bottom:26px;
+margin-bottom:25px;
+color:#ddd;
 }
 
 .quote-buttons{
@@ -688,14 +610,12 @@ gap:14px;
 flex-wrap:wrap;
 }
 
-/* =========================================================
-CONTACT
-========================================================= */
+/* CONTACT */
 
 .contact-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:18px;
 }
 
 .contact-card{
@@ -711,44 +631,40 @@ display:flex;
 align-items:center;
 justify-content:center;
 border:1px solid var(--gold);
-margin:auto;
-margin-bottom:18px;
+background:#111;
 font-size:24px;
 color:var(--gold);
-background:#111;
+margin:auto;
+margin-bottom:18px;
 }
 
 .contact-card h4{
 margin-bottom:10px;
 }
 
-/* =========================================================
-FOOTER
-========================================================= */
+/* FOOTER */
 
 footer{
 padding:50px 0 25px;
-border-top:1px solid rgba(255,255,255,.06);
-background:#050505;
+border-top:1px solid rgba(255,255,255,.05);
 }
 
 .footer-grid{
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:20px;
 flex-wrap:wrap;
+gap:20px;
 }
 
 .footer-links{
 display:flex;
-gap:24px;
+gap:22px;
 flex-wrap:wrap;
 }
 
 .footer-links a{
-color:#d7d7d7;
-text-decoration:none;
+color:#d0d0d0;
 }
 
 .socials{
@@ -763,7 +679,7 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-border:1px solid rgba(212,164,55,.3);
+border:1px solid rgba(212,164,55,.25);
 color:white;
 transition:.4s;
 }
@@ -773,7 +689,7 @@ background:var(--gold);
 color:black;
 }
 
-/* FLOATING */
+/* FLOAT */
 
 .float-whatsapp{
 position:fixed;
@@ -788,14 +704,11 @@ align-items:center;
 justify-content:center;
 font-size:30px;
 color:white;
-text-decoration:none;
 z-index:999;
-box-shadow:0 0 25px rgba(37,211,102,.4);
+box-shadow:0 0 25px rgba(37,211,102,.45);
 }
 
-/* =========================================================
-RESPONSIVE
-========================================================= */
+/* RESPONSIVE */
 
 @media(max-width:1200px){
 
@@ -812,29 +725,10 @@ grid-template-columns:repeat(2,1fr);
 @media(max-width:992px){
 
 .hero-grid,
-why-grid,
+.why-grid,
 .area-grid,
 .quote-grid{
 grid-template-columns:1fr;
-}
-
-.nav-links{
-position:absolute;
-top:92px;
-left:0;
-width:100%;
-background:#0b0b0b;
-flex-direction:column;
-padding:30px;
-display:none;
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.menu-btn{
-display:block;
 }
 
 .feature-grid{
@@ -847,6 +741,25 @@ grid-template-columns:repeat(2,1fr);
 
 .contact-grid{
 grid-template-columns:repeat(2,1fr);
+}
+
+.nav-links{
+position:absolute;
+top:90px;
+left:0;
+width:100%;
+background:#0b0b0b;
+padding:30px;
+flex-direction:column;
+display:none;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
 }
 
 .hero-left h1{
@@ -870,10 +783,10 @@ font-size:42px;
 }
 
 .services-grid,
+.feature-grid,
 .review-grid,
 .projects-grid,
-.contact-grid,
-.feature-grid{
+.contact-grid{
 grid-template-columns:1fr;
 }
 
@@ -889,7 +802,7 @@ grid-template-columns:1fr;
 grid-column:span 1;
 }
 
-.hero-right img{
+.hero-image img{
 height:430px;
 }
 
@@ -920,10 +833,9 @@ font-size:20px;
 
 <body>
 
-<!-- TOP BAR -->
+<!-- TOPBAR -->
 
 <div class="topbar">
-<i class="fa-solid fa-house"></i>
 Free Site Visit Available
 </div>
 
@@ -978,10 +890,10 @@ Get a Quote
 <span>PREMIUM INTERIOR & CONSTRUCTION SERVICES</span>
 
 <h1>
-Best Interior & 
-<span class="gold">Construction</span>
+Best Interior &
+<span style="color:#d4a437;">Construction</span>
 Solutions in
-<span class="gold">Silchar, Assam</span>
+<span style="color:#d4a437;">Silchar, Assam</span>
 </h1>
 
 <p>
@@ -989,9 +901,9 @@ Complete Home & Building Solutions Under One Roof.
 Modern Design • Quality Work • Professional Finish
 </p>
 
-<div class="stats-row">
+<div class="stats">
 
-<div class="stat-box">
+<div class="stat">
 <i class="fa-solid fa-award"></i>
 <div>
 <h4>50+</h4>
@@ -999,7 +911,7 @@ Modern Design • Quality Work • Professional Finish
 </div>
 </div>
 
-<div class="stat-box">
+<div class="stat">
 <i class="fa-solid fa-shield-halved"></i>
 <div>
 <h4>Trusted</h4>
@@ -1007,7 +919,7 @@ Modern Design • Quality Work • Professional Finish
 </div>
 </div>
 
-<div class="stat-box">
+<div class="stat">
 <i class="fa-solid fa-location-dot"></i>
 <div>
 <h4>All Assam</h4>
@@ -1019,22 +931,22 @@ Modern Design • Quality Work • Professional Finish
 
 <div class="hero-buttons">
 
-<a href="tel:+918876410518" class="btn-outline btn">
+<a href="tel:+918876410518" class="btn outline-btn">
 <i class="fa-solid fa-phone"></i>
 Call Now
 </a>
 
-<a href="https://wa.me/918876410518" class="btn-outline btn">
+<a href="https://wa.me/918876410518" class="btn outline-btn">
 <i class="fa-brands fa-whatsapp"></i>
 WhatsApp
 </a>
 
-<a href="#" class="btn-outline btn">
+<a href="#" class="btn outline-btn">
 <i class="fa-brands fa-instagram"></i>
 Instagram
 </a>
 
-<a href="#" class="btn-outline btn">
+<a href="#" class="btn outline-btn">
 <i class="fa-brands fa-facebook-f"></i>
 Facebook
 </a>
@@ -1043,9 +955,9 @@ Facebook
 
 </div>
 
-<div class="hero-right">
+<div class="hero-image">
 
-<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop" alt="">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop">
 
 </div>
 
@@ -1067,167 +979,152 @@ Facebook
 <div class="services-grid">
 
 <!-- 1 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
 <h3>False Ceiling</h3>
-<p>Modern stylish false ceiling designs with premium finish and perfect lighting.</p>
+<p>Modern false ceiling designs with premium finishing and lighting.</p>
 </div>
 </div>
 
 <!-- 2 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
 <h3>T-Ceiling (2x2)</h3>
-<p>Professional office ceiling solutions for shops and commercial spaces.</p>
+<p>Professional ceiling solutions for offices and commercial spaces.</p>
 </div>
 </div>
 
 <!-- 3 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
 <h3>PVC Ceiling & Panel Design</h3>
-<p>Durable waterproof PVC ceiling and panel solutions with modern look.</p>
+<p>Waterproof premium PVC ceiling and wall panel design solutions.</p>
 </div>
 </div>
 
 <!-- 4 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
 <h3>Interior & Exterior Painting</h3>
-<p>Premium quality painting with smooth finish and long-lasting protection.</p>
+<p>Luxury wall painting with smooth finishing and rich textures.</p>
 </div>
 </div>
 
 <!-- 5 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-trowel"></i></div>
 <h3>Wall Putty</h3>
-<p>Smooth and strong wall finishing with professional wall putty service.</p>
+<p>Professional wall putty for smooth and long-lasting surfaces.</p>
 </div>
 </div>
 
 <!-- 6 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
 <h3>House Wiring</h3>
-<p>Safe and reliable electrical house wiring with efficient planning.</p>
+<p>Safe and efficient house wiring installation by expert electricians.</p>
 </div>
 </div>
 
 <!-- 7 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-tv"></i></div>
 <h3>TV Unit / Panel & Wall</h3>
-<p>Elegant TV units and premium wall panel designs for luxury interiors.</p>
+<p>Luxury TV panel and decorative wall designs for modern homes.</p>
 </div>
 </div>
 
 <!-- 8 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-bath"></i></div>
 <h3>Bathroom Renovation</h3>
-<p>Modern stylish bathroom renovation with premium fittings and lighting.</p>
+<p>Modern bathroom renovation with premium fittings and lighting.</p>
 </div>
 </div>
 
 <!-- 9 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-kitchen-set"></i></div>
 <h3>Modular Kitchen</h3>
-<p>Luxury modular kitchens with smart storage and premium finishing.</p>
+<p>Premium modular kitchen solutions with modern smart storage.</p>
 </div>
 </div>
 
 <!-- 10 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
 <h3>Carpenter Service</h3>
-<p>Expert furniture and woodwork solutions with decorative designs.</p>
+<p>Expert furniture and woodwork service with luxury finishing.</p>
 </div>
 </div>
 
 <!-- 11 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1616594039964-4e4d1b5f31a4?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
 <h3>Bedroom & Livingroom Design</h3>
-<p>Modern luxury bedroom and living room design with premium concepts.</p>
+<p>Luxury bedroom and living room interior design solutions.</p>
 </div>
 </div>
 
 <!-- 12 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-door-open"></i></div>
 <h3>Aluminium Doors & Windows</h3>
-<p>Strong stylish aluminium doors and windows with modern finishing.</p>
+<p>Stylish aluminium doors and windows with premium durability.</p>
 </div>
 </div>
 
 <!-- 13 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-house"></i></div>
 <h3>Home Renovation</h3>
-<p>Complete home renovation and remodeling with premium construction.</p>
+<p>Complete home renovation and remodeling with modern concepts.</p>
 </div>
 </div>
 
 <!-- 14 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-image"></i></div>
 <h3>Wallpaper Installation</h3>
-<p>Luxury wallpaper installation with elegant textures and patterns.</p>
+<p>Elegant wallpaper installation with premium textures and styles.</p>
 </div>
 </div>
 
 <!-- 15 -->
-
 <div class="card service-card">
 <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-border-top-left"></i></div>
 <h3>Tiles Work</h3>
-<p>Premium floor and wall tile installation with modern finishing.</p>
+<p>Premium floor and wall tiles installation with perfect finishing.</p>
 </div>
 </div>
 
@@ -1236,399 +1133,13 @@ Facebook
 </div>
 
 </section>
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<div class="container">
-
-<div class="feature-grid">
-
-<div class="card feature-card">
-<i class="fa-solid fa-medal"></i>
-<div>
-<h4>Premium Quality</h4>
-<p>We use the finest materials and latest techniques for lasting results.</p>
-</div>
-</div>
-
-<div class="card feature-card">
-<i class="fa-solid fa-users"></i>
-<div>
-<h4>Expert Team</h4>
-<p>Our skilled professionals deliver creativity and excellence.</p>
-</div>
-</div>
-
-<div class="card feature-card">
-<i class="fa-solid fa-clock"></i>
-<div>
-<h4>On-Time Delivery</h4>
-<p>We ensure timely project completion with quality work.</p>
-</div>
-</div>
-
-<div class="card feature-card">
-<i class="fa-solid fa-headset"></i>
-<div>
-<h4>After-Sales Support</h4>
-<p>Our support continues even after project completion.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- WHY CHOOSE -->
-
-<section id="about">
-
-<div class="container why-grid">
-
-<div class="card why-box">
-
-<div class="section-head" style="text-align:left;margin-bottom:10px;">
-<span>WHY CHOOSE US</span>
-<h2>Premium Construction Excellence</h2>
-</div>
-
-<ul class="check-list">
-
-<li><i class="fa-solid fa-circle-check"></i>100% Quality Construction & Premium Designs</li>
-
-<li><i class="fa-solid fa-circle-check"></i>Professional & Skilled Team</li>
-
-<li><i class="fa-solid fa-circle-check"></i>Premium Quality Materials</li>
-
-<li><i class="fa-solid fa-circle-check"></i>Affordable & Transparent Pricing</li>
-
-<li><i class="fa-solid fa-circle-check"></i>On-Time Project Completion</li>
-
-<li><i class="fa-solid fa-circle-check"></i>Customized Solutions</li>
-
-<li><i class="fa-solid fa-circle-check"></i>100% Customer Satisfaction</li>
-
-</ul>
-
-</div>
-
-<div class="counter-grid">
-
-<div class="card counter-card">
-<h3>50+</h3>
-<p>Projects Done</p>
-</div>
-
-<div class="card counter-card">
-<h3>100+</h3>
-<p>Happy Clients</p>
-</div>
-
-<div class="card counter-card">
-<h3>10+</h3>
-<p>Team Members</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- REVIEWS -->
-
-<section>
-
-<div class="container">
-
-<div class="section-head">
-<span>CLIENT REVIEWS</span>
-<h2>Trusted by Happy Customers</h2>
-</div>
-
-<div class="review-grid">
-
-<div class="card review-card">
-<div class="stars">★★★★★</div>
-<p>Skyline Services transformed our home beautifully. Their work quality and finishing were outstanding.</p>
-<h4>Rakesh Das, Silchar</h4>
-</div>
-
-<div class="card review-card">
-<div class="stars">★★★★★</div>
-<p>Professional team with excellent communication and premium design quality.</p>
-<h4>Pooja Nath, Silchar</h4>
-</div>
-
-<div class="card review-card">
-<div class="stars">★★★★★</div>
-<p>Best interior and construction service in Silchar. Highly satisfied with the result.</p>
-<h4>Imran Ahmed, Silchar</h4>
-</div>
-
-<div class="card review-card">
-<div class="stars">★★★★★</div>
-<p>Everything from design to execution was smooth and professional.</p>
-<h4>Bipasha Roy, Silchar</h4>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- AREA -->
-
-<section>
-
-<div class="container area-grid">
-
-<div>
-
-<div class="section-head" style="text-align:left;">
-<span>SERVICE AREAS</span>
-<h2>Serving Across Assam</h2>
-</div>
-
-<div class="area-buttons">
-
-<button><i class="fa-solid fa-location-dot"></i> Silchar</button>
-<button><i class="fa-solid fa-location-dot"></i> Sonai</button>
-<button><i class="fa-solid fa-location-dot"></i> Dholai</button>
-<button><i class="fa-solid fa-location-dot"></i> Karimganj</button>
-<button><i class="fa-solid fa-location-dot"></i> Hailakandi</button>
-<button><i class="fa-solid fa-location-dot"></i> Cachar</button>
-<button style="grid-column:span 2;"><i class="fa-solid fa-location-dot"></i> Assam & Nearby Areas</button>
-
-</div>
-
-</div>
-
-<div class="map-box">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Assam_locator_map.svg">
-</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<div class="container">
-
-<div class="section-head">
-<span>OUR PROJECTS</span>
-<h2>Luxury Interior Showcase</h2>
-</div>
-
-<div class="projects-grid">
-
-<div class="card project-card">
-<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop">
-<div class="project-overlay">
-<h4>Luxury Living Room</h4>
-</div>
-</div>
-
-<div class="card project-card">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600&auto=format&fit=crop">
-<div class="project-overlay">
-<h4>Modern Kitchen Design</h4>
-</div>
-</div>
-
-<div class="card project-card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop">
-<div class="project-overlay">
-<h4>Premium Ceiling Design</h4>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- QUOTE -->
-
-<section id="quote">
-
-<div class="container quote-grid">
-
-<div class="card quote-form">
-
-<div class="section-head" style="text-align:left;">
-<span>GET FREE QUOTE</span>
-<h2>Book Your Site Visit</h2>
-</div>
-
-<form class="form-grid">
-
-<input type="text" placeholder="Your Name">
-<input type="text" placeholder="Phone Number">
-
-<input type="email" placeholder="Email Address">
-
-<select>
-<option>Select Service</option>
-<option>False Ceiling</option>
-<option>Modular Kitchen</option>
-<option>Painting</option>
-<option>Home Renovation</option>
-</select>
-
-<textarea class="full" placeholder="Your Message"></textarea>
-
-<div class="checkbox full">
-<input type="checkbox">
-<label>I’m happy to receive a Free Site Visit & Instant Response</label>
-</div>
-
-<button class="btn full">
-Send Message
-<i class="fa-solid fa-paper-plane"></i>
-</button>
-
-</form>
-
-</div>
-
-<div class="card quote-image">
-
-<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop">
-
-<div class="quote-overlay">
-
-<h3>Book Your Free Site Visit Today!</h3>
-
-<p>
-Our expert will visit your place, understand your requirements and give the best solution.
-</p>
-
-<div class="quote-buttons">
-
-<a href="tel:+918876410518" class="btn">
-<i class="fa-solid fa-phone"></i>
-Call Now
-</a>
-
-<a href="https://wa.me/918876410518" class="btn">
-<i class="fa-brands fa-whatsapp"></i>
-Chat on WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<div class="section-head">
-<span>CONTACT DETAILS</span>
-<h2>Reach Skyline Services</h2>
-</div>
-
-<div class="contact-grid">
-
-<div class="card contact-card">
-<i class="fa-solid fa-phone"></i>
-<h4>Phone Number</h4>
-<p>+91 8876410518</p>
-</div>
-
-<div class="card contact-card">
-<i class="fa-brands fa-whatsapp"></i>
-<h4>WhatsApp</h4>
-<p>+91 6002414408</p>
-</div>
-
-<div class="card contact-card">
-<i class="fa-solid fa-location-dot"></i>
-<h4>Address</h4>
-<p>Sonai Road, Silchar, Assam - 788119</p>
-</div>
-
-<div class="card contact-card">
-<i class="fa-solid fa-clock"></i>
-<h4>Working Hours</h4>
-<p>Mon - Sat : 9AM - 7PM</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container footer-grid">
-
-<div>
-<h2 class="gold">Skyline Services</h2>
-<p>Your Dream Home, Our Responsibility.</p>
-</div>
-
-<div class="footer-links">
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Projects</a>
-<a href="#">About Us</a>
-<a href="#">Contact</a>
-</div>
-
-<div class="socials">
-
-<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-
-<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-
-</div>
-
-</div>
-
-<div class="container" style="margin-top:25px;text-align:center;color:#999;">
-© 2026 Skyline Services. All Rights Reserved.
-</div>
-
-</footer>
-
-<!-- FLOATING WHATSAPP -->
-
-<a href="https://wa.me/918876410518" class="float-whatsapp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<!-- JS -->
 
 <script>
 
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
 
-menuBtn.onclick = () => {
+menuBtn.onclick=()=>{
 navLinks.classList.toggle('active');
 }
 
