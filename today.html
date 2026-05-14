@@ -1,0 +1,521 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyline Services | Luxury Interior & Construction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    ::-webkit-scrollbar{
+      width:8px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:linear-gradient(#ffcc70,#c89211);
+      border-radius:20px;
+    }
+
+    .gold-text{
+      background:linear-gradient(135deg,#ffe7a3,#d9a520,#fff0c4);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,215,0,0.18);
+    }
+
+    .gold-border{
+      border:1px solid rgba(255,200,70,0.35);
+    }
+
+    .glow:hover{
+      transform:translateY(-6px);
+      box-shadow:0 0 35px rgba(255,191,0,0.3);
+    }
+
+    .hero-bg{
+      background:
+      linear-gradient(to right, rgba(0,0,0,0.88), rgba(0,0,0,0.55)),
+      url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .service-card img{
+      height:170px;
+      width:100%;
+      object-fit:cover;
+    }
+
+    .btn-gold{
+      background:linear-gradient(135deg,#ffcc70,#c89211);
+      color:black;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn-gold:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 25px rgba(255,191,0,0.45);
+    }
+
+    .outline-btn{
+      border:1px solid rgba(255,191,0,0.5);
+      transition:0.3s;
+    }
+
+    .outline-btn:hover{
+      background:#d9a520;
+      color:black;
+    }
+
+    .section-title{
+      position:relative;
+      display:inline-block;
+      padding-bottom:10px;
+    }
+
+    .section-title::after{
+      content:'';
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:0;
+      width:80px;
+      height:3px;
+      background:linear-gradient(90deg,#ffcc70,#c89211);
+      border-radius:10px;
+    }
+
+    .map-bg{
+      background:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .floating-btn{
+      position:fixed;
+      right:18px;
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:999;
+      color:white;
+      font-size:24px;
+      box-shadow:0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .call-btn{
+      bottom:90px;
+      background:#d9a520;
+      color:black;
+    }
+
+    .whatsapp-btn{
+      bottom:22px;
+      background:#25D366;
+    }
+  </style></head>
+<body>  <!-- Top Bar -->  <div class="bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-700 text-black text-center py-2 text-sm font-semibold tracking-wide">
+    ✦ Free Site Visit Available Across Assam
+  </div>  <!-- Navbar -->  <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-yellow-700/20">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><div class="flex items-center gap-4">
+    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-400 to-yellow-700 flex items-center justify-center text-black font-bold text-xl">
+      S
+    </div>
+
+    <div>
+      <h1 class="text-2xl font-bold gold-text">Skyline Services</h1>
+      <p class="text-xs text-gray-400">Luxury Interior & Construction</p>
+    </div>
+  </div>
+
+  <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+    <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+    <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+    <a href="#projects" class="hover:text-yellow-400 transition">Projects</a>
+    <a href="#reviews" class="hover:text-yellow-400 transition">Reviews</a>
+    <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+  </nav>
+
+  <button class="btn-gold px-6 py-3 rounded-xl">
+    Get Quote →
+  </button>
+</div>
+
+  </header>  <!-- Hero -->  <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden"><div class="absolute w-[500px] h-[500px] bg-yellow-500/10 blur-[140px] rounded-full top-0 right-0"></div>
+
+<div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+
+  <div>
+    <p class="text-yellow-400 tracking-[4px] uppercase mb-5 text-sm font-semibold">
+      Premium Interior & Construction Services
+    </p>
+
+    <h2 class="text-5xl md:text-7xl leading-tight font-extrabold mb-6">
+      Best <span class="gold-text">Construction</span>
+      Solutions in
+      <span class="gold-text">Silchar, Assam</span>
+    </h2>
+
+    <p class="text-gray-300 text-lg leading-8 max-w-xl mb-8">
+      Complete home and building solutions under one roof with premium quality, modern luxury styling and professional execution.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-8">
+      <div class="glass rounded-2xl p-4 text-center">
+        <h3 class="text-2xl font-bold gold-text">50+</h3>
+        <p class="text-sm text-gray-400">Projects</p>
+      </div>
+
+      <div class="glass rounded-2xl p-4 text-center">
+        <h3 class="text-2xl font-bold gold-text">100+</h3>
+        <p class="text-sm text-gray-400">Clients</p>
+      </div>
+
+      <div class="glass rounded-2xl p-4 text-center">
+        <h3 class="text-2xl font-bold gold-text">10+</h3>
+        <p class="text-sm text-gray-400">Team</p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-4">
+      <button class="btn-gold px-7 py-4 rounded-xl">📞 Call Now</button>
+      <button class="outline-btn px-7 py-4 rounded-xl">WhatsApp</button>
+      <button class="outline-btn px-7 py-4 rounded-xl">Instagram</button>
+    </div>
+  </div>
+
+  <div class="relative hidden lg:block">
+    <div class="absolute inset-0 bg-yellow-500/10 blur-3xl rounded-full"></div>
+
+    <img
+      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+      class="rounded-[35px] border border-yellow-700/30 shadow-2xl relative z-10"
+      alt="Luxury Interior"
+    />
+  </div>
+</div>
+
+  </section>  <!-- Services -->  <section id="services" class="py-24 bg-[#070707]">
+    <div class="max-w-7xl mx-auto px-6"><div class="text-center mb-16">
+    <p class="text-yellow-500 tracking-[3px] uppercase mb-4">Our Services</p>
+    <h2 class="section-title text-5xl font-bold">
+      Complete Solutions For Every Space
+    </h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">False Ceiling</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Premium POP and luxury false ceiling designs with ambient lighting.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">PVC Ceiling</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Waterproof stylish PVC ceiling and wall panel systems.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">Interior Design</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Modern luxury interior styling with elegant execution.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">Modular Kitchen</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Smart modular kitchen with premium finish and storage.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">Painting</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Premium wall painting and texture finish solutions.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">Electrical Work</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Modern electrical and home wiring with safety assurance.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">Wallpaper</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Elegant wallpaper installation with luxury textures.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-card glass rounded-3xl overflow-hidden glow transition duration-500">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-3">Construction</h3>
+        <p class="text-gray-400 text-sm leading-7">
+          Full residential and commercial construction services.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </section>  <!-- Features -->  <section class="py-10 bg-black">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6"><div class="glass rounded-2xl p-6 text-center">
+    <div class="text-4xl mb-4">⭐</div>
+    <h3 class="font-semibold mb-2">Premium Quality</h3>
+    <p class="text-sm text-gray-400">Luxury materials with lasting durability.</p>
+  </div>
+
+  <div class="glass rounded-2xl p-6 text-center">
+    <div class="text-4xl mb-4">👨‍💼</div>
+    <h3 class="font-semibold mb-2">Expert Team</h3>
+    <p class="text-sm text-gray-400">Skilled professionals with modern execution.</p>
+  </div>
+
+  <div class="glass rounded-2xl p-6 text-center">
+    <div class="text-4xl mb-4">⏱️</div>
+    <h3 class="font-semibold mb-2">On-Time Delivery</h3>
+    <p class="text-sm text-gray-400">Project completion within deadline.</p>
+  </div>
+
+  <div class="glass rounded-2xl p-6 text-center">
+    <div class="text-4xl mb-4">🛠️</div>
+    <h3 class="font-semibold mb-2">Support</h3>
+    <p class="text-sm text-gray-400">Reliable customer and after-sales support.</p>
+  </div>
+
+</div>
+
+  </section>  <!-- Why Choose -->  <section id="projects" class="py-24 bg-[#060606]">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center"><div>
+    <p class="text-yellow-500 tracking-[3px] uppercase mb-4">Why Choose Us</p>
+
+    <h2 class="text-5xl font-bold leading-tight mb-8">
+      Luxury Construction With
+      <span class="gold-text">Modern Perfection</span>
+    </h2>
+
+    <div class="space-y-5 text-gray-300">
+      <div>✔ Professional & Skilled Team</div>
+      <div>✔ Affordable & Transparent Pricing</div>
+      <div>✔ Premium Luxury Materials</div>
+      <div>✔ Customized Design Solutions</div>
+      <div>✔ Complete Interior & Construction</div>
+      <div>✔ 100% Client Satisfaction</div>
+    </div>
+  </div>
+
+  <div class="glass rounded-[40px] p-10 relative overflow-hidden">
+
+    <div class="absolute -top-10 -right-10 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl"></div>
+
+    <div class="grid grid-cols-2 gap-6 relative z-10">
+
+      <div class="bg-black/40 rounded-3xl p-8 text-center gold-border">
+        <h3 class="text-5xl font-bold gold-text mb-3">150+</h3>
+        <p class="text-gray-400">Projects Done</p>
+      </div>
+
+      <div class="bg-black/40 rounded-3xl p-8 text-center gold-border">
+        <h3 class="text-5xl font-bold gold-text mb-3">100+</h3>
+        <p class="text-gray-400">Happy Clients</p>
+      </div>
+
+      <div class="bg-black/40 rounded-3xl p-8 text-center gold-border">
+        <h3 class="text-5xl font-bold gold-text mb-3">10+</h3>
+        <p class="text-gray-400">Team Members</p>
+      </div>
+
+      <div class="bg-black/40 rounded-3xl p-8 text-center gold-border">
+        <h3 class="text-5xl font-bold gold-text mb-3">24/7</h3>
+        <p class="text-gray-400">Support</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+  </section>  <!-- Reviews -->  <section id="reviews" class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6"><div class="text-center mb-16">
+    <p class="text-yellow-500 tracking-[3px] uppercase mb-4">Client Reviews</p>
+    <h2 class="section-title text-5xl font-bold">What Clients Say</h2>
+  </div>
+
+  <div class="grid lg:grid-cols-3 gap-8">
+
+    <div class="glass rounded-3xl p-8 glow transition duration-500">
+      <div class="text-yellow-400 text-xl mb-5">★★★★★</div>
+      <p class="text-gray-300 leading-8 mb-5">
+        Skyline Services transformed our home with a luxury modern finish. Amazing quality and professional work.
+      </p>
+      <h4 class="font-semibold gold-text">Rahul Das, Silchar</h4>
+    </div>
+
+    <div class="glass rounded-3xl p-8 glow transition duration-500">
+      <div class="text-yellow-400 text-xl mb-5">★★★★★</div>
+      <p class="text-gray-300 leading-8 mb-5">
+        Premium ceiling and modular kitchen design exceeded expectations. Highly recommended.
+      </p>
+      <h4 class="font-semibold gold-text">Pooja Nath, Assam</h4>
+    </div>
+
+    <div class="glass rounded-3xl p-8 glow transition duration-500">
+      <div class="text-yellow-400 text-xl mb-5">★★★★★</div>
+      <p class="text-gray-300 leading-8 mb-5">
+        Affordable pricing with luxury quality finish and timely project delivery.
+      </p>
+      <h4 class="font-semibold gold-text">Imran Ahmed, Hailakandi</h4>
+    </div>
+
+  </div>
+</div>
+
+  </section>  <!-- Service Areas -->  <section class="py-24 bg-[#050505]">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center"><div>
+    <p class="text-yellow-500 tracking-[3px] uppercase mb-4">Service Areas</p>
+
+    <h2 class="text-5xl font-bold mb-8">
+      We Serve Across
+      <span class="gold-text">Assam</span>
+    </h2>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="glass rounded-xl p-4">📍 Silchar</div>
+      <div class="glass rounded-xl p-4">📍 Sonai</div>
+      <div class="glass rounded-xl p-4">📍 Cachar</div>
+      <div class="glass rounded-xl p-4">📍 Karimganj</div>
+      <div class="glass rounded-xl p-4">📍 Hailakandi</div>
+      <div class="glass rounded-xl p-4">📍 Nearby Areas</div>
+    </div>
+  </div>
+
+  <div class="map-bg min-h-[420px] rounded-[40px] border border-yellow-700/30 overflow-hidden"></div>
+
+</div>
+
+  </section>  <!-- Contact -->  <section id="contact" class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6"><div class="glass rounded-[40px] overflow-hidden grid lg:grid-cols-2">
+
+    <div class="p-10 lg:p-14">
+      <p class="text-yellow-500 tracking-[3px] uppercase mb-4">Get Free Quote</p>
+
+      <h2 class="text-5xl font-bold leading-tight mb-6">
+        Book Your
+        <span class="gold-text">Dream Project</span>
+      </h2>
+
+      <p class="text-gray-400 leading-8 mb-10">
+        Fill the form and our expert team will contact you shortly for a free consultation.
+      </p>
+
+      <form class="space-y-5">
+        <input type="text" placeholder="Your Name"
+          class="w-full bg-black/40 border border-yellow-700/30 rounded-xl p-4 outline-none focus:border-yellow-500">
+
+        <input type="email" placeholder="Email Address"
+          class="w-full bg-black/40 border border-yellow-700/30 rounded-xl p-4 outline-none focus:border-yellow-500">
+
+        <input type="text" placeholder="Phone Number"
+          class="w-full bg-black/40 border border-yellow-700/30 rounded-xl p-4 outline-none focus:border-yellow-500">
+
+        <textarea rows="5" placeholder="Tell us about your project"
+          class="w-full bg-black/40 border border-yellow-700/30 rounded-xl p-4 outline-none focus:border-yellow-500"></textarea>
+
+        <button class="btn-gold px-8 py-4 rounded-xl">
+          Send Message →
+        </button>
+      </form>
+    </div>
+
+    <div class="hero-bg min-h-[650px] flex items-center justify-center p-10">
+      <div class="glass rounded-[35px] p-10 max-w-md text-center">
+        <h3 class="text-4xl font-bold mb-6">
+          Free Site Visit
+          <span class="gold-text">Available</span>
+        </h3>
+
+        <p class="text-gray-300 leading-8 mb-8">
+          Our experts will visit your site, understand requirements and provide modern luxury solutions.
+        </p>
+
+        <div class="space-y-4">
+          <button class="btn-gold w-full py-4 rounded-xl">📞 Call Now</button>
+          <button class="outline-btn w-full py-4 rounded-xl">WhatsApp Chat</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <!-- Footer -->  <footer class="border-t border-yellow-700/20 bg-[#030303] py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-6 justify-between items-center"><div>
+    <h3 class="text-2xl font-bold gold-text mb-2">Skyline Services</h3>
+    <p class="text-gray-500 text-sm">© 2026 All Rights Reserved</p>
+  </div>
+
+  <div class="flex gap-4 text-2xl">
+    <a class="glass w-12 h-12 rounded-full flex items-center justify-center hover:text-yellow-400 transition">📘</a>
+    <a class="glass w-12 h-12 rounded-full flex items-center justify-center hover:text-yellow-400 transition">📸</a>
+    <a class="glass w-12 h-12 rounded-full flex items-center justify-center hover:text-yellow-400 transition">💬</a>
+  </div>
+</div>
+
+  </footer>  <!-- Floating Buttons --><a href="#" class="floating-btn call-btn">📞</a> <a href="#" class="floating-btn whatsapp-btn">💬</a>
+
+</body>
+          </html>
