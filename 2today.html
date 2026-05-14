@@ -136,7 +136,26 @@ cursor:pointer;
 }
 
 .hero{
-padding:70px 0;
+position:relative;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.82)),
+url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+overflow:hidden;
+padding:120px 0;
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(212,175,55,.12), transparent 70%);
+pointer-events:none;
 }
 
 .hero-wrap{
