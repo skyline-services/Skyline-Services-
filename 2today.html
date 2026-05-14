@@ -233,25 +233,26 @@ font-weight:800;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
+display:grid !important;
+grid-template-columns:repeat(3, 1fr) !important;
 gap:24px;
-align-items:stretch;
+width:100%;
 }
 
 .card{
 min-height:620px;
+width:100%;
 }
 
 @media(max-width:992px){
 .grid{
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(3,1fr) !important;
 }
 }
 
 @media(max-width:768px){
 .grid{
-grid-template-columns:1fr;
+grid-template-columns:1fr !important;
 }
 }
 
