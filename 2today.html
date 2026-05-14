@@ -37,6 +37,7 @@ linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.92)),
 url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
+background-attachment:fixed;
 color:#fff;
 overflow-x:hidden;
 }
@@ -1107,4 +1108,420 @@ Complete Home & Building Solutions Under One Roof.
 </div>
 
 <div class="project-card">
-  
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+<div class="project-overlay"><h3>Modern Modular Kitchen</h3></div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<div class="project-overlay"><h3>Premium Ceiling Work</h3></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- QUOTE SECTION -->
+<section class="section" id="contact">
+<div class="container quote-wrap">
+
+<div class="quote-form">
+<h2>Get Free Quote</h2>
+
+<div class="form-grid">
+<input type="text" placeholder="Your Name">
+<input type="tel" placeholder="Phone Number">
+</div>
+
+<input type="email" placeholder="Email Address">
+
+<select>
+<option>Select Service</option>
+<option>False Ceiling</option>
+<option>Painting</option>
+<option>Modular Kitchen</option>
+<option>House Wiring</option>
+</select>
+
+<textarea placeholder="Message"></textarea>
+
+<label style="display:flex;gap:10px;margin-bottom:18px;">
+<input type="checkbox" style="width:auto;">
+<span>I'm happy to receive a Free Site Visit & Instant Response</span>
+</label>
+
+<button class="submit-btn">Send Message</button>
+</div>
+
+<div class="booking-card">
+<div class="booking-overlay">
+<h2>Book Your Free Site Visit Today!</h2>
+<p>Our expert will visit your place, understand your requirements and give the best solution.</p>
+
+<div class="action-buttons" style="justify-content:center;">
+<a href="tel:+918876410518" class="action-btn">📞 Call Now</a>
+<a href="https://wa.me/918876410518" class="action-btn">💬 Chat on WhatsApp</a>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+<div class="container">
+<div class="section-title-wrap">
+<small>CONTACT DETAILS</small>
+<h2 class="section-title">Get In Touch</h2>
+</div>
+
+<div class="contact-grid">
+<div class="contact-card">
+<i class="fas fa-phone"></i>
+<h3>Phone</h3>
+<p>+91 8876410518</p>
+</div>
+
+<div class="contact-card">
+<i class="fab fa-whatsapp"></i>
+<h3>WhatsApp</h3>
+<p>Instant Support</p>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<p>skyline.services27@gmail.com</p>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-location-dot"></i>
+<h3>Address</h3>
+<p>Sonai Road, Silchar</p>
+</div>
+
+<div class="contact-card">
+<i class="fas fa-clock"></i>
+<h3>Working Hours</h3>
+<p>9 AM - 8 PM</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container footer-wrap">
+
+<div>
+<h2 style="color:#d4a437;">Skyline Services</h2>
+<p>Your Dream Home, Our Responsibility.</p>
+</div>
+
+<div class="footer-links">
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="footer-socials">
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+</footer>
+
+<div class="sticky-mobile-bar">
+<a href="tel:+918876410518">📞 Call Now</a>
+<a href="https://wa.me/918876410518">💬 WhatsApp</a>
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/918876410518">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+
+/* ADVANCED PREMIUM EFFECTS */
+
+.preloader{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:99999;
+}
+
+.loader-ring{
+width:90px;
+height:90px;
+border-radius:50%;
+border:4px solid rgba(255,215,0,.15);
+border-top:4px solid #d4a437;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg)}
+}
+
+.mobile-menu-btn{
+display:none;
+font-size:26px;
+color:#fff;
+cursor:pointer;
+}
+
+.mobile-menu{
+position:fixed;
+top:0;
+right:-100%;
+width:280px;
+height:100vh;
+background:#050505;
+padding:100px 30px;
+z-index:9999;
+transition:.4s;
+border-left:1px solid rgba(255,215,0,.2);
+}
+
+.mobile-menu.active{
+right:0;
+}
+
+.mobile-menu a{
+display:block;
+margin:20px 0;
+color:#fff;
+text-decoration:none;
+font-size:18px;
+}
+
+.scroll-top{
+position:fixed;
+right:20px;
+bottom:95px;
+width:52px;
+height:52px;
+border-radius:50%;
+background:#d4a437;
+color:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+text-decoration:none;
+z-index:999;
+opacity:0;
+pointer-events:none;
+}
+
+.scroll-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(80px);
+transition:1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+.counter{
+font-size:54px;
+font-weight:700;
+color:#d4a437;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#d4a43722,transparent 70%);
+filter:blur(40px);
+top:-100px;
+left:-100px;
+z-index:-1;
+}
+
+.project-card::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(212,164,55,.15),transparent);
+opacity:0;
+}
+
+.project-card:hover::after{
+opacity:1;
+}
+
+.action-btn:active{
+transform:scale(.95);
+}
+
+@media(max-width:768px){
+.mobile-menu-btn{
+display:block;
+}
+
+.quote-btn,
+.nav{
+display:none;
+}
+
+.hero{
+padding-top:40px;
+}
+
+.hero-wrap{
+gap:24px;
+}
+
+.action-buttons{
+justify-content:center;
+}
+
+.card{
+min-height:auto;
+}
+
+.footer-wrap{
+text-align:center;
+justify-content:center;
+}
+}
+
+</style>
+
+<div class="preloader">
+<div class="loader-ring"></div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="#" class="scroll-top" id="scrollTop">
+<i class="fas fa-arrow-up"></i>
+</a>
+
+<script>
+
+const progressBar = document.getElementById('progressBar');
+
+window.addEventListener('scroll',()=>{
+const totalHeight = document.body.scrollHeight - window.innerHeight;
+const progress = (window.pageYOffset / totalHeight) * 100;
+progressBar.style.width = progress + '%';
+})
+
+const cursorGlow = document.getElementById('cursorGlow');
+
+window.addEventListener('mousemove',(e)=>{
+cursorGlow.style.left = e.clientX + 'px';
+cursorGlow.style.top = e.clientY + 'px';
+})
+
+const particles = document.getElementById('particles');
+
+for(let i=0;i<45;i++){
+const particle = document.createElement('div');
+particle.classList.add('particle');
+particle.style.left = Math.random()*100 + '%';
+particle.style.animationDuration = (8 + Math.random()*12) + 's';
+particle.style.animationDelay = Math.random()*5 + 's';
+particles.appendChild(particle);
+}
+
+window.addEventListener('load',()=>{
+setTimeout(()=>{
+document.querySelector('.preloader').style.opacity='0';
+document.querySelector('.preloader').style.visibility='hidden';
+},1200)
+})
+
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuBtn.onclick = ()=>{
+mobileMenu.classList.toggle('active');
+}
+
+const lazyImages = document.querySelectorAll('img');
+
+lazyImages.forEach(img=>{
+img.classList.add('lazy-img');
+img.onload = ()=>{
+img.classList.add('loaded');
+}
+})
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+const updateCounter = ()=>{
+const target = +counter.getAttribute('data-target');
+const current = +counter.innerText;
+const increment = target/80;
+
+if(current < target){
+counter.innerText = Math.ceil(current + increment);
+setTimeout(updateCounter,25);
+}else{
+counter.innerText = target + '+';
+}
+}
+updateCounter();
+})
+
+const sections = document.querySelectorAll('section, .card, .project-card, .review-card, .feature-box');
+
+window.addEventListener('scroll',()=>{
+
+const scrollTopBtn = document.getElementById('scrollTop');
+
+if(window.scrollY > 400){
+scrollTopBtn.classList.add('show');
+}else{
+scrollTopBtn.classList.remove('show');
+}
+
+const reveals = document.querySelectorAll('.reveal, section, .card, .project-card, .review-card, .feature-box');
+
+reveals.forEach(el=>{
+const winHeight = window.innerHeight;
+const top = el.getBoundingClientRect().top;
+
+if(top < winHeight - 100){
+el.classList.add('active');
+}
+})
+sections.forEach(sec=>{
+const top = window.scrollY;
+const offset = sec.offsetTop - 500;
+if(top > offset){
+sec.style.opacity='1';
+sec.style.transform='translateY(0px)';
+}
+})
+})
+
+</script>
+
+</body>
+</html>
