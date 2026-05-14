@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Skyline Services Ultra CRM</title>
+<title>Skyline Services CRM Pro</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -20,10 +20,10 @@ text-align:center;
 border-bottom:2px solid gold;
 }
 
-h1{color:gold;margin:0}
+h1{color:gold;margin:0;font-size:22px}
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 padding:20px;
 }
@@ -81,24 +81,17 @@ border-radius:8px;
 font-size:13px;
 }
 
-.services{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-top:10px;
-}
-
 .service-box{
 background:#0f0f0f;
-padding:10px;
-border-radius:8px;
+padding:8px;
+border-radius:6px;
+margin-top:5px;
 border:1px solid #333;
-font-size:13px;
+font-size:12px;
 }
 
 @media(max-width:768px){
 .grid{grid-template-columns:1fr}
-.services{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -107,7 +100,7 @@ font-size:13px;
 
 <header>
 <h1>Skyline Services CRM PRO</h1>
-<p class="small">Ultra SaaS CRM (Single File Edition)</p>
+<p class="small">All-in-One Booking + CRM System</p>
 </header>
 
 <div class="container">
@@ -128,53 +121,32 @@ font-size:13px;
 
 <!-- LEFT -->
 <div class="card">
-<h2>New Booking</h2>
+<h2>Create Booking</h2>
 
 <input id="name" placeholder="Customer Name">
 <input id="phone" placeholder="Phone">
 <input id="area" placeholder="Area">
 
-<select id="service">
-<option>False Ceiling</option>
-<option>T-Ceiling</option>
-<option>PVC Ceiling</option>
-<option>Painting</option>
-<option>Wall Putty</option>
-<option>House Wiring</option>
-<option>Modular Kitchen</option>
-<option>Tile Work</option>
-</select>
+<select id="service"></select>
 
-<button onclick="addLead()">Save Lead</button>
+<button onclick="addLead()">Save Booking</button>
 
 <hr>
 
 <h3>Skyline Services</h3>
-
-<div class="services">
-<div class="service-box">🏗 False Ceiling</div>
-<div class="service-box">🎨 Painting</div>
-<div class="service-box">⚡ House Wiring</div>
-<div class="service-box">🏠 Modular Kitchen</div>
-<div class="service-box">🧱 Tile Work</div>
-<div class="service-box">🧱 Wall Putty</div>
-</div>
+<div id="serviceList"></div>
 
 <hr>
 
 <h3>AI Assistant</h3>
-<button onclick="runAI()">Run AI Analysis</button>
-<div id="ai" class="ai">AI will analyze your business...</div>
-
-<hr>
-
-<button onclick="pay()">Upgrade to PRO (₹999)</button>
+<button onclick="runAI()">Analyze CRM</button>
+<div id="ai" class="ai">AI insights will appear here...</div>
 
 </div>
 
 <!-- RIGHT -->
 <div class="card">
-<h2>Leads</h2>
+<h2>All Leads</h2>
 <div id="leads"></div>
 </div>
 
@@ -184,14 +156,69 @@ font-size:13px;
 
 <script>
 
-/* DATA */
+const loginBox = document.getElementById("login");
+const dash = document.getElementById("dash");
+const leadsBox = document.getElementById("leads");
+
+const user = document.getElementById("user");
+const pass = document.getElementById("pass");
+const name = document.getElementById("name");
+const phone = document.getElementById("phone");
+const area = document.getElementById("area");
+const service = document.getElementById("service");
+
 let leads = JSON.parse(localStorage.getItem("leads")||"[]");
-let pro = localStorage.getItem("pro") || "NO";
+
+/* FULL SERVICES */
+const services = [
+"False Ceiling",
+"Gypsum Ceiling",
+"T-Ceiling",
+"PVC Ceiling",
+"POP Design",
+"Painting Interior",
+"Painting Exterior",
+"Wall Putty",
+"House Wiring",
+"Modular Kitchen",
+"Tile Work",
+"Floor Polishing",
+"Aluminium Doors & Windows",
+"Wallpaper Installation",
+"Glass Partition Work",
+"Carpentry Work",
+"Renovation Work",
+"Interior Design Consultation",
+"Wardrobe Design",
+"TV Cabinet Design",
+"Bedroom Interior Design",
+"Living Room Interior Design",
+"Full Home Renovation"
+];
+
+/* INIT SERVICES */
+function loadServices(){
+service.innerHTML="";
+document.getElementById("serviceList").innerHTML="";
+
+services.forEach(s=>{
+let opt=document.createElement("option");
+opt.textContent=s;
+service.appendChild(opt);
+
+let div=document.createElement("div");
+div.className="service-box";
+div.textContent=s;
+document.getElementById("serviceList").appendChild(div);
+});
+}
+
+loadServices();
 
 /* LOGIN */
 function login(){
-if(user.value=="admin" && pass.value=="1234"){
-login.style.display="none";
+if(user.value==="admin" && pass.value==="1234"){
+loginBox.style.display="none";
 dash.style.display="block";
 render();
 }else alert("Wrong login");
@@ -199,6 +226,11 @@ render();
 
 /* ADD LEAD */
 function addLead(){
+
+if(!name.value || !phone.value){
+alert("Fill required fields");
+return;
+}
 
 leads.push({
 id:Date.now(),
@@ -216,7 +248,6 @@ phone.value="";
 area.value="";
 
 render();
-
 }
 
 /* RENDER */
@@ -246,7 +277,6 @@ Status: <span class="status">${l.status}</span>
 });
 
 leadsBox.innerHTML=html;
-
 }
 
 /* STATUS */
@@ -266,32 +296,19 @@ localStorage.setItem("leads",JSON.stringify(leads));
 render();
 }
 
-/* AI ENGINE */
+/* AI */
 function runAI(){
 
 let total=leads.length;
 let done=leads.filter(l=>l.status=="Completed").length;
-
-let score = total?Math.round((done/total)*100):0;
+let score= total?Math.round((done/total)*100):0;
 
 document.getElementById("ai").innerHTML=`
 📊 Total Leads: ${total}<br>
 ✅ Completed: ${done}<br>
-📈 Success Rate: ${score}%<br><br>
-
-💡 Suggestion: ${score<50?
-"Improve follow-up + WhatsApp response":
-"Good performance"}
+📈 Conversion: ${score}%<br><br>
+💡 ${score<50?"Improve follow-up system":"Good performance"}
 `;
-
-}
-
-/* PAYMENT (Stripe redirect ready) */
-function pay(){
-alert("Redirecting to payment gateway...");
-window.open("https://buy.stripe.com/test_payment_link");
-pro="YES";
-localStorage.setItem("pro",pro);
 }
 
 render();
