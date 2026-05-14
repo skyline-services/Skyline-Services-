@@ -2,152 +2,113 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Skyline Services CRM Pro</title>
+<title>Skyline Services - Website + CRM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:#0a0a0a;
-color:#fff;
-}
-
-header{
-background:#111;
-padding:15px;
-text-align:center;
-border-bottom:2px solid gold;
-}
-
+body{margin:0;font-family:Arial;background:#0a0a0a;color:#fff}
+header{padding:15px;text-align:center;background:#111;border-bottom:2px solid gold}
 h1{color:gold;margin:0;font-size:22px}
+.container{max-width:1100px;margin:auto;padding:20px}
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+.card{background:#111;padding:20px;border-radius:10px;border:1px solid #333}
+
+input,select,button{
+width:100%;padding:10px;margin-top:10px;border-radius:6px;
+background:#000;color:#fff;border:1px solid #444;
 }
 
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
+button{background:gold;color:#000;font-weight:bold;cursor:pointer}
 
-.card{
-background:#111;
-padding:20px;
-border-radius:12px;
-border:1px solid #333;
-}
-
-input,select,textarea{
-width:100%;
-padding:10px;
-margin-top:10px;
-background:#000;
-color:#fff;
-border:1px solid #444;
-border-radius:6px;
-}
-
-button{
-width:100%;
-padding:12px;
-margin-top:10px;
-background:gold;
-border:none;
-font-weight:bold;
-cursor:pointer;
-border-radius:6px;
-}
-
-.lead{
-border:1px solid #333;
-padding:10px;
-margin-top:10px;
-border-radius:8px;
-}
+.lead{border:1px solid #333;padding:10px;margin-top:10px;border-radius:8px}
 
 .status{color:gold}
 
 .small{font-size:12px;color:#aaa}
 
-.ai{
-background:#1a1a1a;
-padding:10px;
-margin-top:10px;
-border-radius:8px;
-font-size:13px;
-}
+.service-box{padding:6px;border:1px solid #333;margin-top:5px;border-radius:5px;font-size:12px}
 
-.service-box{
-background:#0f0f0f;
-padding:8px;
-border-radius:6px;
-margin-top:5px;
-border:1px solid #333;
-font-size:12px;
-}
+nav{display:flex;gap:10px;justify-content:center;margin-top:10px}
+nav button{width:auto;padding:8px 14px}
+.hidden{display:none}
 
-@media(max-width:768px){
-.grid{grid-template-columns:1fr}
-}
+@media(max-width:768px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Skyline Services CRM PRO</h1>
-<p class="small">All-in-One Booking + CRM System</p>
+<h1>Skyline Services</h1>
+<p class="small">Website + CRM Integrated System</p>
+
+<nav>
+<button onclick="showPage('home')">Website</button>
+<button onclick="showPage('admin')">Admin CRM</button>
+</nav>
 </header>
 
 <div class="container">
 
-<!-- LOGIN -->
-<div id="login" class="card">
+<!-- WEBSITE PAGE -->
+<div id="home">
+
+<div class="card">
+<h2>Book Free Site Visit</h2>
+
+<input id="wname" placeholder="Your Name">
+<input id="wphone" placeholder="Phone">
+<input id="warea" placeholder="Area">
+
+<select id="wservice"></select>
+
+<button onclick="websiteLead()">Send Booking</button>
+
+<p class="small">Your request will go directly to CRM system</p>
+</div>
+
+<div class="card">
+<h3>Our Services</h3>
+<div id="serviceList"></div>
+</div>
+
+</div>
+
+<!-- ADMIN CRM -->
+<div id="admin" class="hidden">
+
+<div class="card">
 <h2>Admin Login</h2>
 <input id="user" placeholder="Username">
 <input id="pass" type="password" placeholder="Password">
 <button onclick="login()">Login</button>
-<p class="small">Demo: admin / 1234</p>
+<p class="small">admin / 1234</p>
 </div>
 
-<!-- DASHBOARD -->
-<div id="dash" style="display:none;">
+<div id="dashboard" class="hidden">
 
 <div class="grid">
 
-<!-- LEFT -->
 <div class="card">
-<h2>Create Booking</h2>
+<h2>CRM Dashboard</h2>
+<button onclick="clearAll()">Clear All Leads</button>
+</div>
 
-<input id="name" placeholder="Customer Name">
-<input id="phone" placeholder="Phone">
-<input id="area" placeholder="Area">
-
-<select id="service"></select>
-
-<button onclick="addLead()">Save Booking</button>
-
-<hr>
-
-<h3>Skyline Services</h3>
-<div id="serviceList"></div>
-
-<hr>
-
-<h3>AI Assistant</h3>
-<button onclick="runAI()">Analyze CRM</button>
-<div id="ai" class="ai">AI insights will appear here...</div>
+<div class="card">
+<h2>AI Report</h2>
+<button onclick="ai()">Generate</button>
+<div id="aiBox" class="small"></div>
+</div>
 
 </div>
 
-<!-- RIGHT -->
 <div class="card">
-<h2>All Leads</h2>
+<h2>Leads</h2>
 <div id="leads"></div>
+</div>
+
 </div>
 
 </div>
@@ -156,105 +117,79 @@ font-size:12px;
 
 <script>
 
-const loginBox = document.getElementById("login");
-const dash = document.getElementById("dash");
-const leadsBox = document.getElementById("leads");
-
-const user = document.getElementById("user");
-const pass = document.getElementById("pass");
-const name = document.getElementById("name");
-const phone = document.getElementById("phone");
-const area = document.getElementById("area");
-const service = document.getElementById("service");
-
-let leads = JSON.parse(localStorage.getItem("leads")||"[]");
-
-/* FULL SERVICES */
+/* SERVICES */
 const services = [
-"False Ceiling",
-"Gypsum Ceiling",
-"T-Ceiling",
-"PVC Ceiling",
-"POP Design",
-"Painting Interior",
-"Painting Exterior",
-"Wall Putty",
-"House Wiring",
-"Modular Kitchen",
-"Tile Work",
-"Floor Polishing",
-"Aluminium Doors & Windows",
-"Wallpaper Installation",
-"Glass Partition Work",
-"Carpentry Work",
-"Renovation Work",
-"Interior Design Consultation",
-"Wardrobe Design",
-"TV Cabinet Design",
-"Bedroom Interior Design",
-"Living Room Interior Design",
-"Full Home Renovation"
+"False Ceiling","Gypsum Ceiling","T-Ceiling","PVC Ceiling",
+"POP Design","Painting Interior","Painting Exterior","Wall Putty",
+"House Wiring","Modular Kitchen","Tile Work","Floor Polishing",
+"Aluminium Doors & Windows","Wallpaper Installation","Glass Work",
+"Carpentry","Renovation","Wardrobe","TV Cabinet",
+"Bedroom Design","Living Room Design","Full Home Renovation"
 ];
 
-/* INIT SERVICES */
+/* INIT */
+const leadsBox=document.getElementById("leads");
+let leads=JSON.parse(localStorage.getItem("leads")||"[]");
+
+/* LOAD SERVICES */
 function loadServices(){
-service.innerHTML="";
-document.getElementById("serviceList").innerHTML="";
-
+let html="";
 services.forEach(s=>{
-let opt=document.createElement("option");
-opt.textContent=s;
-service.appendChild(opt);
+html+=`<div class="service-box">${s}</div>`;
+});
 
-let div=document.createElement("div");
-div.className="service-box";
-div.textContent=s;
-document.getElementById("serviceList").appendChild(div);
+document.getElementById("serviceList").innerHTML=html;
+
+let sel=document.getElementById("wservice");
+services.forEach(s=>{
+let o=document.createElement("option");
+o.textContent=s;
+sel.appendChild(o);
 });
 }
-
 loadServices();
+
+/* WEBSITE LEAD */
+function websiteLead(){
+
+let l={
+id:Date.now(),
+name:wname.value,
+phone:wphone.value,
+area:warea.value,
+service:wservice.value,
+status:"New"
+};
+
+leads.push(l);
+localStorage.setItem("leads",JSON.stringify(leads));
+
+alert("Booking sent successfully!");
+
+wname.value="";
+wphone.value="";
+warea.value="";
+}
+
+/* NAV */
+function showPage(p){
+home.classList.add("hidden");
+admin.classList.add("hidden");
+if(p=="home") home.classList.remove("hidden");
+if(p=="admin") admin.classList.remove("hidden");
+}
 
 /* LOGIN */
 function login(){
-if(user.value==="admin" && pass.value==="1234"){
-loginBox.style.display="none";
-dash.style.display="block";
+if(user.value=="admin" && pass.value=="1234"){
+dashboard.classList.remove("hidden");
 render();
 }else alert("Wrong login");
 }
 
-/* ADD LEAD */
-function addLead(){
-
-if(!name.value || !phone.value){
-alert("Fill required fields");
-return;
-}
-
-leads.push({
-id:Date.now(),
-name:name.value,
-phone:phone.value,
-area:area.value,
-service:service.value,
-status:"New"
-});
-
-localStorage.setItem("leads",JSON.stringify(leads));
-
-name.value="";
-phone.value="";
-area.value="";
-
-render();
-}
-
 /* RENDER */
 function render(){
-
 let html="";
-
 leads.forEach(l=>{
 html+=`
 <div class="lead">
@@ -263,55 +198,41 @@ html+=`
 📍 ${l.area}<br>
 🏗 ${l.service}<br>
 Status: <span class="status">${l.status}</span>
-
-<select onchange="changeStatus(${l.id},this.value)">
+<select onchange="update(${l.id},this.value)">
 <option>New</option>
 <option>Contacted</option>
-<option>Visit Scheduled</option>
+<option>Visit</option>
 <option>Completed</option>
 </select>
-
-<button onclick="del(${l.id})">Delete</button>
 </div>
 `;
 });
-
 leadsBox.innerHTML=html;
 }
 
-/* STATUS */
-function changeStatus(id,val){
-leads=leads.map(l=>{
-if(l.id==id) l.status=val;
-return l;
-});
-localStorage.setItem("leads",JSON.stringify(leads));
-render();
-}
-
-/* DELETE */
-function del(id){
-leads=leads.filter(l=>l.id!=id);
+/* UPDATE */
+function update(id,val){
+leads=leads.map(l=>l.id==id?{...l,status:val}:l);
 localStorage.setItem("leads",JSON.stringify(leads));
 render();
 }
 
 /* AI */
-function runAI(){
-
+function ai(){
 let total=leads.length;
 let done=leads.filter(l=>l.status=="Completed").length;
-let score= total?Math.round((done/total)*100):0;
+let score=total?Math.round(done/total*100):0;
 
-document.getElementById("ai").innerHTML=`
-📊 Total Leads: ${total}<br>
-✅ Completed: ${done}<br>
-📈 Conversion: ${score}%<br><br>
-💡 ${score<50?"Improve follow-up system":"Good performance"}
-`;
+aiBox.innerHTML=
+`Total: ${total} | Completed: ${done} | Success: ${score}%`;
 }
 
+/* CLEAR */
+function clearAll(){
+leads=[];
+localStorage.setItem("leads",JSON.stringify(leads));
 render();
+}
 
 </script>
 
