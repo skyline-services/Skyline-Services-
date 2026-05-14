@@ -496,7 +496,7 @@ cursor:pointer;
 .booking-card{
 background:
 linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop');
+url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 border-radius:28px;
@@ -1356,13 +1356,6 @@ window.addEventListener('scroll',()=>{
 const totalHeight = document.body.scrollHeight - window.innerHeight;
 const progress = (window.pageYOffset / totalHeight) * 100;
 progressBar.style.width = progress + '%';
-})
-
-const cursorGlow = document.getElementById('cursorGlow');
-
-window.addEventListener('mousemove',(e)=>{
-cursorGlow.style.left = e.clientX + 'px';
-cursorGlow.style.top = e.clientY + 'px';
 })
 
 const particles = document.getElementById('particles');
