@@ -27,7 +27,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
-transition:all .35s ease;
+transition: none;
 }
 
 body{
@@ -1357,17 +1357,6 @@ const totalHeight = document.body.scrollHeight - window.innerHeight;
 const progress = (window.pageYOffset / totalHeight) * 100;
 progressBar.style.width = progress + '%';
 })
-
-const particles = document.getElementById('particles');
-
-for(let i=0;i<45;i++){
-const particle = document.createElement('div');
-particle.classList.add('particle');
-particle.style.left = Math.random()*100 + '%';
-particle.style.animationDuration = (8 + Math.random()*12) + 's';
-particle.style.animationDelay = Math.random()*5 + 's';
-particles.appendChild(particle);
-}
 
 window.addEventListener('load',()=>{
 setTimeout(()=>{
