@@ -234,7 +234,7 @@ font-weight:800;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(3,minmax(0,1fr));
 gap:24px;
 }
 
@@ -256,10 +256,11 @@ box-shadow:0 18px 45px rgba(255,215,0,.18);
 
 .card img{
 width:100%;
-height:260px;
-object-fit:contain;
-background:#0a0a0a;
-padding:10px;
+height:320px;
+object-fit:cover;
+object-position:center;
+border-radius:18px 18px 0 0;
+display:block;
 }
 
 .card-content{
@@ -534,6 +535,10 @@ pointer-events:auto;
 .contact-grid{grid-template-columns:repeat(2,1fr)}
 }
 
+@media(max-width:1200px){
+.grid{grid-template-columns:repeat(3,1fr)}
+}
+
 @media(max-width:992px){
 .hero-wrap,
 .quote-wrap{
@@ -548,6 +553,19 @@ grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:768px){
+.grid,
+.projects,
+.features,
+.review-grid,
+.contact-grid,
+.area-buttons{
+grid-template-columns:1fr;
+}
+
+.card{
+min-height:620px;
+}
+
 .nav,
 .quote-btn{display:none}
 .grid,
@@ -648,7 +666,28 @@ Skyline Services delivers premium false ceiling, modular kitchen, painting, elec
 <div class="card-content">
 <div class="icon-circle"><i class="fas fa-kitchen-set"></i></div>
 <h3>Modular Kitchen</h3>
-<p>Premium modular kitchen setup with smart storage and modern aesthetics.</p>
+<p>Modern modular kitchen setup with luxury storage and elegant design.</p>
+</div>
+</div><div class="card">
+<img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="icon-circle"><i class="fas fa-tv"></i></div>
+<h3>TV Cabinet Design</h3>
+<p>Luxury TV cabinet and entertainment unit designs with premium wall panel finishing and elegant modern styling.</p>
+</div>
+</div><div class="card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="icon-circle"><i class="fas fa-couch"></i></div>
+<h3>Bedroom & Livingroom Design</h3>
+<p>Premium bedroom and living room interior concepts with elegant lighting, wall textures, and luxury modern aesthetics.</p>
+</div>
+</div><div class="card">
+<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<div class="icon-circle"><i class="fas fa-door-closed"></i></div>
+<h3>Wardrobe Design</h3>
+<p>Custom wardrobe solutions with smart storage planning, premium materials, and modern luxury finishing.</p>
 </div>
 </div><div class="card">
 <img loading="lazy" src="https://lh3.googleusercontent.com/d/13f3o9aYkZnY8r1DsxXwrOA_wakGGlNj_">
@@ -854,6 +893,5 @@ scrollTopBtn.classList.add('show');
 scrollTopBtn.classList.remove('show');
 }
 });
-</script>
-</body>
+</script></body>
 </html>
