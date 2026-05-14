@@ -718,38 +718,6 @@ overflow:hidden;
 100%{transform:translateX(-40%)}
 }
 
-.particles{
-position:fixed;
-inset:0;
-pointer-events:none;
-overflow:hidden;
-z-index:-1;
-}
-
-.particle{
-position:absolute;
-width:4px;
-height:4px;
-border-radius:50%;
-background:#d4a437;
-opacity:.18;
-animation:floatParticle linear infinite;
-}
-
-@keyframes floatParticle{
-0%{
-transform:translateY(100vh) scale(0);
-opacity:0;
-}
-50%{
-opacity:.25;
-}
-100%{
-transform:translateY(-120px) scale(1);
-opacity:0;
-}
-}
-
 .lazy-img{
 filter:blur(4px);
 transition:1s;
@@ -801,8 +769,6 @@ padding-bottom:75px;
 <div class="progress-bar" id="progressBar"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 
-<div class="particles" id="particles"></div>
-
 <div class="topbar">
 🔥 Free Site Visit Available
 </div>
@@ -811,7 +777,7 @@ padding-bottom:75px;
 <div class="container header-inner">
 
 <div class="brand-wrap">
-<img class="logo" src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png"> -->
+<img class="logo" src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png">
 
 <div>
 <div class="brand">Skyline Services</div>
