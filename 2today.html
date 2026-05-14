@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Skyline Services SaaS CRM</title>
+<title>Skyline Services Ultra CRM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#0b0b0b;
+background:#0a0a0a;
 color:#fff;
 }
 
@@ -23,17 +23,22 @@ border-bottom:2px solid gold;
 h1{color:gold;margin:0}
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 padding:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
 
 .card{
 background:#111;
 padding:20px;
+border-radius:12px;
 border:1px solid #333;
-border-radius:10px;
-margin-top:15px;
 }
 
 input,select,textarea{
@@ -43,39 +48,57 @@ margin-top:10px;
 background:#000;
 color:#fff;
 border:1px solid #444;
+border-radius:6px;
 }
 
 button{
-padding:12px;
 width:100%;
+padding:12px;
 margin-top:10px;
 background:gold;
 border:none;
 font-weight:bold;
 cursor:pointer;
-}
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
+border-radius:6px;
 }
 
 .lead{
 border:1px solid #333;
-padding:15px;
+padding:10px;
 margin-top:10px;
-border-radius:10px;
+border-radius:8px;
 }
 
-.status{
-color:gold;
+.status{color:gold}
+
+.small{font-size:12px;color:#aaa}
+
+.ai{
+background:#1a1a1a;
+padding:10px;
+margin-top:10px;
+border-radius:8px;
+font-size:13px;
 }
 
-.hidden{display:none}
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:10px;
+}
+
+.service-box{
+background:#0f0f0f;
+padding:10px;
+border-radius:8px;
+border:1px solid #333;
+font-size:13px;
+}
 
 @media(max-width:768px){
 .grid{grid-template-columns:1fr}
+.services{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -83,27 +106,27 @@ color:gold;
 <body>
 
 <header>
-<h1>Skyline Services CRM SaaS</h1>
-<p>Your Dream Home, Our Responsibility</p>
+<h1>Skyline Services CRM PRO</h1>
+<p class="small">Ultra SaaS CRM (Single File Edition)</p>
 </header>
 
 <div class="container">
 
 <!-- LOGIN -->
-<div id="loginBox" class="card">
+<div id="login" class="card">
 <h2>Admin Login</h2>
 <input id="user" placeholder="Username">
 <input id="pass" type="password" placeholder="Password">
 <button onclick="login()">Login</button>
-<p style="font-size:12px;color:#aaa">Demo: admin / 1234</p>
+<p class="small">Demo: admin / 1234</p>
 </div>
 
 <!-- DASHBOARD -->
-<div id="dashboard" class="hidden">
+<div id="dash" style="display:none;">
 
 <div class="grid">
 
-<!-- FORM -->
+<!-- LEFT -->
 <div class="card">
 <h2>New Booking</h2>
 
@@ -123,9 +146,33 @@ color:gold;
 </select>
 
 <button onclick="addLead()">Save Lead</button>
+
+<hr>
+
+<h3>Skyline Services</h3>
+
+<div class="services">
+<div class="service-box">🏗 False Ceiling</div>
+<div class="service-box">🎨 Painting</div>
+<div class="service-box">⚡ House Wiring</div>
+<div class="service-box">🏠 Modular Kitchen</div>
+<div class="service-box">🧱 Tile Work</div>
+<div class="service-box">🧱 Wall Putty</div>
 </div>
 
-<!-- LEADS -->
+<hr>
+
+<h3>AI Assistant</h3>
+<button onclick="runAI()">Run AI Analysis</button>
+<div id="ai" class="ai">AI will analyze your business...</div>
+
+<hr>
+
+<button onclick="pay()">Upgrade to PRO (₹999)</button>
+
+</div>
+
+<!-- RIGHT -->
 <div class="card">
 <h2>Leads</h2>
 <div id="leads"></div>
@@ -135,22 +182,19 @@ color:gold;
 
 </div>
 
-</div>
-
 <script>
 
 /* DATA */
-let leads = JSON.parse(localStorage.getItem("skyline_leads") || "[]");
+let leads = JSON.parse(localStorage.getItem("leads")||"[]");
+let pro = localStorage.getItem("pro") || "NO";
 
 /* LOGIN */
 function login(){
 if(user.value=="admin" && pass.value=="1234"){
-loginBox.style.display="none";
-dashboard.classList.remove("hidden");
+login.style.display="none";
+dash.style.display="block";
 render();
-}else{
-alert("Wrong login");
-}
+}else alert("Wrong login");
 }
 
 /* ADD LEAD */
@@ -162,27 +206,16 @@ name:name.value,
 phone:phone.value,
 area:area.value,
 service:service.value,
-status:"New",
-notes:""
+status:"New"
 });
 
-localStorage.setItem("skyline_leads",JSON.stringify(leads));
+localStorage.setItem("leads",JSON.stringify(leads));
 
 name.value="";
 phone.value="";
 area.value="";
 
 render();
-
-/* WhatsApp */
-window.open(
-"https://wa.me/918876410518?text="+
-encodeURIComponent(
-"New Lead\nName: "+name.value+
-"\nPhone: "+phone.value+
-"\nService: "+service.value
-)
-);
 
 }
 
@@ -192,59 +225,76 @@ function render(){
 let html="";
 
 leads.forEach(l=>{
-
 html+=`
 <div class="lead">
 <b>${l.name}</b><br>
 📞 ${l.phone}<br>
 📍 ${l.area}<br>
 🏗 ${l.service}<br>
+Status: <span class="status">${l.status}</span>
 
-Status: <span class="status">${l.status}</span><br>
-
-<select onchange="updateStatus(${l.id},this.value)">
+<select onchange="changeStatus(${l.id},this.value)">
 <option>New</option>
 <option>Contacted</option>
 <option>Visit Scheduled</option>
 <option>Completed</option>
 </select>
 
-<textarea onchange="addNote(${l.id},this.value)">${l.notes}</textarea>
-
-<button onclick="deleteLead(${l.id})">Delete</button>
+<button onclick="del(${l.id})">Delete</button>
 </div>
 `;
 });
 
-leadsBox.innerHTML = html;
+leadsBox.innerHTML=html;
 
 }
 
 /* STATUS */
-function updateStatus(id,status){
-leads = leads.map(l=>{
-if(l.id==id) l.status=status;
+function changeStatus(id,val){
+leads=leads.map(l=>{
+if(l.id==id) l.status=val;
 return l;
 });
-localStorage.setItem("skyline_leads",JSON.stringify(leads));
+localStorage.setItem("leads",JSON.stringify(leads));
 render();
-}
-
-/* NOTES */
-function addNote(id,notes){
-leads = leads.map(l=>{
-if(l.id==id) l.notes=notes;
-return l;
-});
-localStorage.setItem("skyline_leads",JSON.stringify(leads));
 }
 
 /* DELETE */
-function deleteLead(id){
-leads = leads.filter(l=>l.id!=id);
-localStorage.setItem("skyline_leads",JSON.stringify(leads));
+function del(id){
+leads=leads.filter(l=>l.id!=id);
+localStorage.setItem("leads",JSON.stringify(leads));
 render();
 }
+
+/* AI ENGINE */
+function runAI(){
+
+let total=leads.length;
+let done=leads.filter(l=>l.status=="Completed").length;
+
+let score = total?Math.round((done/total)*100):0;
+
+document.getElementById("ai").innerHTML=`
+📊 Total Leads: ${total}<br>
+✅ Completed: ${done}<br>
+📈 Success Rate: ${score}%<br><br>
+
+💡 Suggestion: ${score<50?
+"Improve follow-up + WhatsApp response":
+"Good performance"}
+`;
+
+}
+
+/* PAYMENT (Stripe redirect ready) */
+function pay(){
+alert("Redirecting to payment gateway...");
+window.open("https://buy.stripe.com/test_payment_link");
+pro="YES";
+localStorage.setItem("pro",pro);
+}
+
+render();
 
 </script>
 
