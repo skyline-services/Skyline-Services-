@@ -6,9 +6,11 @@
 
 <title>Skyline Services | Premium Interior & Construction Solutions</title>
 
-<meta name="description" content="Skyline Services provides premium interior design, false ceiling, painting, modular kitchen, electrical, renovation & construction services across Assam."/>
+<meta name="description" content="Skyline Services provides premium interior & construction solutions across Silchar and Assam. False ceiling, modular kitchen, painting, electrical, TV panel, bathroom renovation & more."/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -17,12 +19,13 @@
 
 :root{
 --gold:#d4a437;
---gold-light:#f0c35a;
+--gold-light:#f4c96b;
 --black:#050505;
 --dark:#0b0b0b;
---soft:#ffffff;
---card:#101010;
---border:rgba(212,164,55,0.35);
+--white:#ffffff;
+--gray:#cfcfcf;
+--card:rgba(255,255,255,0.03);
+--border:rgba(212,164,55,0.28);
 }
 
 *{
@@ -38,42 +41,54 @@ scroll-behavior:smooth;
 body{
 font-family:'Poppins',sans-serif;
 background:
-radial-gradient(circle at top left, rgba(212,164,55,0.08), transparent 30%),
-radial-gradient(circle at bottom right, rgba(212,164,55,0.08), transparent 30%),
-#050505;
+linear-gradient(rgba(0,0,0,0.92),rgba(0,0,0,0.95)),
+url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1800&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 color:#fff;
 overflow-x:hidden;
 }
 
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:var(--gold);
+border-radius:10px;
+}
+
+/* CONTAINER */
+
 .container{
-width:100%;
 max-width:1400px;
 margin:auto;
-padding:0 20px;
+padding:0 22px;
 }
 
-/* ===== TOP BAR ===== */
+/* TOPBAR */
 
 .topbar{
-height:34px;
-background:linear-gradient(to right,#b98a25,#f3c75d,#b98a25);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:13px;
-font-weight:600;
+background:linear-gradient(90deg,#d4a437,#f0c96b,#d4a437);
 color:#000;
-letter-spacing:.4px;
+text-align:center;
+font-size:13px;
+font-weight:700;
+padding:8px;
+letter-spacing:.5px;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 
 header{
 position:sticky;
 top:0;
 z-index:999;
-background:rgba(5,5,5,.92);
-backdrop-filter:blur(14px);
+background:rgba(0,0,0,0.92);
+backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(212,164,55,0.18);
 }
 
@@ -85,42 +100,41 @@ justify-content:space-between;
 gap:20px;
 }
 
-.brand{
+.logo-area{
 display:flex;
 align-items:center;
-gap:15px;
+gap:14px;
 }
 
-.brand img{
-width:90px;
+.logo{
+width:78px;
 object-fit:contain;
-filter:drop-shadow(0 0 10px rgba(212,164,55,.2));
 }
 
-.brand-text h2{
-font-size:28px;
+.brand h2{
+font-size:24px;
 font-weight:700;
 color:var(--gold-light);
 line-height:1;
 }
 
-.brand-text p{
+.brand p{
 font-size:12px;
-color:#ccc;
-margin-top:5px;
+color:#ddd;
+margin-top:6px;
 }
 
 .nav-links{
 display:flex;
 align-items:center;
-gap:40px;
+gap:34px;
 }
 
 .nav-links a{
-color:#fff;
 text-decoration:none;
-font-size:15px;
+color:#fff;
 font-weight:500;
+font-size:15px;
 position:relative;
 transition:.35s;
 }
@@ -133,7 +147,7 @@ bottom:-8px;
 width:0%;
 height:2px;
 background:var(--gold);
-transition:.4s;
+transition:.35s;
 }
 
 .nav-links a:hover{
@@ -146,213 +160,185 @@ width:100%;
 
 .quote-btn{
 padding:14px 24px;
-border-radius:14px;
-background:linear-gradient(135deg,#f0c35a,#b9871c);
-color:#000;
+background:linear-gradient(135deg,#d4a437,#f4c96b);
+border:none;
+border-radius:12px;
 font-weight:700;
-text-decoration:none;
-display:flex;
-align-items:center;
-gap:10px;
-transition:.4s;
-box-shadow:0 0 20px rgba(212,164,55,.15);
+color:#000;
+cursor:pointer;
+transition:.35s;
+box-shadow:0 0 20px rgba(212,164,55,0.2);
 }
 
 .quote-btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(212,164,55,.35);
+box-shadow:0 0 30px rgba(212,164,55,0.4);
 }
 
 .menu-btn{
 display:none;
-font-size:26px;
+font-size:28px;
 cursor:pointer;
-color:#fff;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero{
-padding:45px 0 25px;
+padding:40px 0 10px;
 }
 
-.hero-grid{
+.hero-wrap{
 display:grid;
 grid-template-columns:1.05fr 1fr;
-gap:35px;
+gap:26px;
 align-items:stretch;
-}
-
-.hero-left{
-background:
-linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
-border:1px solid var(--border);
-border-radius:26px;
-padding:45px;
-position:relative;
+background:rgba(0,0,0,0.5);
+border:1px solid rgba(212,164,55,0.16);
 overflow:hidden;
 }
 
-.hero-left::before{
-content:'';
-position:absolute;
-width:300px;
-height:300px;
-background:radial-gradient(circle,rgba(212,164,55,.18),transparent 70%);
-top:-100px;
-left:-100px;
+.hero-left{
+padding:50px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
 .hero-label{
 font-size:13px;
 font-weight:700;
-letter-spacing:1px;
 color:var(--gold);
-margin-bottom:20px;
+margin-bottom:18px;
+letter-spacing:.7px;
 }
 
-.hero-title{
-font-size:68px;
+.hero-left h1{
+font-size:62px;
+line-height:1.02;
 font-weight:800;
-line-height:1.05;
 margin-bottom:20px;
 }
 
-.hero-title span{
-color:var(--gold-light);
+.hero-left h1 span{
+color:var(--gold);
 }
 
-.hero-desc{
-font-size:17px;
-color:#cfcfcf;
+.hero-left p{
+font-size:16px;
+color:#ddd;
 line-height:1.8;
-max-width:650px;
+margin-bottom:30px;
 }
 
 .stats{
 display:flex;
-gap:25px;
+gap:18px;
 flex-wrap:wrap;
-margin-top:35px;
+margin-bottom:28px;
 }
 
 .stat-box{
 display:flex;
 align-items:center;
-gap:14px;
-background:rgba(255,255,255,.03);
-border:1px solid rgba(212,164,55,.18);
-padding:15px 18px;
-border-radius:18px;
-transition:.4s;
-}
-
-.stat-box:hover{
-transform:translateY(-4px);
-border-color:var(--gold);
-box-shadow:0 0 20px rgba(212,164,55,.2);
+gap:12px;
+padding:12px 18px;
+border:1px solid rgba(212,164,55,0.3);
+background:rgba(255,255,255,0.03);
+border-radius:14px;
 }
 
 .stat-box i{
-width:48px;
-height:48px;
-border-radius:14px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:rgba(212,164,55,.12);
 color:var(--gold);
-font-size:18px;
+font-size:20px;
 }
 
 .stat-box h4{
-font-size:15px;
+font-size:14px;
+font-weight:600;
 }
 
-.hero-buttons{
+.hero-btns{
 display:flex;
 gap:14px;
 flex-wrap:wrap;
-margin-top:35px;
 }
 
-.hero-buttons a{
-padding:15px 20px;
-border-radius:14px;
-text-decoration:none;
+.hero-btn{
+padding:14px 22px;
+border-radius:12px;
+border:1px solid rgba(212,164,55,0.35);
+background:rgba(255,255,255,0.03);
+color:#fff;
 font-weight:600;
+text-decoration:none;
+transition:.35s;
 display:flex;
 align-items:center;
 gap:10px;
-transition:.4s;
-border:1px solid rgba(212,164,55,.25);
-background:#101010;
-color:#fff;
 }
 
-.hero-buttons a:hover{
+.hero-btn:hover{
 transform:translateY(-4px);
-border-color:var(--gold);
-box-shadow:0 0 25px rgba(212,164,55,.2);
-}
-
-.hero-buttons a:first-child{
-background:linear-gradient(135deg,#e2ba57,#b78317);
+background:var(--gold);
 color:#000;
-font-weight:700;
+box-shadow:0 0 30px rgba(212,164,55,0.4);
 }
 
-.hero-image{
+.hero-right{
 position:relative;
-border-radius:28px;
 overflow:hidden;
-border:1px solid rgba(212,164,55,.22);
-min-height:640px;
+min-height:680px;
 }
 
-.hero-image img{
+.hero-right img{
 width:100%;
 height:100%;
 object-fit:cover;
-transition:1s;
+transition:6s ease;
 }
 
-.hero-image:hover img{
-transform:scale(1.05);
+.hero-right:hover img{
+transform:scale(1.08);
 }
 
 .hero-overlay{
 position:absolute;
 inset:0;
 background:
-linear-gradient(to right, rgba(0,0,0,.2), rgba(0,0,0,.45)),
-linear-gradient(to top, rgba(0,0,0,.65), transparent 40%);
+linear-gradient(to right,rgba(0,0,0,0.2),rgba(0,0,0,0.5)),
+linear-gradient(to top,rgba(0,0,0,0.45),transparent);
 }
 
-/* ===== SECTION COMMON ===== */
+/* SECTION */
 
-.section{
-padding:30px 0;
+section{
+padding:75px 0;
 }
 
-.section-head{
+.section-title-wrap{
 text-align:center;
-margin-bottom:35px;
+margin-bottom:40px;
 }
 
-.section-head small{
+.section-tag{
 color:var(--gold);
+font-size:13px;
 font-weight:700;
+margin-bottom:10px;
 letter-spacing:1px;
 }
 
-.section-head h2{
-font-size:46px;
-margin-top:10px;
+.section-title{
+font-size:42px;
 font-weight:700;
+line-height:1.2;
 }
 
-/* ===== SERVICES ===== */
+.section-title span{
+color:var(--gold);
+}
+
+/* SERVICES */
 
 .services-grid{
 display:grid;
@@ -361,22 +347,23 @@ gap:18px;
 }
 
 .service-card{
-background:linear-gradient(180deg,#111,#090909);
-border:1px solid rgba(212,164,55,.24);
-border-radius:22px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,164,55,0.22);
+border-radius:18px;
 overflow:hidden;
-transition:.5s;
+transition:.45s;
 position:relative;
+backdrop-filter:blur(10px);
 }
 
 .service-card:hover{
 transform:translateY(-8px);
-border-color:var(--gold);
-box-shadow:0 15px 40px rgba(212,164,55,.2);
+box-shadow:0 0 40px rgba(212,164,55,0.2);
+border-color:rgba(212,164,55,0.5);
 }
 
 .service-img{
-height:165px;
+height:180px;
 overflow:hidden;
 }
 
@@ -396,17 +383,20 @@ padding:18px;
 }
 
 .service-icon{
-width:52px;
-height:52px;
+width:48px;
+height:48px;
 border-radius:50%;
-background:rgba(212,164,55,.13);
+background:#111;
+border:1px solid rgba(212,164,55,0.4);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:18px;
 color:var(--gold);
-margin-bottom:14px;
-border:1px solid rgba(212,164,55,.22);
+font-size:18px;
+margin-top:-42px;
+position:relative;
+z-index:2;
+margin-bottom:15px;
 }
 
 .service-content h3{
@@ -417,119 +407,100 @@ margin-bottom:10px;
 .service-content p{
 font-size:13px;
 line-height:1.7;
-color:#c8c8c8;
+color:#cfcfcf;
 }
 
-/* ===== FEATURE STRIP ===== */
+/* FEATURE STRIP */
 
-.features{
+.feature-strip{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:18px;
+margin-top:40px;
 }
 
 .feature-box{
-background:#0d0d0d;
-border:1px solid rgba(212,164,55,.22);
-padding:25px;
-border-radius:22px;
+padding:28px;
+border:1px solid rgba(212,164,55,0.25);
+background:rgba(255,255,255,0.02);
 display:flex;
 gap:16px;
-transition:.4s;
+align-items:flex-start;
+transition:.35s;
 }
 
 .feature-box:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 30px rgba(212,164,55,.15);
-border-color:var(--gold);
+transform:translateY(-6px);
+box-shadow:0 0 30px rgba(212,164,55,0.15);
 }
 
 .feature-box i{
-font-size:28px;
+font-size:30px;
 color:var(--gold);
 }
 
 .feature-box h4{
-font-size:18px;
-margin-bottom:6px;
+margin-bottom:8px;
 }
 
-.feature-box p{
-font-size:13px;
-color:#bbb;
-line-height:1.7;
-}
+/* WHY CHOOSE */
 
-/* ===== WHY ===== */
-
-.why-grid{
+.why-wrap{
 display:grid;
-grid-template-columns:1fr 420px;
-gap:25px;
+grid-template-columns:1.1fr .9fr;
+gap:30px;
+align-items:center;
 }
 
-.why-left,
-.why-right{
-background:linear-gradient(180deg,#111,#090909);
-border:1px solid rgba(212,164,55,.22);
-border-radius:24px;
+.why-left{
 padding:35px;
+border:1px solid rgba(212,164,55,0.22);
+background:rgba(255,255,255,0.03);
 }
 
-.why-list{
-display:flex;
-flex-direction:column;
+.check-list{
+display:grid;
 gap:16px;
-margin-top:10px;
+margin-top:24px;
 }
 
-.why-item{
+.check{
 display:flex;
+align-items:center;
 gap:14px;
-align-items:flex-start;
 font-size:15px;
 }
 
-.why-item i{
+.check i{
 color:var(--gold);
-margin-top:3px;
 }
 
-.stat-cards{
+.stats-grid{
 display:grid;
-grid-template-columns:1fr;
-gap:20px;
-height:100%;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
 }
 
 .big-stat{
-background:#0c0c0c;
-border:1px solid rgba(212,164,55,.2);
-border-radius:20px;
-padding:28px;
+padding:40px 20px;
 text-align:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-transition:.4s;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,164,55,0.25);
+transition:.35s;
 }
 
 .big-stat:hover{
-transform:translateY(-4px);
-border-color:var(--gold);
+transform:translateY(-6px);
+box-shadow:0 0 30px rgba(212,164,55,0.2);
 }
 
 .big-stat h2{
 font-size:42px;
-color:var(--gold-light);
+color:var(--gold);
+margin-bottom:10px;
 }
 
-.big-stat p{
-margin-top:10px;
-color:#ccc;
-}
-
-/* ===== REVIEWS ===== */
+/* REVIEWS */
 
 .review-slider{
 display:grid;
@@ -538,267 +509,200 @@ gap:18px;
 }
 
 .review-card{
-background:#0d0d0d;
-border:1px solid rgba(212,164,55,.22);
-border-radius:22px;
-padding:24px;
-transition:.4s;
+padding:28px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,164,55,0.22);
+transition:.35s;
 }
 
 .review-card:hover{
-transform:translateY(-5px);
-border-color:var(--gold);
+transform:translateY(-6px);
+box-shadow:0 0 30px rgba(212,164,55,0.18);
 }
 
 .stars{
-color:var(--gold-light);
-margin-bottom:15px;
+color:var(--gold);
+margin-bottom:18px;
 }
 
-.review-card p{
-font-size:14px;
-line-height:1.8;
-color:#d0d0d0;
-margin-bottom:16px;
-}
+/* AREAS */
 
-.review-card h4{
-font-size:15px;
-}
-
-/* ===== SERVICE AREA ===== */
-
-.area-grid{
+.area-wrap{
 display:grid;
-grid-template-columns:420px 1fr;
-gap:20px;
+grid-template-columns:.8fr 1.2fr;
+gap:22px;
 }
 
-.area-left,
-.area-right{
-background:#0c0c0c;
-border:1px solid rgba(212,164,55,.22);
-border-radius:24px;
-padding:25px;
-}
-
-.area-buttons{
+.area-left{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:14px;
+gap:16px;
 }
 
 .area-btn{
-padding:15px;
-border-radius:16px;
-border:1px solid rgba(212,164,55,.2);
-background:#111;
+padding:18px;
+border-radius:14px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,164,55,0.22);
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 font-weight:600;
-transition:.4s;
+transition:.35s;
 }
 
 .area-btn:hover{
-background:rgba(212,164,55,.12);
-border-color:var(--gold);
+background:var(--gold);
+color:#000;
+transform:translateY(-4px);
 }
 
-.area-btn i{
-color:var(--gold);
+.area-map{
+border:1px solid rgba(212,164,55,0.25);
+overflow:hidden;
+min-height:300px;
 }
 
-.area-right img{
+.area-map img{
 width:100%;
-border-radius:18px;
 height:100%;
 object-fit:cover;
 }
 
-/* ===== PROJECTS ===== */
+/* PROJECTS */
 
-.project-grid{
+.projects-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:22px;
 }
 
 .project-card{
 position:relative;
 overflow:hidden;
-border-radius:24px;
-height:280px;
-border:1px solid rgba(212,164,55,.22);
+border:1px solid rgba(212,164,55,0.25);
 }
 
 .project-card img{
 width:100%;
-height:100%;
+height:320px;
 object-fit:cover;
 transition:1s;
 }
 
 .project-card:hover img{
-transform:scale(1.08);
+transform:scale(1.1);
 }
 
 .project-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(to top, rgba(0,0,0,.82), transparent 55%);
+background:linear-gradient(to top,rgba(0,0,0,0.9),transparent);
 display:flex;
 align-items:flex-end;
-padding:22px;
+padding:24px;
 }
 
 .project-overlay h3{
 font-size:20px;
 }
 
-/* ===== QUOTE ===== */
+/* QUOTE */
 
-.quote-grid{
+.quote-wrap{
 display:grid;
-grid-template-columns:1fr 500px;
+grid-template-columns:1fr 1fr;
 gap:22px;
 }
 
-.quote-form,
-.quote-right{
-background:#0c0c0c;
-border:1px solid rgba(212,164,55,.22);
-border-radius:24px;
-padding:30px;
+.quote-form{
+padding:34px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,164,55,0.22);
+}
+
+.quote-form h3{
+font-size:28px;
+margin-bottom:20px;
 }
 
 .form-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:16px;
+gap:14px;
 }
 
 input,
 textarea,
 select{
 width:100%;
-padding:16px;
-background:#101010;
-border:1px solid rgba(212,164,55,.18);
-border-radius:14px;
+background:#090909;
+border:1px solid rgba(212,164,55,0.2);
+padding:15px;
 color:#fff;
-font-family:'Poppins',sans-serif;
+font-family:Poppins;
 outline:none;
-transition:.3s;
+margin-bottom:14px;
 }
 
 textarea{
-min-height:140px;
+height:140px;
 resize:none;
 }
 
-input:focus,
-textarea:focus,
-select:focus{
-border-color:var(--gold);
-box-shadow:0 0 20px rgba(212,164,55,.15);
-}
-
-.checkbox{
-display:flex;
-align-items:center;
-gap:12px;
-margin:20px 0;
-font-size:14px;
-color:#ccc;
-}
-
-.checkbox input{
-width:auto;
-}
-
-.send-btn{
-padding:16px 24px;
+.submit-btn{
+background:linear-gradient(135deg,#d4a437,#f0c96b);
 border:none;
-border-radius:14px;
-background:linear-gradient(135deg,#f0c35a,#b9871c);
-color:#000;
+padding:15px 26px;
 font-weight:700;
 cursor:pointer;
-font-size:15px;
-transition:.4s;
+transition:.35s;
 }
 
-.send-btn:hover{
-transform:translateY(-4px);
+.submit-btn:hover{
+transform:translateY(-3px);
 }
 
-.quote-right{
+.quote-image{
 position:relative;
 overflow:hidden;
-display:flex;
-align-items:flex-end;
 min-height:100%;
 }
 
-.quote-right img{
-position:absolute;
-inset:0;
+.quote-image img{
 width:100%;
 height:100%;
 object-fit:cover;
 }
 
-.quote-right::after{
-content:'';
+.quote-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(to top, rgba(0,0,0,.88), rgba(0,0,0,.35));
+background:rgba(0,0,0,0.6);
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:50px;
 }
 
-.quote-content{
-position:relative;
-z-index:2;
+.quote-overlay h2{
+font-size:42px;
+margin-bottom:20px;
 }
 
-.quote-content h2{
-font-size:40px;
-margin-bottom:15px;
-}
-
-.quote-content p{
+.quote-overlay p{
 line-height:1.8;
+margin-bottom:24px;
 color:#ddd;
-margin-bottom:25px;
 }
 
 .quote-actions{
 display:flex;
-gap:15px;
+gap:16px;
 flex-wrap:wrap;
 }
 
-.quote-actions a{
-padding:14px 18px;
-border-radius:14px;
-border:1px solid rgba(212,164,55,.25);
-background:#111;
-color:#fff;
-text-decoration:none;
-font-weight:600;
-transition:.4s;
-}
-
-.quote-actions a:hover{
-border-color:var(--gold);
-}
-
-.quote-actions a:first-child{
-background:linear-gradient(135deg,#f0c35a,#b9871c);
-color:#000;
-}
-
-/* ===== CONTACT ===== */
+/* CONTACT */
 
 .contact-grid{
 display:grid;
@@ -806,44 +710,38 @@ grid-template-columns:repeat(5,1fr);
 gap:18px;
 }
 
-.contact-box{
-background:#0c0c0c;
-border:1px solid rgba(212,164,55,.22);
-border-radius:22px;
-padding:25px;
+.contact-card{
+padding:26px;
 text-align:center;
-transition:.4s;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,164,55,0.22);
+transition:.35s;
 }
 
-.contact-box:hover{
-transform:translateY(-5px);
-border-color:var(--gold);
+.contact-card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px rgba(212,164,55,0.18);
 }
 
-.contact-box i{
-font-size:28px;
+.contact-card i{
+font-size:32px;
 color:var(--gold);
-margin-bottom:14px;
+margin-bottom:16px;
 }
 
-.contact-box h4{
-margin-bottom:10px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 footer{
-margin-top:30px;
-padding:40px 0 25px;
-border-top:1px solid rgba(212,164,55,.18);
+padding:45px 0;
+border-top:1px solid rgba(212,164,55,0.15);
 background:#050505;
 }
 
-.footer-grid{
+.footer-wrap{
 display:flex;
 justify-content:space-between;
-gap:20px;
 align-items:center;
+gap:20px;
 flex-wrap:wrap;
 }
 
@@ -854,7 +752,7 @@ flex-wrap:wrap;
 }
 
 .footer-links a{
-color:#ccc;
+color:#ddd;
 text-decoration:none;
 transition:.3s;
 }
@@ -865,72 +763,54 @@ color:var(--gold);
 
 .socials{
 display:flex;
-gap:15px;
+gap:12px;
 }
 
 .socials a{
 width:42px;
 height:42px;
-border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#111;
-color:var(--gold);
+border:1px solid rgba(212,164,55,0.25);
+color:#fff;
 text-decoration:none;
-border:1px solid rgba(212,164,55,.22);
-transition:.4s;
+transition:.35s;
 }
 
 .socials a:hover{
-transform:translateY(-4px);
-border-color:var(--gold);
+background:var(--gold);
+color:#000;
 }
 
-/* ===== FLOAT ===== */
+/* FLOATING */
 
-.float-whatsapp{
+.whatsapp-float{
 position:fixed;
-right:20px;
-bottom:20px;
-width:62px;
-height:62px;
-border-radius:50%;
+right:18px;
+bottom:18px;
+width:58px;
+height:58px;
 background:#25D366;
+border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-color:#fff;
 font-size:28px;
-text-decoration:none;
+color:#fff;
 z-index:999;
-box-shadow:0 0 25px rgba(37,211,102,.5);
-animation:float 2.5s infinite ease-in-out;
+text-decoration:none;
+box-shadow:0 0 25px rgba(37,211,102,0.5);
+animation:float 2s infinite ease-in-out;
 }
 
 @keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-8px);}
+0%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
+100%{transform:translateY(0)}
 }
 
-/* ===== ANIMATIONS ===== */
-
-.fade{
-animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* ===== MOBILE ===== */
+/* RESPONSIVE */
 
 @media(max-width:1200px){
 
@@ -938,102 +818,88 @@ transform:translateY(0);
 grid-template-columns:repeat(3,1fr);
 }
 
-.project-grid{
+.review-slider{
 grid-template-columns:repeat(2,1fr);
 }
 
-.hero-title{
-font-size:55px;
+.contact-grid{
+grid-template-columns:repeat(3,1fr);
 }
 
 }
 
-@media(max-width:991px){
+@media(max-width:992px){
+
+.hero-wrap,
+why-wrap,
+quote-wrap,
+area-wrap{
+grid-template-columns:1fr;
+}
+
+.projects-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.feature-strip{
+grid-template-columns:repeat(2,1fr);
+}
+
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-left h1{
+font-size:50px;
+}
 
 .nav-links{
-position:absolute;
+position:fixed;
 top:92px;
-left:0;
+left:-100%;
 width:100%;
-background:#090909;
+background:#050505;
 flex-direction:column;
-padding:30px;
-display:none;
-border-bottom:1px solid rgba(212,164,55,.2);
+padding:40px 20px;
+transition:.45s;
+border-top:1px solid rgba(212,164,55,0.18);
 }
 
 .nav-links.active{
-display:flex;
+left:0;
 }
 
 .menu-btn{
 display:block;
 }
 
-.hero-grid,
-why-grid,
-.area-grid,
-.quote-grid{
-grid-template-columns:1fr;
-}
-
-.features{
-grid-template-columns:repeat(2,1fr);
-}
-
-.review-slider{
-grid-template-columns:repeat(2,1fr);
-}
-
-.contact-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.hero-title{
-font-size:48px;
-}
-
-.hero-image{
-min-height:500px;
+.quote-btn{
+display:none;
 }
 
 }
 
-@media(max-width:700px){
-
-.hero{
-padding-top:20px;
-}
+@media(max-width:768px){
 
 .hero-left{
-padding:28px;
+padding:35px 24px;
 }
 
-.hero-title{
-font-size:38px;
+.hero-left h1{
+font-size:40px;
 }
 
-.hero-desc{
-font-size:15px;
+.section-title{
+font-size:32px;
 }
 
-.services-grid{
-grid-template-columns:1fr;
-}
-
-.features{
-grid-template-columns:1fr;
-}
-
-.review-slider{
-grid-template-columns:1fr;
-}
-
-.project-grid{
-grid-template-columns:1fr;
-}
-
-.contact-grid{
+.services-grid,
+feature-strip,
+projects-grid,
+review-slider,
+stats-grid,
+contact-grid,
+.area-left{
 grid-template-columns:1fr;
 }
 
@@ -1041,31 +907,27 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
-.area-buttons{
-grid-template-columns:1fr;
+.hero-right{
+min-height:420px;
 }
 
-.section-head h2{
-font-size:32px;
+.navbar{
+height:82px;
 }
 
-.brand img{
-width:70px;
+.logo{
+width:62px;
 }
 
-.brand-text h2{
-font-size:22px;
+.brand h2{
+font-size:20px;
 }
 
-.quote-btn{
-display:none;
-}
-
-.hero-buttons{
+.hero-btns{
 flex-direction:column;
 }
 
-.hero-buttons a{
+.hero-btn{
 justify-content:center;
 }
 
@@ -1076,10 +938,11 @@ justify-content:center;
 
 <body>
 
-<!-- TOP BAR -->
+<!-- TOPBAR -->
 
 <div class="topbar">
-<i class="fa-solid fa-house"></i>&nbsp;&nbsp;Free Site Visit Available
+<i class="fa-solid fa-house"></i>
+Free Site Visit Available
 </div>
 
 <!-- HEADER -->
@@ -1088,11 +951,14 @@ justify-content:center;
 
 <div class="container navbar">
 
+<div class="logo-area">
+
+<img
+class="logo"
+src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png"
+alt="Skyline Services Logo">
+
 <div class="brand">
-
-<img src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png">
-
-<div class="brand-text">
 <h2>Skyline Services</h2>
 <p>Your Dream Home, Our Responsibility.</p>
 </div>
@@ -1109,12 +975,12 @@ justify-content:center;
 
 </div>
 
-<a href="#quote" class="quote-btn">
+<button class="quote-btn">
 Get a Quote
 <i class="fa-solid fa-arrow-right"></i>
-</a>
+</button>
 
-<div class="menu-btn" id="menuBtn">
+<div class="menu-btn" onclick="toggleMenu()">
 <i class="fa-solid fa-bars"></i>
 </div>
 
@@ -1124,9 +990,11 @@ Get a Quote
 
 <!-- HERO -->
 
-<section class="hero fade">
+<section class="hero">
 
-<div class="container hero-grid">
+<div class="container">
+
+<div class="hero-wrap">
 
 <div class="hero-left">
 
@@ -1134,57 +1002,54 @@ Get a Quote
 PREMIUM INTERIOR & CONSTRUCTION SERVICES
 </div>
 
-<h1 class="hero-title">
-Best Interior & <span>Construction</span> Solutions in <span>Silchar, Assam</span>
+<h1>
+Best Interior &
+<span>Construction</span>
+Solutions in
+<span>Silchar, Assam</span>
 </h1>
 
-<p class="hero-desc">
+<p>
 Complete Home & Building Solutions Under One Roof.
 </p>
 
 <div class="stats">
 
 <div class="stat-box">
-<i class="fa-solid fa-building"></i>
-<div>
+<i class="fa-solid fa-award"></i>
 <h4>50+ Projects Done</h4>
-</div>
 </div>
 
 <div class="stat-box">
-<i class="fa-solid fa-award"></i>
-<div>
+<i class="fa-solid fa-shield-halved"></i>
 <h4>Trusted Service</h4>
-</div>
 </div>
 
 <div class="stat-box">
 <i class="fa-solid fa-location-dot"></i>
-<div>
 <h4>All Assam Service</h4>
 </div>
-</div>
 
 </div>
 
-<div class="hero-buttons">
+<div class="hero-btns">
 
-<a href="tel:+918876410518">
+<a href="tel:+918876410518" class="hero-btn">
 <i class="fa-solid fa-phone"></i>
 Call Now
 </a>
 
-<a href="https://wa.me/918876410518">
+<a href="https://wa.me/918876410518" class="hero-btn">
 <i class="fa-brands fa-whatsapp"></i>
 WhatsApp
 </a>
 
-<a href="https://instagram.com/skyline__services">
+<a href="#" class="hero-btn">
 <i class="fa-brands fa-instagram"></i>
 Instagram
 </a>
 
-<a href="https://facebook.com">
+<a href="#" class="hero-btn">
 <i class="fa-brands fa-facebook-f"></i>
 Facebook
 </a>
@@ -1193,11 +1058,13 @@ Facebook
 
 </div>
 
-<div class="hero-image">
+<div class="hero-right">
 
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1800&auto=format&fit=crop">
 
 <div class="hero-overlay"></div>
+
+</div>
 
 </div>
 
@@ -1207,13 +1074,18 @@ Facebook
 
 <!-- SERVICES -->
 
-<section class="section" id="services">
+<section id="services">
 
 <div class="container">
 
-<div class="section-head">
-<small>OUR SERVICES</small>
-<h2>Complete Solutions for Every Space</h2>
+<div class="section-title-wrap">
+
+<div class="section-tag">OUR SERVICES</div>
+
+<h2 class="section-title">
+Complete Solutions for Every Space
+</h2>
+
 </div>
 
 <div class="services-grid">
@@ -1222,157 +1094,149 @@ Facebook
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1616594039964-4f7dcf5b9f51?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
 <h3>False Ceiling</h3>
-<p>Modern stylish false ceiling designs with premium finish and perfect lighting.</p>
+<p>Modern & stylish false ceiling designs with premium finish and elegant lighting.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
 <h3>T-Ceiling (2x2)</h3>
-<p>Professional 2x2 grid T-ceiling solutions for offices and commercial spaces.</p>
+<p>Professional 2x2 grid T-ceiling solutions for office and commercial spaces.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
-<div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-<h3>PVC Ceiling & Panel Design</h3>
-<p>Durable waterproof PVC ceiling & panel solutions for modern spaces.</p>
+<div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+<h3>PVC Ceiling & Panel</h3>
+<p>Durable waterproof PVC ceiling & premium modern wall panel solutions.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
-<h3>Interior & Exterior Painting</h3>
-<p>Premium quality painting with smooth finish and long-lasting protection.</p>
+<h3>Interior Painting</h3>
+<p>Premium quality painting with smooth finishing and elegant rich color texture.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1582582494700-5e7b7c0c1d17?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
-<div class="service-icon"><i class="fa-solid fa-trowel"></i></div>
+<div class="service-icon"><i class="fa-solid fa-fill-drip"></i></div>
 <h3>Wall Putty</h3>
-<p>Smooth and strong base for your walls with professional wall putty services.</p>
+<p>Smooth and durable wall putty finishing for premium interior walls.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
 <h3>House Wiring</h3>
-<p>Safe reliable electrical wiring with proper circuit planning.</p>
+<p>Reliable and safe electrical wiring with professional circuit planning.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-tv"></i></div>
-<h3>TV Unit / Panel & Wall</h3>
-<p>Elegant TV units and wall panels that enhance your living space.</p>
+<h3>TV Unit / Panel</h3>
+<p>Elegant TV panel & wall unit solutions with modern premium designs.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-bath"></i></div>
 <h3>Bathroom Renovation</h3>
-<p>Modern stylish bathroom renovation with premium fittings.</p>
+<p>Luxury bathroom renovation with modern fittings and stylish finish.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-kitchen-set"></i></div>
 <h3>Modular Kitchen</h3>
-<p>Stylish modular kitchens with smart storage and premium quality.</p>
+<p>Smart modular kitchen solutions with elegant premium storage design.</p>
 </div>
 </div>
 
 <div class="service-card">
 <div class="service-img">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format&fit=crop">
 </div>
 <div class="service-content">
 <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
 <h3>Carpenter Service</h3>
-<p>Expert carpenter services for all furniture and wood work solutions.</p>
+<p>Expert carpenter work for furniture, wood interior & customized designs.</p>
 </div>
 </div>
 
 </div>
-
-</div>
-
-</section>
 
 <!-- FEATURE STRIP -->
 
-<section class="section">
-
-<div class="container">
-
-<div class="features">
+<div class="feature-strip">
 
 <div class="feature-box">
 <i class="fa-solid fa-medal"></i>
 <div>
-<h4>Premium Quality</h4>
-<p>We use the finest materials and latest techniques for premium results.</p>
+<h4>PREMIUM QUALITY</h4>
+<p>Finest materials and latest techniques for luxury finishing.</p>
 </div>
 </div>
 
 <div class="feature-box">
 <i class="fa-solid fa-users"></i>
 <div>
-<h4>Expert Team</h4>
-<p>Skilled professionals delivering precision and creativity.</p>
+<h4>EXPERT TEAM</h4>
+<p>Professional experts delivering precision and creativity.</p>
 </div>
 </div>
 
 <div class="feature-box">
 <i class="fa-solid fa-clock"></i>
 <div>
-<h4>On-Time Delivery</h4>
-<p>Every project completed within committed timeline.</p>
+<h4>ON-TIME DELIVERY</h4>
+<p>Fast project completion with premium work quality.</p>
 </div>
 </div>
 
 <div class="feature-box">
 <i class="fa-solid fa-headset"></i>
 <div>
-<h4>After-Sales Support</h4>
-<p>Reliable support even after the project is completed.</p>
+<h4>AFTER-SALES SUPPORT</h4>
+<p>Reliable support and customer satisfaction guaranteed.</p>
 </div>
 </div>
 
@@ -1382,44 +1246,37 @@ Facebook
 
 </section>
 
-<!-- WHY -->
+<!-- WHY CHOOSE -->
 
-<section class="section" id="about">
+<section id="about">
 
 <div class="container">
 
-<div class="why-grid">
+<div class="why-wrap">
 
 <div class="why-left">
 
-<div class="section-head" style="text-align:left;margin-bottom:20px;">
-<small>WHY CHOOSE US</small>
-<h2>Luxury Quality & Trusted Service</h2>
-</div>
+<div class="section-tag">WHY CHOOSE US</div>
 
-<div class="why-list">
+<h2 class="section-title">
+Luxury Quality Construction & Interior Solutions
+</h2>
 
-<div class="why-item"><i class="fa-solid fa-circle-check"></i>100% Quality Construction & Premium Designs</div>
+<div class="check-list">
 
-<div class="why-item"><i class="fa-solid fa-circle-check"></i>Professional & Skilled Team</div>
-
-<div class="why-item"><i class="fa-solid fa-circle-check"></i>Premium Quality Materials</div>
-
-<div class="why-item"><i class="fa-solid fa-circle-check"></i>Affordable & Transparent Pricing</div>
-
-<div class="why-item"><i class="fa-solid fa-circle-check"></i>On-Time Project Completion</div>
-
-<div class="why-item"><i class="fa-solid fa-circle-check"></i>Customized Solutions</div>
-
-<div class="why-item"><i class="fa-solid fa-circle-check"></i>100% Customer Satisfaction</div>
+<div class="check"><i class="fa-solid fa-circle-check"></i>100% Quality Construction & Premium Designs</div>
+<div class="check"><i class="fa-solid fa-circle-check"></i>Professional & Skilled Team</div>
+<div class="check"><i class="fa-solid fa-circle-check"></i>Premium Quality Materials</div>
+<div class="check"><i class="fa-solid fa-circle-check"></i>Affordable & Transparent Pricing</div>
+<div class="check"><i class="fa-solid fa-circle-check"></i>On-Time Project Completion</div>
+<div class="check"><i class="fa-solid fa-circle-check"></i>Customized Solutions</div>
+<div class="check"><i class="fa-solid fa-circle-check"></i>100% Customer Satisfaction</div>
 
 </div>
 
 </div>
 
-<div class="why-right">
-
-<div class="stat-cards">
+<div class="stats-grid">
 
 <div class="big-stat">
 <h2>50+</h2>
@@ -1442,19 +1299,20 @@ Facebook
 
 </div>
 
-</div>
-
 </section>
 
 <!-- REVIEWS -->
 
-<section class="section">
+<section>
 
 <div class="container">
 
-<div class="section-head">
-<small>CLIENT REVIEWS</small>
-<h2>What Our Clients Say</h2>
+<div class="section-title-wrap">
+
+<div class="section-tag">CLIENT REVIEWS</div>
+
+<h2 class="section-title">What Our Clients Say</h2>
+
 </div>
 
 <div class="review-slider">
@@ -1462,25 +1320,29 @@ Facebook
 <div class="review-card">
 <div class="stars">★★★★★</div>
 <p>“Skyline Services transformed our home beautifully. Highly professional and on-time work.”</p>
-<h4>Rakesh Das, Silchar</h4>
+<br>
+<h4>— Rakesh Das, Silchar</h4>
 </div>
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>“Excellent quality and finishing. Their team is skilled and very cooperative.”</p>
-<h4>Pooja Nath, Silchar</h4>
+<p>“Excellent finishing quality and premium design execution. Highly recommended.”</p>
+<br>
+<h4>— Pooja Nath, Silchar</h4>
 </div>
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>“Best interior and construction service in Silchar. Totally satisfied.”</p>
-<h4>Imran Ahmed, Silchar</h4>
+<p>“Best interior and construction service in Assam with very skilled team.”</p>
+<br>
+<h4>— Imran Ahmed, Cachar</h4>
 </div>
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>“From design to delivery, everything was perfect. Highly recommended.”</p>
-<h4>Dipasha Roy, Silchar</h4>
+<p>“From design to delivery everything was smooth and premium quality.”</p>
+<br>
+<h4>— Bipasha Roy, Hailakandi</h4>
 </div>
 
 </div>
@@ -1491,20 +1353,21 @@ Facebook
 
 <!-- SERVICE AREAS -->
 
-<section class="section">
+<section>
 
 <div class="container">
 
-<div class="section-head">
-<small>SERVICE AREAS</small>
-<h2>Serving Across Assam</h2>
+<div class="section-title-wrap">
+
+<div class="section-tag">SERVICE AREAS</div>
+
+<h2 class="section-title">Serving Across Assam</h2>
+
 </div>
 
-<div class="area-grid">
+<div class="area-wrap">
 
 <div class="area-left">
-
-<div class="area-buttons">
 
 <div class="area-btn"><i class="fa-solid fa-location-dot"></i>Silchar</div>
 <div class="area-btn"><i class="fa-solid fa-location-dot"></i>Sonai</div>
@@ -1512,15 +1375,16 @@ Facebook
 <div class="area-btn"><i class="fa-solid fa-location-dot"></i>Karimganj</div>
 <div class="area-btn"><i class="fa-solid fa-location-dot"></i>Hailakandi</div>
 <div class="area-btn"><i class="fa-solid fa-location-dot"></i>Cachar</div>
-<div class="area-btn" style="grid-column:1/-1;"><i class="fa-solid fa-location-dot"></i>Assam & Nearby Areas</div>
-
+<div class="area-btn" style="grid-column:span 2;">
+<i class="fa-solid fa-location-dot"></i>
+Assam & Nearby Areas
 </div>
 
 </div>
 
-<div class="area-right">
+<div class="area-map">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Assam_in_India_%28claimed_and_disputed_hatched%29.svg/1200px-Assam_in_India_%28claimed_and_disputed_hatched%29.svg.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Assam_in_India_%28disputed_hatched%29.svg/1200px-Assam_in_India_%28disputed_hatched%29.svg.png">
 
 </div>
 
@@ -1532,45 +1396,62 @@ Facebook
 
 <!-- PROJECTS -->
 
-<section class="section" id="projects">
+<section id="projects">
 
 <div class="container">
 
-<div class="section-head">
-<small>OUR PROJECTS</small>
-<h2>Premium Project Showcase</h2>
+<div class="section-title-wrap">
+
+<div class="section-tag">OUR PROJECTS</div>
+
+<h2 class="section-title">
+Luxury Interior Project Showcase
+</h2>
+
 </div>
 
-<div class="project-grid">
+<div class="projects-grid">
 
 <div class="project-card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-<div class="project-overlay"><h3>Luxury Living Room</h3></div>
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1000&auto=format&fit=crop">
+<div class="project-overlay">
+<h3>Luxury Living Interior</h3>
 </div>
-
-<div class="project-card">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
-<div class="project-overlay"><h3>Modern Modular Kitchen</h3></div>
-</div>
-
-<div class="project-card">
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
-<div class="project-overlay"><h3>False Ceiling Design</h3></div>
 </div>
 
 <div class="project-card">
-<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop">
-<div class="project-overlay"><h3>Premium Painting Work</h3></div>
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1000&auto=format&fit=crop">
+<div class="project-overlay">
+<h3>Modern Modular Kitchen</h3>
+</div>
 </div>
 
 <div class="project-card">
-<img src="https://images.unsplash.com/photo-1616594039964-4f7dcf5b9f51?q=80&w=1200&auto=format&fit=crop">
-<div class="project-overlay"><h3>TV Panel Interior</h3></div>
+<img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1000&auto=format&fit=crop">
+<div class="project-overlay">
+<h3>TV Panel Design</h3>
+</div>
 </div>
 
 <div class="project-card">
-<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop">
-<div class="project-overlay"><h3>Luxury Bedroom Design</h3></div>
+<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop">
+<div class="project-overlay">
+<h3>False Ceiling Work</h3>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format&fit=crop">
+<div class="project-overlay">
+<h3>Premium Wood Work</h3>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1000&auto=format&fit=crop">
+<div class="project-overlay">
+<h3>Luxury Bedroom Design</h3>
+</div>
 </div>
 
 </div>
@@ -1579,34 +1460,30 @@ Facebook
 
 </section>
 
-<!-- QUOTE -->
+<!-- FREE QUOTE -->
 
-<section class="section" id="quote">
+<section id="contact">
 
 <div class="container">
 
-<div class="quote-grid">
+<div class="quote-wrap">
 
 <div class="quote-form">
 
-<div class="section-head" style="text-align:left;margin-bottom:25px;">
-<small>GET FREE QUOTE</small>
-<h2>Book Your Consultation</h2>
-</div>
+<h3>Get Free Quote</h3>
 
 <div class="form-grid">
 
 <input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Phone Number">
+<input type="text" placeholder="Phone Number">
 
 <input type="email" placeholder="Email Address">
 
 <select>
 <option>Select Service</option>
 <option>False Ceiling</option>
-<option>Modular Kitchen</option>
 <option>Painting</option>
-<option>TV Panel</option>
+<option>Modular Kitchen</option>
 <option>Bathroom Renovation</option>
 </select>
 
@@ -1614,25 +1491,27 @@ Facebook
 
 <textarea placeholder="Your Message"></textarea>
 
-<div class="checkbox">
-<input type="checkbox">
-<span>I’m happy to receive a Free Site Visit & Instant Response</span>
-</div>
+<label style="display:flex;align-items:center;gap:10px;margin-bottom:20px;font-size:14px;">
+<input type="checkbox" style="width:auto;">
+I’m happy to receive a Free Site Visit & Instant Response
+</label>
 
-<button class="send-btn">
+<button class="submit-btn">
 Send Message
 <i class="fa-solid fa-paper-plane"></i>
 </button>
 
 </div>
 
-<div class="quote-right">
+<div class="quote-image">
 
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop">
 
-<div class="quote-content">
+<div class="quote-overlay">
 
-<h2>Book Your Free Site Visit Today!</h2>
+<h2>
+Book Your Free Site Visit Today!
+</h2>
 
 <p>
 Our expert will visit your place, understand your requirements and give the best solution.
@@ -1640,12 +1519,12 @@ Our expert will visit your place, understand your requirements and give the best
 
 <div class="quote-actions">
 
-<a href="tel:+918876410518">
+<a href="tel:+918876410518" class="hero-btn">
 <i class="fa-solid fa-phone"></i>
 Call Now
 </a>
 
-<a href="https://wa.me/918876410518">
+<a href="https://wa.me/918876410518" class="hero-btn">
 <i class="fa-brands fa-whatsapp"></i>
 Chat on WhatsApp
 </a>
@@ -1664,45 +1543,48 @@ Chat on WhatsApp
 
 <!-- CONTACT -->
 
-<section class="section" id="contact">
+<section>
 
 <div class="container">
 
-<div class="section-head">
-<small>CONTACT DETAILS</small>
-<h2>Get In Touch</h2>
+<div class="section-title-wrap">
+
+<div class="section-tag">CONTACT DETAILS</div>
+
+<h2 class="section-title">Get In Touch</h2>
+
 </div>
 
 <div class="contact-grid">
 
-<div class="contact-box">
+<div class="contact-card">
 <i class="fa-solid fa-phone"></i>
 <h4>Phone</h4>
 <p>+91 8876410518</p>
 </div>
 
-<div class="contact-box">
+<div class="contact-card">
 <i class="fa-brands fa-whatsapp"></i>
 <h4>WhatsApp</h4>
-<p>+91 6002414408</p>
+<p>+91 8876410518</p>
 </div>
 
-<div class="contact-box">
+<div class="contact-card">
 <i class="fa-solid fa-envelope"></i>
 <h4>Email</h4>
 <p>skyline.services27@gmail.com</p>
 </div>
 
-<div class="contact-box">
+<div class="contact-card">
 <i class="fa-solid fa-location-dot"></i>
 <h4>Address</h4>
 <p>Sonai Road, Silchar, Assam - 788119</p>
 </div>
 
-<div class="contact-box">
+<div class="contact-card">
 <i class="fa-solid fa-clock"></i>
 <h4>Working Hours</h4>
-<p>Mon - Sat : 9AM - 7PM</p>
+<p>9 AM - 8 PM</p>
 </div>
 
 </div>
@@ -1715,11 +1597,13 @@ Chat on WhatsApp
 
 <footer>
 
-<div class="container footer-grid">
+<div class="container">
+
+<div class="footer-wrap">
 
 <div>
 <h2 style="color:#d4a437;">Skyline Services</h2>
-<p style="color:#999;margin-top:6px;">
+<p style="margin-top:10px;color:#bbb;">
 Your Dream Home, Our Responsibility.
 </p>
 </div>
@@ -1741,26 +1625,25 @@ Your Dream Home, Our Responsibility.
 
 </div>
 
-<div style="text-align:center;color:#777;margin-top:30px;">
+<div style="margin-top:30px;text-align:center;color:#888;font-size:14px;">
 © 2026 Skyline Services. All Rights Reserved.
+</div>
+
 </div>
 
 </footer>
 
-<!-- FLOAT -->
+<!-- FLOATING -->
 
-<a href="https://wa.me/918876410518" class="float-whatsapp">
+<a href="https://wa.me/918876410518" class="whatsapp-float">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <script>
 
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
-
-menuBtn.onclick = () => {
-navLinks.classList.toggle('active');
-};
+function toggleMenu(){
+document.getElementById('navLinks').classList.toggle('active');
+}
 
 </script>
 
