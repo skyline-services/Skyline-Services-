@@ -27,13 +27,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
-
-transition:
-background .35s ease,
-color .35s ease,
-transform .35s ease,
-border-color .35s ease,
-box-shadow .35s ease;
+transition:all .35s ease;
 }
 
 body{
@@ -54,13 +48,14 @@ margin:auto;
 padding:0 22px;
 }
 
-.top-mini-bar{
-background:linear-gradient(90deg,#d4a437,#f5d06f);
+.topbar{
+background:linear-gradient(90deg,#d4a437,#f5d06f,#d4a437);
 color:#000;
 text-align:center;
 padding:8px;
 font-size:13px;
 font-weight:700;
+letter-spacing:.5px;
 }
 
 .header{
@@ -106,12 +101,7 @@ display:flex;
 gap:30px;
 align-items:center;
 }
-.mobile-menu-btn{
-display:none;
-font-size:26px;
-color:#fff;
-cursor:pointer;
-}
+
 .nav a{
 text-decoration:none;
 color:#fff;
@@ -150,162 +140,89 @@ cursor:pointer;
 }
 
 .hero{
-padding:18px 0 35px;
-position:relative;
+padding:60px 0;
 }
 
 .hero-wrap{
 display:grid;
-grid-template-columns:0.95fr 1.05fr;
+grid-template-columns:.9fr 1.1fr;
 align-items:center;
-gap:22px;
-
+gap:0;
 background:#080808;
 border:1px solid rgba(255,215,0,.15);
-border-radius:26px;
-
+border-radius:28px;
 overflow:hidden;
-padding:24px;
-
-min-height:auto;
-}
-
-.hero-left{
-padding:10px 5px;
 }
 
 .hero-left small{
-font-size:13px;
 color:var(--gold);
 font-weight:700;
 letter-spacing:1px;
 }
 
 .hero-left h1{
-font-size:58px;
+font-size:68px;
 line-height:1.05;
-margin:14px 0;
+margin:18px 0;
 font-weight:800;
+text-shadow:0 0 30px rgba(255,215,0,.12);
 }
 
 .hero-left p{
-font-size:15px;
-line-height:1.7;
-margin-bottom:18px;
-color:#d8d8d8;
+font-size:16px;
+line-height:1.8;
+color:#ddd;
+margin-bottom:26px;
 }
 
 .stats{
 display:flex;
 flex-wrap:wrap;
-gap:12px;
-margin-bottom:18px;
+gap:14px;
+margin-bottom:28px;
 }
 
 .stat{
-padding:12px 16px;
+padding:12px 18px;
+border:1px solid rgba(255,215,0,.2);
 border-radius:14px;
 background:rgba(255,255,255,.04);
-border:1px solid rgba(255,215,0,.18);
+backdrop-filter:blur(10px);
 }
 
 .action-buttons{
 display:flex;
 flex-wrap:wrap;
-gap:12px;
-margin-top:5px;
-}
-
-.hero-image{
-height:100%;
-min-height:420px;
-overflow:hidden;
-border-radius:22px;
-}
-
-.hero-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-border-radius:22px;
-}
-
-/* TABLET */
-@media(max-width:992px){
-
-.hero-wrap{
-grid-template-columns:1fr;
-padding:18px;
-}
-
-.hero-left h1{
-font-size:46px;
-}
-
-.hero-image{
-min-height:340px;
-}
-
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.hero{
-padding:12px 0 25px;
-}
-
-.hero-wrap{
-padding:14px;
-gap:16px;
-border-radius:22px;
-}
-
-.hero-left{
-padding:0;
-}
-
-.hero-left h1{
-font-size:36px;
-line-height:1.12;
-}
-
-.hero-left p{
-font-size:14px;
-margin-bottom:16px;
-}
-
-.stats{
-gap:10px;
-}
-
-.stat{
-width:100%;
-}
-
-.action-buttons{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+gap:14px;
 }
 
 .action-btn{
-text-align:center;
-padding:13px 12px;
-font-size:14px;
+padding:14px 22px;
+border-radius:14px;
+text-decoration:none;
+font-weight:600;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,215,0,.25);
+color:#fff;
 }
 
-.hero-image{
-min-height:240px;
-border-radius:18px;
+.action-btn:hover{
+background:linear-gradient(135deg,#d4a437,#f5d06f);
+color:#000;
+transform:translateY(-4px);
+box-shadow:0 0 30px rgba(255,215,0,.2);
 }
 
 .hero-image img{
-border-radius:18px;
+width:100%;
+height:620%;
+object-fit:cover;
+border-radius:0;
+border:none;
+box-shadow:none;
+display:block;
 }
 
-}
 .section{
 padding:90px 0;
 }
@@ -718,36 +635,7 @@ text-decoration:none;
 box-shadow:0 0 25px rgba(37,211,102,.4);
 z-index:999;
 }
-.mobile-menu{
-position:fixed;
-top:0;
-right:-100%;
-width:280px;
-height:100vh;
-background:#050505;
-padding:100px 30px;
-z-index:9999;
-transition:.4s;
-border-left:1px solid rgba(255,215,0,.2);
-backdrop-filter:blur(20px);
-}
 
-.mobile-menu.active{
-right:0;
-}
-
-.mobile-menu a{
-display:block;
-margin:20px 0;
-color:#fff;
-text-decoration:none;
-font-size:18px;
-}
-
-.mobile-menu a:hover{
-color:#d4a437;
-padding-left:10px;
-}
 @media(max-width:1200px){
 .grid{
 grid-template-columns:repeat(3,1fr);
@@ -764,9 +652,9 @@ grid-template-columns:repeat(3,1fr);
 
 @media(max-width:992px){
 .hero-wrap,
-.why-wrap,
-.area-wrap,
-.quote-wrap{
+why-wrap,
+area-wrap,
+quote-wrap{
 grid-template-columns:1fr;
 }
 
@@ -804,16 +692,13 @@ grid-template-columns:1fr;
 .nav{
 display:none;
 }
-.mobile-menu-btn{
-display:block;
-}
+
 .hero-left h1{
 font-size:40px;
 }
 
 .hero-image img{
-height:220px;
-min-height:220px;
+height:340px;
 }
 
 .section-title{
@@ -960,63 +845,47 @@ padding-bottom:75px;
 
 <div class="particles" id="particles"></div>
 
-<div class="top-mini-bar">
+<div class="topbar">
 🔥 Free Site Visit Available
 </div>
 
 <header class="header">
-
 <div class="container header-inner">
 
 <div class="brand-wrap">
-
-<img class="logo"
-src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png">
+<img class="logo" src="https://raw.githubusercontent.com/skyline-services/Skyline-Services-/main/newlogo.png" alt="Skyline Services Logo">
 
 <div>
 <div class="brand">Skyline Services</div>
-<div class="tagline">
-Best Interior & Construction Solutions
+<div class="tagline">Your Dream Home, Our Responsibility.</div>
 </div>
 </div>
 
+<div class="mobile-menu-btn" id="menuBtn">
+<i class="fas fa-bars"></i>
 </div>
 
 <div class="nav">
-<a class="active" href="#">Home</a>
+<a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#about">About Us</a>
 <a href="#contact">Contact</a>
 </div>
-<div class="mobile-menu-btn" id="menuBtn">
-<i class="fas fa-bars"></i>
-</div>
-<div class="mobile-menu-btn" id="menuBtn">
-<i class="fas fa-bars"></i>
-</div>
 
-<a href="#contact" class="quote-btn">
-Get a Quote
-<i class="fas fa-arrow-right"></i>
-</a>
+<button class="quote-btn">Get a Quote</button>
 
 </div>
 </header>
 
 <section class="hero">
-
 <div class="container hero-wrap">
 
 <div class="hero-left">
-
 <small>PREMIUM INTERIOR & CONSTRUCTION SERVICES</small>
 
 <h1>
-Best Interior &
-<span>Construction</span>
-Solutions in
-<span>Silchar, Assam</span>
+Best Interior & Construction Solutions in Silchar, Assam
 </h1>
 
 <p>
@@ -1024,68 +893,24 @@ Complete Home & Building Solutions Under One Roof.
 </p>
 
 <div class="stats">
-
-<div class="stat">
-<i class="fas fa-medal"></i>
-<div>
-<b>150+</b>
-<p>Projects Done</p>
-</div>
-</div>
-
-<div class="stat">
-<i class="fas fa-shield-heart"></i>
-<div>
-<b>Trusted</b>
-<p>By Clients</p>
-</div>
-</div>
-
-<div class="stat">
-<i class="fas fa-location-dot"></i>
-<div>
-<b>Assam</b>
-<p>Service Area</p>
-</div>
-</div>
-
+<div class="stat">✔ 50+ Projects Done</div>
+<div class="stat">✔ Trusted Service</div>
+<div class="stat">✔ All Assam Service</div>
 </div>
 
 <div class="action-buttons">
+<a href="tel:+918876410518" class="action-btn">📞 Call Now</a>
+<a href="https://wa.me/918876410518" class="action-btn">💬 WhatsApp</a>
+<a href="https://instagram.com/skyline__services" class="action-btn">📸 Instagram</a>
+<a href="https://facebook.com" class="action-btn">ⓕ Facebook</a>
+</div>
+</div>
 
-<a href="tel:+918876410518" class="action-btn">
-<i class="fas fa-phone"></i>
-Call Now
-</a>
-
-<a href="https://wa.me/918876410518" class="action-btn">
-<i class="fab fa-whatsapp"></i>
-WhatsApp
-</a>
-
-<a href="https://instagram.com/skyline__services" class="action-btn">
-<i class="fab fa-instagram"></i>
-Instagram
-</a>
-
-<a href="https://www.facebook.com/share/1e4BkiUc9a/" class="action-btn">
-<i class="fab fa-facebook-f"></i>
-Facebook
-</a>
-
+<div class="hero-image hero-slider">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop">
 </div>
 
 </div>
-
-<div class="hero-image">
-
-<img 
-src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop"
-alt="Skyline Services Interior Design">
-</div>
-
-</div>
-
 </section>
 
 <!-- SERVICES SECTION -->
@@ -1413,13 +1238,6 @@ alt="Skyline Services Interior Design">
 </section>
 
 <footer>
-  <div class="mobile-menu" id="mobileMenu">
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
 <div class="container footer-wrap">
 
 <div>
@@ -1592,7 +1410,7 @@ display:none;
 }
 
 .hero{
-padding-top:25px;
+padding-top:40px;
 }
 
 .hero-wrap{
@@ -1666,32 +1484,7 @@ menuBtn.onclick = ()=>{
 mobileMenu.classList.toggle('active');
 }
 
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuBtn.addEventListener('click',()=>{
-
-mobileMenu.classList.toggle('active');
-
-if(mobileMenu.classList.contains('active')){
-menuBtn.innerHTML = '<i class="fas fa-xmark"></i>';
-}else{
-menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-}
-
-})
-
-document.querySelectorAll('.mobile-menu a').forEach(link=>{
-
-link.addEventListener('click',()=>{
-
-mobileMenu.classList.remove('active');
-
-menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-
-})
-
-})
+const lazyImages = document.querySelectorAll('img');
 
 lazyImages.forEach(img=>{
 img.classList.add('lazy-img');
