@@ -1459,13 +1459,6 @@ const progress = (window.pageYOffset / totalHeight) * 100;
 progressBar.style.width = progress + '%';
 })
 
-const cursorGlow = document.getElementById('cursorGlow');
-
-window.addEventListener('mousemove',(e)=>{
-cursorGlow.style.left = e.clientX + 'px';
-cursorGlow.style.top = e.clientY + 'px';
-})
-
 const particles = document.getElementById('particles');
 
 for(let i=0;i<45;i++){
