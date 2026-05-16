@@ -14,10 +14,11 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#000;
+background:#050505;
 color:#fff;
 overflow-x:hidden;
 }
@@ -33,330 +34,618 @@ max-width:1280px;
 margin:auto;
 }
 
+:root{
+--gold:#d7a43d;
+--dark:#080808;
+--border:rgba(215,164,61,.45);
+}
+
 .topbar{
-background:linear-gradient(to right,#d6a23b,#f4c35a,#d6a23b);
 height:38px;
+background:linear-gradient(to right,#c68a1f,#f2c45d,#c68a1f);
 display:flex;
 align-items:center;
 justify-content:center;
-color:#000;
 font-size:13px;
 font-weight:600;
+color:#000;
 border-radius:0 0 8px 8px;
-letter-spacing:.5px;
 }
 
 header{
-background:#050505;
-border:1px solid rgba(212,160,55,.45);
-padding:22px 35px;
+margin-top:8px;
+background:#070707;
+border:1px solid var(--border);
 display:flex;
 align-items:center;
 justify-content:space-between;
-margin-top:8px;
-position:relative;
+padding:22px 35px;
 }
 
-.logo-area{
+.logo-wrap{
 display:flex;
 align-items:center;
-gap:18px;
+gap:16px;
 }
 
-.logo-area img{
-width:110px;
+.logo-wrap img{
+width:100px;
 }
 
 .logo-text h2{
-font-size:32px;
+font-size:31px;
 font-weight:700;
-color:#d6a23b;
-line-height:1;
-margin-bottom:8px;
+color:var(--gold);
 }
 
 .logo-text p{
-font-size:15px;
-color:#d4d4d4;
-font-weight:500;
+font-size:14px;
+color:#ddd;
+margin-top:3px;
 }
 
 nav{
 display:flex;
-align-items:center;
-gap:45px;
+gap:42px;
 }
 
 nav a{
 text-decoration:none;
 color:#fff;
-font-size:16px;
+font-size:15px;
 font-weight:500;
-position:relative;
 transition:.3s;
 }
 
-nav a:hover{
-color:#d6a23b;
+nav a:hover,
+nav a.active{
+color:var(--gold);
 }
 
 .quote-btn{
-background:linear-gradient(to bottom,#e8bb52,#c89127);
+background:linear-gradient(to bottom,#efc15a,#cb9128);
 color:#000;
-padding:16px 28px;
-font-size:15px;
+padding:15px 26px;
+border-radius:8px;
 font-weight:700;
-border-radius:10px;
 text-decoration:none;
 display:flex;
 align-items:center;
-gap:12px;
-box-shadow:0 0 18px rgba(214,162,59,.3);
+gap:10px;
 }
 
 .hero{
 margin-top:10px;
-position:relative;
-border:2px solid rgba(214,162,59,.35);
-background:#050505;
-overflow:hidden;
-min-height:650px;
+border:2px solid rgba(215,164,61,.35);
+background:#090909;
 }
 
 .hero-grid{
 display:grid;
-grid-template-columns:46% 54%;
-align-items:stretch;
+grid-template-columns:44% 56%;
 }
 
-.hero-content{
-padding:55px 42px 35px;
+.hero-left{
+padding:42px 35px;
 position:relative;
-z-index:5;
-background:linear-gradient(to right,rgba(0,0,0,.96),rgba(0,0,0,.88));
+background:linear-gradient(to right,rgba(0,0,0,.97),rgba(0,0,0,.88));
 }
 
-.hero-content::before{
+.hero-left::before{
 content:'';
 position:absolute;
-inset:18px;
-border:3px solid rgba(39,255,77,.45);
+inset:16px;
+border:2px solid rgba(30,255,60,.4);
 pointer-events:none;
 }
 
-.mini-tag{
-color:#d6a23b;
-font-size:14px;
+.hero-small{
+color:var(--gold);
+font-size:13px;
 font-weight:700;
-letter-spacing:.8px;
-margin-bottom:24px;
+letter-spacing:.5px;
+margin-bottom:22px;
 display:block;
 }
 
-.hero h1{
+.hero-left h1{
 font-size:68px;
-line-height:1.03;
+line-height:1.04;
 font-weight:800;
-margin-bottom:28px;
+margin-bottom:22px;
 }
 
-.hero h1 span{
-color:#d6a23b;
+.hero-left h1 span{
+color:var(--gold);
 }
 
-.hero-desc{
-font-size:18px;
+.hero-left p{
+font-size:16px;
 line-height:1.8;
-color:#d5d5d5;
-margin-bottom:35px;
-max-width:600px;
+color:#d4d4d4;
+margin-bottom:30px;
 }
 
-.info-boxes{
+.stats{
 display:flex;
-gap:26px;
-margin-bottom:40px;
+gap:28px;
 flex-wrap:wrap;
+margin-bottom:32px;
 }
 
-.info-card{
+.stat-box{
 display:flex;
 align-items:center;
 gap:12px;
 }
 
-.info-icon{
-width:58px;
-height:58px;
+.stat-icon{
+width:55px;
+height:55px;
 border-radius:50%;
-border:2px solid rgba(214,162,59,.45);
+border:2px solid rgba(215,164,61,.35);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:22px;
-color:#d6a23b;
-background:#0c0c0c;
+font-size:21px;
+color:var(--gold);
 }
 
-.info-card h4{
-font-size:22px;
-color:#fff;
-font-weight:700;
+.stat-box h4{
+font-size:20px;
 }
 
-.info-card p{
-font-size:14px;
-color:#cfcfcf;
+.stat-box p{
+font-size:13px;
+margin:0;
 }
 
-.social-buttons{
+.social-row{
 display:flex;
-gap:18px;
+gap:14px;
 flex-wrap:wrap;
-margin-top:20px;
 }
 
-.social-buttons a{
-height:64px;
-padding:0 28px;
+.social-row a{
+height:58px;
+padding:0 24px;
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
 text-decoration:none;
-border-radius:8px;
-border:2px solid rgba(214,162,59,.35);
-background:#0a0a0a;
 color:#fff;
-font-size:18px;
+background:#0e0e0e;
+border:1px solid var(--border);
+border-radius:7px;
 font-weight:600;
 transition:.35s;
 }
 
-.social-buttons a:hover{
-transform:translateY(-3px);
-background:#d6a23b;
+.social-row a:hover{
+background:var(--gold);
 color:#000;
 }
 
 .call-btn{
-background:linear-gradient(to bottom,#e7b84d,#ca9329)!important;
+background:linear-gradient(to bottom,#efc15a,#cb9128)!important;
 color:#000!important;
-font-weight:700!important;
 }
 
-.hero-image{
-position:relative;
-min-height:650px;
-overflow:hidden;
-}
-
-.hero-image img{
-width:100%;
+.hero-right img{
 height:100%;
 object-fit:cover;
-filter:brightness(.8);
+filter:brightness(.78);
 }
 
-.hero-image::after{
-content:'';
+.section{
+margin-top:16px;
+padding:32px;
+border:1px solid var(--border);
+background:#080808;
+}
+
+.section-title-small{
+text-align:center;
+color:var(--gold);
+font-size:13px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+font-weight:700;
+margin-bottom:32px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:18px;
+}
+
+.service-card{
+background:#0c0c0c;
+border:1px solid rgba(215,164,61,.35);
+border-radius:10px;
+overflow:hidden;
+transition:.35s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+border-color:var(--gold);
+}
+
+.service-card img{
+height:160px;
+object-fit:cover;
+}
+
+.service-content{
+padding:15px;
+}
+
+.service-number{
+width:38px;
+height:38px;
+border-radius:50%;
+background:#000;
+border:2px solid var(--gold);
+color:var(--gold);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+font-weight:700;
+margin-top:-34px;
+position:relative;
+margin-bottom:14px;
+}
+
+.service-content h3{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.service-content p{
+font-size:13px;
+line-height:1.7;
+color:#d3d3d3;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.feature-box{
+background:#0b0b0b;
+border:1px solid rgba(215,164,61,.35);
+padding:22px;
+display:flex;
+gap:15px;
+align-items:flex-start;
+}
+
+.feature-box i{
+font-size:28px;
+color:var(--gold);
+margin-top:4px;
+}
+
+.feature-box h4{
+margin-bottom:6px;
+font-size:16px;
+}
+
+.feature-box p{
+font-size:13px;
+line-height:1.7;
+color:#ccc;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:58% 42%;
+gap:25px;
+align-items:center;
+}
+
+.why-list li{
+list-style:none;
+margin-bottom:18px;
+font-size:16px;
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+.why-list i{
+color:var(--gold);
+}
+
+.stats-big{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.big-card{
+background:#0b0b0b;
+border:1px solid rgba(215,164,61,.35);
+padding:35px 20px;
+text-align:center;
+}
+
+.big-card h2{
+font-size:48px;
+color:var(--gold);
+margin-bottom:8px;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.review-card{
+background:#0c0c0c;
+border:1px solid rgba(215,164,61,.35);
+padding:25px;
+min-height:220px;
+}
+
+.review-card p{
+line-height:1.9;
+font-size:14px;
+color:#ddd;
+margin-bottom:22px;
+}
+
+.review-card h4{
+color:var(--gold);
+font-size:16px;
+}
+
+.area-grid{
+display:grid;
+grid-template-columns:32% 68%;
+gap:22px;
+}
+
+.area-buttons{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.area-buttons a{
+text-decoration:none;
+color:#fff;
+padding:15px 18px;
+background:#0c0c0c;
+border:1px solid rgba(215,164,61,.35);
+border-radius:7px;
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:500;
+}
+
+.area-buttons i{
+color:var(--gold);
+}
+
+.map-box img{
+height:100%;
+object-fit:cover;
+border-radius:10px;
+border:1px solid rgba(215,164,61,.35);
+}
+
+.quote-grid{
+display:grid;
+grid-template-columns:58% 42%;
+gap:22px;
+}
+
+.form-box{
+background:#0b0b0b;
+border:1px solid rgba(215,164,61,.35);
+padding:28px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:25px;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select{
+width:100%;
+background:#070707;
+border:1px solid rgba(215,164,61,.35);
+height:58px;
+padding:0 16px;
+color:#fff;
+border-radius:6px;
+outline:none;
+}
+
+.form-box textarea{
+height:150px;
+padding-top:15px;
+resize:none;
+grid-column:span 2;
+}
+
+.submit-btn{
+margin-top:18px;
+height:58px;
+padding:0 28px;
+background:linear-gradient(to bottom,#efc15a,#cb9128);
+border:none;
+color:#000;
+font-weight:700;
+border-radius:8px;
+font-size:16px;
+}
+
+.quote-card{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+}
+
+.quote-card img{
+height:100%;
+object-fit:cover;
+filter:brightness(.55);
+}
+
+.quote-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(to right,rgba(0,0,0,.35),rgba(0,0,0,.1));
+padding:50px 35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-.gold-line{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-height:3px;
-background:linear-gradient(to right,#5f3a05,#d6a23b,#5f3a05);
+.quote-overlay h2{
+font-size:46px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.quote-overlay p{
+line-height:1.8;
+margin-bottom:28px;
+color:#ddd;
+}
+
+.quote-actions{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.quote-actions a{
+height:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+text-decoration:none;
+font-weight:700;
+border-radius:7px;
+}
+
+.call-action{
+background:linear-gradient(to bottom,#efc15a,#cb9128);
+color:#000;
+}
+
+.whatsapp-action{
+background:#0b0b0b;
+border:1px solid rgba(215,164,61,.35);
+color:#fff;
+}
+
+footer{
+margin:16px 0 40px;
+border:1px solid rgba(30,255,60,.4);
+padding:24px 30px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.footer-social{
+display:flex;
+gap:14px;
+}
+
+.footer-social a{
+width:48px;
+height:48px;
+border-radius:50%;
+border:1px solid rgba(215,164,61,.35);
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:#fff;
+font-size:18px;
 }
 
 @media(max-width:1100px){
-.hero-grid{
+.services-grid,
+.reviews,
+.features{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-grid,
+.why-grid,
+.area-grid,
+.quote-grid{
 grid-template-columns:1fr;
 }
 
-.hero-image{
-height:500px;
-}
-
-.hero h1{
+.hero-left h1{
 font-size:54px;
 }
+}
 
+@media(max-width:768px){
 header{
 flex-direction:column;
-gap:30px;
-padding:30px 20px;
+gap:25px;
 }
 
 nav{
 flex-wrap:wrap;
 justify-content:center;
-gap:20px;
-}
-}
-
-@media(max-width:768px){
-.container{
-width:95%;
-}
-
-.topbar{
-font-size:11px;
-padding:0 10px;
-text-align:center;
-}
-
-.logo-area{
-flex-direction:column;
-text-align:center;
-}
-
-.logo-area img{
-width:90px;
-}
-
-.logo-text h2{
-font-size:24px;
-}
-
-.hero-content{
-padding:30px 20px 25px;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero-desc{
-font-size:15px;
-}
-
-.info-boxes{
 gap:18px;
 }
 
-.info-card{
-width:100%;
+.hero-left h1{
+font-size:42px;
 }
 
-.social-buttons{
-grid-template-columns:1fr 1fr;
+.services-grid,
+.reviews,
+.features,
+.stats-big,
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.social-row{
 display:grid;
+grid-template-columns:1fr 1fr;
 }
 
-.social-buttons a{
-justify-content:center;
-padding:0 10px;
-font-size:15px;
-height:56px;
+.section{
+padding:22px;
 }
 
-.hero-image{
-height:380px;
+.quote-overlay h2{
+font-size:34px;
+}
+
+footer{
+flex-direction:column;
+gap:18px;
+text-align:center;
 }
 }
 </style>
@@ -370,10 +659,8 @@ height:380px;
 </div>
 
 <header>
-
-<div class="logo-area">
-<img src="logo.png" alt="Skyline Services Logo">
-
+<div class="logo-wrap">
+<img src="logo.png">
 <div class="logo-text">
 <h2>Skyline Services</h2>
 <p>Best Interior & Construction Solutions</p>
@@ -381,7 +668,7 @@ height:380px;
 </div>
 
 <nav>
-<a href="#">Home</a>
+<a class="active" href="#">Home</a>
 <a href="#">Services</a>
 <a href="#">Projects</a>
 <a href="#">About Us</a>
@@ -389,19 +676,15 @@ height:380px;
 </nav>
 
 <a href="#" class="quote-btn">
-Get a Quote
-<i class="fa-solid fa-arrow-right"></i>
+Get a Quote <i class="fa-solid fa-arrow-right"></i>
 </a>
-
 </header>
 
 <section class="hero">
-
 <div class="hero-grid">
 
-<div class="hero-content">
-
-<span class="mini-tag">PREMIUM INTERIOR & CONSTRUCTION SERVICES</span>
+<div class="hero-left">
+<span class="hero-small">PREMIUM INTERIOR & CONSTRUCTION SERVICES</span>
 
 <h1>
 Best Interior &<br>
@@ -410,78 +693,49 @@ Solutions in<br>
 <span>Silchar, Assam</span>
 </h1>
 
-<p class="hero-desc">
+<p>
 Complete Home & Building Solutions Under One Roof.
 </p>
 
-<div class="info-boxes">
-
-<div class="info-card">
-<div class="info-icon">
-<i class="fa-solid fa-building"></i>
-</div>
+<div class="stats">
+<div class="stat-box">
+<div class="stat-icon"><i class="fa-solid fa-building"></i></div>
 <div>
 <h4>150+</h4>
 <p>Projects Done</p>
 </div>
 </div>
 
-<div class="info-card">
-<div class="info-icon">
-<i class="fa-solid fa-award"></i>
-</div>
+<div class="stat-box">
+<div class="stat-icon"><i class="fa-solid fa-award"></i></div>
 <div>
 <h4>Trusted</h4>
 <p>By Clients</p>
 </div>
 </div>
 
-<div class="info-card">
-<div class="info-icon">
-<i class="fa-solid fa-location-dot"></i>
-</div>
+<div class="stat-box">
+<div class="stat-icon"><i class="fa-solid fa-location-dot"></i></div>
 <div>
 <h4>Assam</h4>
 <p>Service Area</p>
 </div>
 </div>
-
 </div>
 
-<div class="social-buttons">
+<div class="social-row">
+<a class="call-btn" href="#"><i class="fa-solid fa-phone"></i> Call Now</a>
+<a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+<a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+<a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+</div>
+</div>
 
-<a href="#" class="call-btn">
-<i class="fa-solid fa-phone"></i>
-Call Now
-</a>
-
-<a href="#">
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp
-</a>
-
-<a href="#">
-<i class="fa-brands fa-instagram"></i>
-Instagram
-</a>
-
-<a href="#">
-<i class="fa-brands fa-facebook-f"></i>
-Facebook
-</a>
-
+<div class="hero-right">
+<img src="hero.jpg">
 </div>
 
 </div>
-
-<div class="hero-image">
-<img src="interior.jpg" alt="Luxury Interior">
-</div>
-
-</div>
-
-<div class="gold-line"></div>
-
 </section>
 
 </div>
